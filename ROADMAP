@@ -1,0 +1,8 @@
+					-*-org-*-
+
+* v1.0.0
+** v0.1.0
+*** v0.0.1
+**** Correct project setup
+- [ ] Add LICENCE file for GPLv3
+- [ ] Start cmake script for browser and lib
