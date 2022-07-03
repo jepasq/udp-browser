@@ -3,6 +3,16 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
-**** Correct project setup
-- [ ] Add LICENCE file for GPLv3
+**** Main browser window is also an editor
+     Should use the Qt WebEngine
+- [ ] cmake must search for Qt5
+- [ ] library handle files serialization (how ?)
+  
+**** TODO Correct project setup
+:LOGBOOK:
+CLOCK: [2022-07-04 lun. 00:47]--[2022-07-04 lun. 00:55] =>  0:08
+:END:
+- [X] Add LICENCE file for GPLv3
 - [ ] Start cmake script for browser and lib
+- [ ] Add a README.md file with installation instruction
+- [ ] Add doxygen support
