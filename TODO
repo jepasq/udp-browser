@@ -1,6 +1,6 @@
-udb-browser - GPLv3 - A UDP browser designed like a meta server.
+udb-browser - GPLv3 - A web browser designed like a meta server.
 
 === ChangeLog ===
 
 * v0.0.0-1 (04 Jul. 2022 - ???)
-- Add GPlv3 COPYING file
+- (1) Add GPlv3 COPYING file
