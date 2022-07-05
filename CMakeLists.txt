@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 3.0)
 project(udp-browser VERSION 0.0.0)
 set(REVISION 0)
 
-#configure_file(
-#  "${PROJECT_SOURCE_DIR}/Doxyfile.in"
-#  "${PROJECT_BINARY_DIR}/Doxyfile"
-#  )
+configure_file(
+  "${PROJECT_SOURCE_DIR}/Doxyfile.in"
+  "${PROJECT_BINARY_DIR}/Doxyfile"
+  )
 
 #configure_file(
 #  "${PROJECT_SOURCE_DIR}/src/config.h.in"
