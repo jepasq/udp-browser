@@ -20,6 +20,7 @@
 - [ ] library handle files serialization (how ?)
 **** TODO Correct project setup
 :LOGBOOK:
+CLOCK: [2022-07-06 mer. 02:41]--[2022-07-06 mer. 02:51] =>  0:10
 CLOCK: [2022-07-05 mar. 02:19]--[2022-07-05 mar. 02:26] =>  0:07
 CLOCK: [2022-07-05 mar. 01:58]--[2022-07-05 mar. 02:05] =>  0:07
 CLOCK: [2022-07-04 lun. 00:47]--[2022-07-04 lun. 00:55] =>  0:08
@@ -27,6 +28,6 @@ CLOCK: [2022-07-04 lun. 00:47]--[2022-07-04 lun. 00:55] =>  0:08
 - [X] Add LICENCE file for GPLv3
 - [X] Add a README.md file with installation instruction
 - [X] Add doxygen support and generate Doxyfile.in from cmake script  
-- [ ] Start cmake script for browser and lib
+- [X] Start cmake script for browser and lib
   We need at least one source in lib, start with ConfigReader
 - [ ] Add a markdown-based doxygen mainpage in src/

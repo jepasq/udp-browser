@@ -20,14 +20,20 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 include(FindPkgConfig)
 pkg_check_modules(LIBS REQUIRED fox>=1.6)
 
+# The main library (at least used by editor)
+add_library(udpb SHARED
+  src/lib/ConfigReader.cpp
+  )
+
+
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
 set(EDITOR_SRC
   #  src/browser/main.cpp
 )
 add_executable(elecrud src/browser/main.cpp ${EDITOR_SRC}) 
-target_link_libraries(elecrud ${LIBS_LIBRARIES})
-target_include_directories(elecrud PUBLIC ${SDL2_INCLUDE_DIRS})
+target_link_libraries(elecrud ${LIBS_LIBRARIES} udpb)
+target_include_directories(elecrud PUBLIC src/lib ${SDL2_INCLUDE_DIRS})
 
 # Unit tests
 #find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
