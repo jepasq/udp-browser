@@ -3,19 +3,27 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
+**** Let's you create website on the fly
+MainWindow, in its editor mode, have alist of basic HTML element
+(div, span etc...) we can drag and drop
+
 **** Handle preference dialog
 - [ ] Change our username
 - [ ] Quota : you tell how many disk spaces it can use. :
   This space will be used to shadow copy others websites
+- [ ] Disk space is composed of chunk of fixed size (500Kb ?);
 **** Handle unit tests
 **** Websites are called site@user
      User can be
 - [ ] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
 **** Main browser window is also an editor
+:LOGBOOK:
+CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
+:END:
      Should use the Qt WebEngine
-- [ ] main()'s package name and version comes from a generated config.h file
-- [ ] cmake must search for Qt5
+- [X] main()'s package name and version comes from a generated config.h file
+- [ ] cmake must search for Qt5 or 6 ?
   and handle MOC files etc...
 - [ ] library handle files serialization (how ?)
 **** TODO Correct project setup

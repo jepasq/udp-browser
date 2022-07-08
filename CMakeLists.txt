@@ -8,10 +8,10 @@ configure_file(
   "${PROJECT_BINARY_DIR}/Doxyfile"
   )
 
-#configure_file(
-#  "${PROJECT_SOURCE_DIR}/src/config.h.in"
-#  "${PROJECT_BINARY_DIR}/config.h"
-#  )
+configure_file(
+  "${PROJECT_SOURCE_DIR}/src/config.h.in"
+  "${PROJECT_BINARY_DIR}/config.h"
+  )
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED on)
@@ -33,7 +33,10 @@ set(EDITOR_SRC
 )
 add_executable(elecrud src/browser/main.cpp ${EDITOR_SRC}) 
 target_link_libraries(elecrud ${LIBS_LIBRARIES} udpb)
-target_include_directories(elecrud PUBLIC src/lib ${SDL2_INCLUDE_DIRS})
+target_include_directories(elecrud PUBLIC src/lib
+  ${SDL2_INCLUDE_DIRS}
+  ${PROJECT_BINARY_DIR}
+)
 
 # Unit tests
 #find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 

@@ -2,6 +2,8 @@
 
 #include "ConfigReader.hpp"
 
+#include "config.h"
+
 int
 main()
 {
@@ -10,7 +12,7 @@ main()
 
   ConfigReader cr;
   
-  cout << "Starting udp-browser v..." << endl;
+  cout << "Starting " << PROJECT_NAME << " " << PROJECT_NUMBER << endl;
 
   return 0;
 }
