@@ -12,12 +12,12 @@ MainWindow, in its editor mode, have alist of basic HTML element
 - [ ] Quota : you tell how many disk spaces it can use. :
   This space will be used to shadow copy others websites
 - [ ] Disk space is composed of chunk of fixed size (500Kb ?);
-**** Handle unit tests
 **** Websites are called site@user
-     User can be
+     User can be a name or a hashsum.
 - [ ] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
-**** Main browser window is also an editor
+**** Handle unit tests
+**** TODO Main browser window is also an editor
 :LOGBOOK:
 CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
 :END:
@@ -26,8 +26,9 @@ CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
 - [ ] cmake must search for Qt5 or 6 ?
   and handle MOC files etc...
 - [ ] library handle files serialization (how ?)
-**** TODO Correct project setup
+**** DONE Correct project setup
 :LOGBOOK:
+CLOCK: [2022-07-11 lun. 02:14]--[2022-07-11 lun. 02:21] =>  0:07
 CLOCK: [2022-07-06 mer. 02:41]--[2022-07-06 mer. 02:51] =>  0:10
 CLOCK: [2022-07-05 mar. 02:19]--[2022-07-05 mar. 02:26] =>  0:07
 CLOCK: [2022-07-05 mar. 01:58]--[2022-07-05 mar. 02:05] =>  0:07
@@ -38,4 +39,4 @@ CLOCK: [2022-07-04 lun. 00:47]--[2022-07-04 lun. 00:55] =>  0:08
 - [X] Add doxygen support and generate Doxyfile.in from cmake script  
 - [X] Start cmake script for browser and lib
   We need at least one source in lib, start with ConfigReader
-- [ ] Add a markdown-based doxygen mainpage in src/
+- [X] Add a markdown-based doxygen mainpage in src/
