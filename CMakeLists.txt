@@ -1,7 +1,18 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.1.0)
 
-project(udp-browser VERSION 0.0.0)
+project(udp-browser VERSION 0.0.0 LANGUAGES CXX)
 set(REVISION 0)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+if(CMAKE_VERSION VERSION_LESS "3.7.0")
+    set(CMAKE_INCLUDE_CURRENT_DIR ON)
+endif()
 
 configure_file(
   "${PROJECT_SOURCE_DIR}/Doxyfile.in"
@@ -17,23 +28,24 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
-include(FindPkgConfig)
-pkg_check_modules(LIBS REQUIRED fox>=1.6)
+#include(FindPkgConfig)
+#pkg_check_modules(LIBS REQUIRED fox>=1.6)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
 
 # The main library (at least used by editor)
 add_library(udpb SHARED
   src/lib/ConfigReader.cpp
   )
 
-
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
 set(EDITOR_SRC
   #  src/browser/main.cpp
 )
-add_executable(elecrud src/browser/main.cpp ${EDITOR_SRC}) 
-target_link_libraries(elecrud ${LIBS_LIBRARIES} udpb)
-target_include_directories(elecrud PUBLIC src/lib
+add_executable(udp-browser src/browser/main.cpp ${EDITOR_SRC}) 
+target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)
+target_include_directories(udp-browser PUBLIC src/lib
   ${SDL2_INCLUDE_DIRS}
   ${PROJECT_BINARY_DIR}
 )

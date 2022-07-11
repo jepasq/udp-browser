@@ -3,6 +3,9 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
+**** Add a search widget
+- Included search engine let you discover new websites;
+
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop
@@ -16,15 +19,20 @@ MainWindow, in its editor mode, have alist of basic HTML element
      User can be a name or a hashsum.
 - [ ] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
+- [ ] Webcontent is first compressed then signed then splited in chunks;
 **** Handle unit tests
 **** TODO Main browser window is also an editor
 :LOGBOOK:
+CLOCK: [2022-07-11 lun. 02:35]--[2022-07-11 lun. 02:50] =>  0:15
 CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
 :END:
      Should use the Qt WebEngine
 - [X] main()'s package name and version comes from a generated config.h file
-- [ ] cmake must search for Qt5 or 6 ?
+- [X] Ther's still a elecrud makefile rule : removed
+- [ ] cmake must search for Qt5
   and handle MOC files etc...
+  see https://doc.qt.io/qt-5/cmake-get-started.html
+- [ ] MainWindow class has a mode value (browser||editor)  
 - [ ] library handle files serialization (how ?)
 **** DONE Correct project setup
 :LOGBOOK:
