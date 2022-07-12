@@ -1,0 +1,9 @@
+* v0.0.0-1 (04 Jul. 2022 - 12 Jul. 2022)
+- main binary show MainWindow ui file
+- Add a MainWindow.ui draft
+- cmake search for Qt5
+- main()'s package name and version comes from a generated config.h file
+- Add ConfigReader class to src/lib
+- Doxygen use version and revision from cmake
+- Add a first draft as cmake script
+- Add GPlv3 COPYING file
