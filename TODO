@@ -5,4 +5,4 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     Update version and revision from CMakeLists.txt
 
 * v0.0.0-2 (12 Jul. 2022 - ???)
-
+- (1) Add BrowserMode enumeration

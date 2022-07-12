@@ -2,13 +2,26 @@
 
 #include <QWidget>
 
+/** The actual browser mode
+  *
+  */
+enum BrowserMode
+  {
+    BM_BROWSER,  //!< We're in browser mode
+    BM_EDITOR    //!< We're editing our webspace
+  };
+
+/** The main browser window
+  *
+  */
 class MainWindow : public QMainWindow
 {
  Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+  explicit MainWindow(QWidget *parent = nullptr);
 
 private:
-    Ui::MainWindow ui;
+  BrowserMode mode;
+  Ui::MainWindow ui;
 };
