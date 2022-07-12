@@ -4,20 +4,10 @@
 
 #include "config.h"
 
-//#include "ui_MainWindow.h" # MOC generated file
-
-static QWidget*
-loadUiFile(QWidget *parent)
-{
-  QFile file(":/forms/textfinder.ui");
-  file.open(QIODevice::ReadOnly);
-  
-  QUiLoader loader;
-  return loader.load(&file, parent);
-}
+#include "MainWindow.hpp"
 
 int
-main()
+main(int argc, char *argv[])
 {
   using std::cout;
   using std::endl;
@@ -25,15 +15,11 @@ main()
   ConfigReader cr;
 
 
-  QApplication app(argc, argv);
-  QWidget widget;
-  /*  Ui::MainWindow ui;
-  ui.setupUi(&widget);
-  */
-  loadUiFile(&widget);
-  widget.show();
-  
   cout << "Starting " << PROJECT_NAME << " " << PROJECT_NUMBER << endl;
+  QApplication app(argc, argv);
+  MainWindow mw;
+  mw.show();
+  
 
-  return 0;
+  return app.exec();
 }

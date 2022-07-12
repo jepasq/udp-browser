@@ -26,6 +26,7 @@ MainWindow, in its editor mode, have alist of basic HTML element
 **** Handle unit tests
 **** TODO Main browser window is also an editor
 :LOGBOOK:
+CLOCK: [2022-07-12 mar. 03:53]--[2022-07-12 mar. 04:32] =>  0:39
 CLOCK: [2022-07-12 mar. 02:46]--[2022-07-12 mar. 03:18] =>  0:32
 CLOCK: [2022-07-11 lun. 02:35]--[2022-07-11 lun. 02:50] =>  0:15
 CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
@@ -37,7 +38,9 @@ CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
   and handle MOC files etc...
   see https://doc.qt.io/qt-5/cmake-get-started.html
 - [X] MainWindow.ui design. WebWidget and editor are in a QStackedWidget
-- [ ] MainWindow class has a mode value (browser||editor)  
+- [X] Understand how to use ui file
+  see https://doc.qt.io/qt-6/designer-using-a-ui-file.html
+- [ ] MainWindow class has a mode value (browser||editor)
 - [ ] library handle files serialization (how ?)
 **** DONE Correct project setup
 :LOGBOOK:

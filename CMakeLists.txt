@@ -30,7 +30,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
 #include(FindPkgConfig)
 #pkg_check_modules(LIBS REQUIRED fox>=1.6)
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Widgets WebView REQUIRED)
 
 
 # The main library (at least used by editor)
@@ -42,8 +42,9 @@ add_library(udpb SHARED
 # Do not contain main.cpp to avoid multiple definitions of main()
 set(BROWSER_SRC
   src/browser/main.cpp
-
-  ui/MainWindow.ui
+  src/browser/MainWindow.cpp
+  
+  src/browser/ui/MainWindow.ui
 )
 add_executable(udp-browser ${BROWSER_SRC}) 
 target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)

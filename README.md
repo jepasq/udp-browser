@@ -6,7 +6,7 @@ A web browser designed like a meta server
 
 On arch-based GNU/linux distributions :
 
-	sudo pacman -S cmake gcc qt5-base
+	sudo pacman -S cmake gcc qt5-base qt5-webview
 	
 ## Building
 
