@@ -5,7 +5,8 @@
 *** v0.0.1
 **** Add a search widget
 - Included search engine let you discover new websites;
-
+- An included IA (using libfann) try to suggest you new intersting websites;
+  Maybe something like a 'for you' page or so
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop
@@ -20,18 +21,22 @@ MainWindow, in its editor mode, have alist of basic HTML element
 - [ ] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
 - [ ] Webcontent is first compressed then signed then splited in chunks;
+- When we need a chunk, we first ask for the last known revision, then
+  ask our friends if they know this revision.
 **** Handle unit tests
 **** TODO Main browser window is also an editor
 :LOGBOOK:
+CLOCK: [2022-07-12 mar. 02:46]--[2022-07-12 mar. 03:18] =>  0:32
 CLOCK: [2022-07-11 lun. 02:35]--[2022-07-11 lun. 02:50] =>  0:15
 CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
 :END:
      Should use the Qt WebEngine
 - [X] main()'s package name and version comes from a generated config.h file
 - [X] Ther's still a elecrud makefile rule : removed
-- [ ] cmake must search for Qt5
+- [X] cmake must search for Qt5
   and handle MOC files etc...
   see https://doc.qt.io/qt-5/cmake-get-started.html
+- [X] MainWindow.ui design. WebWidget and editor are in a QStackedWidget
 - [ ] MainWindow class has a mode value (browser||editor)  
 - [ ] library handle files serialization (how ?)
 **** DONE Correct project setup

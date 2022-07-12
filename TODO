@@ -5,7 +5,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     Update version and revision from CMakeLists.txt
 
 * v0.0.0-1 (04 Jul. 2022 - ???)
-- (6) cmake search for Qt5
+- (7) Add a MainWindow.ui draft
+- cmake search for Qt5
 - main()'s package name and version comes from a generated config.h file
 - Add ConfigReader class to src/lib
 - Doxygen use version and revision from cmake

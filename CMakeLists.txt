@@ -40,10 +40,12 @@ add_library(udpb SHARED
 
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
-set(EDITOR_SRC
-  #  src/browser/main.cpp
+set(BROWSER_SRC
+  src/browser/main.cpp
+
+  ui/MainWindow.ui
 )
-add_executable(udp-browser src/browser/main.cpp ${EDITOR_SRC}) 
+add_executable(udp-browser ${BROWSER_SRC}) 
 target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)
 target_include_directories(udp-browser PUBLIC src/lib
   ${SDL2_INCLUDE_DIRS}
