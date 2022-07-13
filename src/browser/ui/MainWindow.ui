@@ -21,9 +21,9 @@
        <widget class="QLineEdit" name="lineEdit"/>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="pbMode">
         <property name="text">
-         <string>Mode</string>
+         <string>Browser</string>
         </property>
        </widget>
       </item>

@@ -2,13 +2,13 @@
 
 #include <QWidget>
 
-/** The actual browser mode
+/** The actual MainWindow's  browser mode
   *
   */
 enum BrowserMode
   {
-    BM_BROWSER,  //!< We're in browser mode
-    BM_EDITOR    //!< We're editing our webspace
+    BM_BROWSER = 0,  //!< We're in browser mode
+    BM_EDITOR        //!< We're editing our webspace
   };
 
 /** The main browser window
@@ -21,6 +21,13 @@ class MainWindow : public QMainWindow
 public:
   explicit MainWindow(QWidget *parent = nullptr);
 
+private slots:
+  void on_pbMode_clicked(bool value);
+
+protected:
+  void nextMode();
+  QString modeToStr();
+  
 private:
   BrowserMode mode;
   Ui::MainWindow ui;
