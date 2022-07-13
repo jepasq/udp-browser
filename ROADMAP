@@ -26,6 +26,7 @@ MainWindow, in its editor mode, have alist of basic HTML element
 **** Handle unit tests
 **** TODO Main browser window is also an editor
 :LOGBOOK:
+CLOCK: [2022-07-13 mer. 02:31]--[2022-07-13 mer. 02:54] =>  0:23
 CLOCK: [2022-07-13 mer. 01:38]--[2022-07-13 mer. 02:28] =>  0:50
 CLOCK: [2022-07-13 mer. 00:55]--[2022-07-13 mer. 01:07] =>  0:12
 CLOCK: [2022-07-13 mer. 00:31]--[2022-07-13 mer. 00:45] =>  0:14
@@ -43,11 +44,11 @@ CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
 - [X] MainWindow.ui design. WebWidget and editor are in a QStackedWidget
 - [X] Understand how to use ui file
   see https://doc.qt.io/qt-6/designer-using-a-ui-file.html
-- [-] MainWindow class has a mode value (browser||editor)
+- [X] MainWindow class has a mode value (browser||editor)
   Initial state is browser
   - [X] Handle its type
   - [X] Handle a onToggleMode private signal
-  - [ ] Must change page of stackedwidget
+  - [X] Must change page of stackedwidget
 - [ ] MainWindow's title shoud show project name and version
 - [ ] Must add a hanburger menu at the right of the Mode button
   At least with about/preferences choices

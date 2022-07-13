@@ -25,10 +25,10 @@ private slots:
   void on_pbMode_clicked(bool value);
 
 protected:
-  void nextMode();
+  void    nextMode();
   QString modeToStr();
   
 private:
-  BrowserMode mode;
-  Ui::MainWindow ui;
+  BrowserMode mode;   //!< The current mode
+  Ui::MainWindow ui;  //!< The ui objects from the designer .ui file
 };
