@@ -4,4 +4,12 @@
 #define PROJECT_NAME   "@CMAKE_PROJECT_NAME@"
 #define PROJECT_NUMBER "v@CMAKE_PROJECT_VERSION@-@REVISION@"
 
+/** The MainWindow's title
+  *
+  * Can't use a const char* or a string here to avoid 'multiple definitions'
+  * error. 
+  *
+  */
+#define WTITLE "@CMAKE_PROJECT_NAME@ v@CMAKE_PROJECT_VERSION@-@REVISION@"
+
 #endif // !__CONFIG_H__

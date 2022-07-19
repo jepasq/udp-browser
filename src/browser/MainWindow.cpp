@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "config.h" // USES WTITLE
+
 /** The main window constructor
   *
   * \param parent An optional parent defaulted to nullptr.
@@ -15,6 +17,7 @@ MainWindow::MainWindow(QWidget* parent):
   // Set initial button's label and stackedWidget's page
   ui.stackedWidget->setCurrentIndex(static_cast<int>(mode));
   ui.pbMode->setText(modeToStr());
+  setWindowTitle(WTITLE);
 }
 
 void
