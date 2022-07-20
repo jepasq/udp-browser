@@ -48,3 +48,10 @@ MainWindow::modeToStr()
   int i = static_cast<int>(mode);
   return m[i];
 }
+
+void
+MainWindow::on_pbHamburger_clicked(bool value)
+{
+  std::cout << "Hamburger menu clicked" << std::endl;
+}
+

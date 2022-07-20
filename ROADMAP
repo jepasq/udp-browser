@@ -11,11 +11,6 @@
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop
 
-**** Handle preference dialog
-- [ ] Change our username
-- [ ] Quota : you tell how many disk spaces it can use. :
-  This space will be used to shadow copy others websites
-- [ ] Disk space is composed of chunk of fixed size (500Kb ?);
 **** Websites are called site@user
      User can be a name or a hashsum.
 - [ ] We must have a configuration file somewhere to keep username
@@ -24,8 +19,14 @@ MainWindow, in its editor mode, have alist of basic HTML element
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
 **** Handle unit tests
+**** Handle preference dialog
+- [ ] Change our username
+- [ ] Quota : you tell how many disk spaces it can use. :
+  This space will be used to shadow copy others websites
+- [ ] Disk space is composed of chunk of fixed size (500Kb ?);
 **** TODO Main browser window is also an editor
 :LOGBOOK:
+CLOCK: [2022-07-20 mer. 07:53]
 CLOCK: [2022-07-19 mar. 06:06]--[2022-07-19 mar. 06:15] =>  0:09
 CLOCK: [2022-07-13 mer. 02:31]--[2022-07-13 mer. 02:54] =>  0:23
 CLOCK: [2022-07-13 mer. 01:38]--[2022-07-13 mer. 02:28] =>  0:50
@@ -51,7 +52,7 @@ CLOCK: [2022-07-08 ven. 02:23]--[2022-07-08 ven. 02:26] =>  0:03
   - [X] Handle a onToggleMode private signal
   - [X] Must change page of stackedwidget
 - [X] MainWindow's title should show project name and version
-- [ ] Must add a hanburger menu at the right of the Mode button
+- [X] Must add a hanburger menu at the right of the Mode button
   At least with about/preferences choices
 - [ ] library handle files serialization (how ?)
 **** DONE Correct project setup

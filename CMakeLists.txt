@@ -45,6 +45,8 @@ set(BROWSER_SRC
   src/browser/MainWindow.cpp
   
   src/browser/ui/MainWindow.ui
+
+  media/resources.qrc
 )
 add_executable(udp-browser ${BROWSER_SRC}) 
 target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)

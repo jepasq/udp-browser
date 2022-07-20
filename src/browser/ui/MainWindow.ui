@@ -27,6 +27,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="pbHamburger">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../../../media/resources.qrc">
+          <normaloff>:/hamburger.png</normaloff>:/hamburger.png</iconset>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
@@ -135,6 +146,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../../media/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
