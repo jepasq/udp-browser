@@ -36,7 +36,10 @@ find_package(Qt5 COMPONENTS Widgets WebView REQUIRED)
 # The main library (at least used by editor)
 add_library(udpb SHARED
   src/lib/ConfigReader.cpp
+  src/lib/Serializer.cpp
   )
+
+target_link_libraries(udpb Qt5::Widgets)
 
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
@@ -50,10 +53,7 @@ set(BROWSER_SRC
 )
 add_executable(udp-browser ${BROWSER_SRC}) 
 target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)
-target_include_directories(udp-browser PUBLIC src/lib
-  ${SDL2_INCLUDE_DIRS}
-  ${PROJECT_BINARY_DIR}
-)
+target_include_directories(udp-browser PUBLIC src/lib  ${PROJECT_BINARY_DIR})
 
 # Unit tests
 #find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
