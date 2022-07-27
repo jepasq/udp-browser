@@ -23,13 +23,16 @@ MainWindow, in its editor mode, have alist of basic HTML element
 **** Handle unit tests
 **** TODO Handle preference dialog
 :LOGBOOK:
+CLOCK: [2022-07-27 mer. 08:19]--[2022-07-27 mer. 08:51] =>  0:32
 CLOCK: [2022-07-27 mer. 06:52]--[2022-07-27 mer. 07:07] =>  0:15
 CLOCK: [2022-07-27 mer. 06:24]--[2022-07-27 mer. 06:39] =>  0:15
 :END:
 - [X] Hamburger menu should show a pane
 - [X] Add Preferences to the Hamurger pane
-- [ ] Start the Preferences.ui file with =designer=    
-- [ ] Change our username
+- [X] Start the Preferences.ui file with =designer=
+  and the PreferencesDialog class
+- [ ] Change our username and save it in a Preferences class that only
+  keeps these values (and can be serialized)
 - [ ] Quota : you tell how many disk spaces it can use. :
   This space will be used to shadow copy others websites
 - [ ] Disk space is composed of chunk of fixed size (500Kb ?);

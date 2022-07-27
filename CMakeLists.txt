@@ -46,8 +46,10 @@ target_link_libraries(udpb Qt5::Widgets)
 set(BROWSER_SRC
   src/browser/main.cpp
   src/browser/MainWindow.cpp
+  src/browser/PreferencesDialog.cpp
   
   src/browser/ui/MainWindow.ui
+  src/browser/ui/Preferences.ui
 
   media/resources.qrc
 )

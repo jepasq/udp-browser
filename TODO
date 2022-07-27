@@ -5,7 +5,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     Update version and revision from CMakeLists.txt
 
 * v0.0.0-2 (12 Jul. 2022 - ???)
-- (7) Add a menu t hamburger button
+- (8) Add Preferences dialog and exec() it
+- Add a menu t hamburger button
 - Start to implement the Serializer class
 - Add a hamburger menu to main window
 - Add program name and version in widow's title

@@ -3,6 +3,8 @@
 #include <iostream>
 
 #include "config.h" // USES WTITLE
+#include "PreferencesDialog.hpp"
+
 
 /** The main window constructor
   *
@@ -70,5 +72,7 @@ void
 MainWindow::onPreferencesClicked(bool value)
 {
   std::cout << "Show preferences dialog..." << std::endl;
+  PreferencesDialog prd;
+  prd.exec();
 }
 
