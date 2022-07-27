@@ -3,13 +3,7 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
 === ChangeLog ===
     (8 items by revision)
     Update version and revision from CMakeLists.txt
+    SLOC is the result of https://github.com/flosse/sloc on src/.
 
-* v0.0.0-2 (12 Jul. 2022 - ???)
-- (8) Add Preferences dialog and exec() it
-- Add a menu t hamburger button
-- Start to implement the Serializer class
-- Add a hamburger menu to main window
-- Add program name and version in widow's title
-- Changing mode updates stacked widget page
-- Mode button toggles MainWindow's mode
-- Add BrowserMode enumeration
+* v0.0.0-3 (27 Jul. 2022 - ???) SLOC ???
+
