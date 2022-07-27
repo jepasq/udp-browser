@@ -20,10 +20,13 @@ MainWindow::MainWindow(QWidget* parent):
   ui.pbMode->setText(modeToStr());
   setWindowTitle(WTITLE);
 
+  auto prefAction = new QAction("&Preferences", this);
   hamMenu = new QMenu("Global menu", this);
-  hamMenu->addAction("&Preferences");
+  hamMenu->addAction(prefAction);
 
   ui.pbHamburger->setMenu(hamMenu);
+  connect(prefAction, &QAction::triggered,
+	  this, &MainWindow::onPreferencesClicked);
 }
 
 /** The window destructor
@@ -64,8 +67,8 @@ MainWindow::modeToStr()
 }
 
 void
-MainWindow::on_pbHamburger_clicked(bool value)
+MainWindow::onPreferencesClicked(bool value)
 {
-  //  hamMenu->show();
+  std::cout << "Show preferences dialog..." << std::endl;
 }
 

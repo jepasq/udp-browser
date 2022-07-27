@@ -24,7 +24,8 @@ public:
 						
 private slots:
   void on_pbMode_clicked(bool value);
-  void on_pbHamburger_clicked(bool value);
+
+  void onPreferencesClicked(bool value);
 
 protected:
   void    nextMode();

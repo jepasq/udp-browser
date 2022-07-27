@@ -23,10 +23,11 @@ MainWindow, in its editor mode, have alist of basic HTML element
 **** Handle unit tests
 **** TODO Handle preference dialog
 :LOGBOOK:
+CLOCK: [2022-07-27 mer. 06:52]--[2022-07-27 mer. 07:07] =>  0:15
 CLOCK: [2022-07-27 mer. 06:24]--[2022-07-27 mer. 06:39] =>  0:15
 :END:
 - [X] Hamburger menu should show a pane
-- [ ] Add Preferences to the Hamurger pane
+- [X] Add Preferences to the Hamurger pane
 - [ ] Start the Preferences.ui file with =designer=    
 - [ ] Change our username
 - [ ] Quota : you tell how many disk spaces it can use. :
