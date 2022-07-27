@@ -20,7 +20,8 @@ class MainWindow : public QMainWindow
 
 public:
   explicit MainWindow(QWidget *parent = nullptr);
-
+  virtual ~MainWindow();						
+						
 private slots:
   void on_pbMode_clicked(bool value);
   void on_pbHamburger_clicked(bool value);
@@ -32,4 +33,6 @@ protected:
 private:
   BrowserMode mode;   //!< The current mode
   Ui::MainWindow ui;  //!< The ui objects from the designer .ui file
+
+  QMenu* hamMenu;      //!< The hamberger menu
 };

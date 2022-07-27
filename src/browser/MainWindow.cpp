@@ -10,7 +10,8 @@
   *
   */
 MainWindow::MainWindow(QWidget* parent):
-  mode(BM_BROWSER)
+  mode(BM_BROWSER),
+  hamMenu(nullptr)
 {
   ui.setupUi(this);
 
@@ -18,6 +19,19 @@ MainWindow::MainWindow(QWidget* parent):
   ui.stackedWidget->setCurrentIndex(static_cast<int>(mode));
   ui.pbMode->setText(modeToStr());
   setWindowTitle(WTITLE);
+
+  hamMenu = new QMenu("Global menu", this);
+  hamMenu->addAction("&Preferences");
+
+  ui.pbHamburger->setMenu(hamMenu);
+}
+
+/** The window destructor
+  *
+  */
+MainWindow::~MainWindow()
+{
+  delete hamMenu;
 }
 
 void
@@ -52,6 +66,6 @@ MainWindow::modeToStr()
 void
 MainWindow::on_pbHamburger_clicked(bool value)
 {
-  std::cout << "Hamburger menu clicked" << std::endl;
+  //  hamMenu->show();
 }
 
