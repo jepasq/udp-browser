@@ -23,6 +23,7 @@ MainWindow, in its editor mode, have alist of basic HTML element
 **** Handle unit tests
 **** TODO Handle preference dialog
 :LOGBOOK:
+CLOCK: [2022-07-29 ven. 10:17]--[2022-07-29 ven. 10:39] =>  0:22
 CLOCK: [2022-07-29 ven. 09:38]--[2022-07-29 ven. 10:08] =>  0:30
 CLOCK: [2022-07-27 mer. 08:19]--[2022-07-27 mer. 08:51] =>  0:32
 CLOCK: [2022-07-27 mer. 06:52]--[2022-07-27 mer. 07:07] =>  0:15
@@ -34,6 +35,8 @@ CLOCK: [2022-07-27 mer. 06:24]--[2022-07-27 mer. 06:39] =>  0:15
   and the PreferencesDialog class
 - [X] Quota : you tell how many disk spaces it can use. :
   This space will be used to shadow copy others websites
+- [ ] Implement lib/Preferences serialization trying to inherits Serializer
+  Should certainly make the stream variable protected in Serializer class
 - [ ] Change our username and save it in a Preferences class that only
   keeps these values (and can be serialized)
 - [ ] Disk space is composed of chunk of fixed size (500Kb ?);

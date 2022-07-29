@@ -38,6 +38,7 @@ find_package(Qt5 COMPONENTS Widgets WebView REQUIRED)
 # The main library (at least used by editor)
 add_library(udpb SHARED
   src/lib/ConfigReader.cpp
+  src/lib/Preferences.cpp
   src/lib/Serializer.cpp
   )
 
