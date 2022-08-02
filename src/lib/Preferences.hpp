@@ -12,7 +12,10 @@ class Preferences : public Serializer
 {
 public:
   Preferences();
-  
+
+  virtual void save(void);
+  virtual void load(void);
+
 private:
   QString      username; //!< The local username
   unsigned int quota;    //!< Quota in Kb

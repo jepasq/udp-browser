@@ -5,3 +5,16 @@ Preferences::Preferences():
 {
 
 }
+
+void
+Preferences::save(void)
+{
+  Serializer::save();
+}
+
+void
+Preferences::load(void)
+{
+  Serializer::load();
+
+}
