@@ -1,11 +1,31 @@
 #include "Preferences.hpp"
 
+#include <string>
+#include <fstream>
+
 #define BOOST_TEST_MODULE Preferences
 #include <boost/test/unit_test.hpp>
 
-BOOST_AUTO_TEST_CASE( can_instanciate )
+const QString fname = "preferences-test.dat";
+
+bool
+file_exists(const std::string& file)
 {
-  Preferences p;
-  
+  std::ifstream infile(file);
+  return infile.good();
+}
+
+BOOST_AUTO_TEST_CASE( can_be_instanciated )
+{
+  Preferences p(fname);
   BOOST_CHECK( 1 == 1 );
 }
+
+BOOST_AUTO_TEST_CASE( save_create_file )
+{
+  Preferences p(fname);
+  p.save();
+  
+  BOOST_CHECK( file_exists(fname.toStdString()));
+}
+

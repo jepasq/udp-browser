@@ -1,7 +1,7 @@
 #include "Preferences.hpp"
 
-Preferences::Preferences():
-  Serializer("preferences.dat")
+Preferences::Preferences(const QString& filen):
+  Serializer(filen)
 {
 
 }

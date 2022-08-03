@@ -11,7 +11,7 @@
 class Preferences : public Serializer
 {
 public:
-  Preferences();
+  Preferences(const QString& filen = "preferences.dat");
 
   virtual void save(void);
   virtual void load(void);
