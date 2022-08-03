@@ -61,9 +61,10 @@ target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)
 target_include_directories(udp-browser PUBLIC src/lib  ${PROJECT_BINARY_DIR})
 
 # Unit tests
-#find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
-#add_executable(tests src/tests.cpp
-#  ${EDITOR_SRC}
-#  src/editor/MainWindow_Test.cpp)
-#target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES})
-#add_custom_target(check COMMAND tests) # Add the `make check` command
+find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
+add_executable(tests src/tests.cpp
+#  ${BROWSER_SRC}
+  src/lib/Preferences_Test.cpp)
+target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
+  udpb Qt5::Widgets)
+add_custom_target(check COMMAND tests) # Add the `make check` command

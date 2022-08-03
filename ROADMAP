@@ -20,9 +20,15 @@ MainWindow, in its editor mode, have alist of basic HTML element
   using Serializer
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
-**** Handle unit tests
+**** Handle unit tests and CI
+:LOGBOOK:
+CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
+:END:
+- [ ] Create rule and add tests
+  Trying to implement some for lib/Preferences
 **** TODO Handle preference dialog
 :LOGBOOK:
+CLOCK: [2022-08-03 mer. 07:32]--[2022-08-03 mer. 07:47] =>  0:15
 CLOCK: [2022-07-29 ven. 10:17]--[2022-07-29 ven. 10:39] =>  0:22
 CLOCK: [2022-07-29 ven. 09:38]--[2022-07-29 ven. 10:08] =>  0:30
 CLOCK: [2022-07-27 mer. 08:19]--[2022-07-27 mer. 08:51] =>  0:32

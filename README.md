@@ -10,7 +10,7 @@ On arch-based GNU/linux distributions :
 
 on  debian-based distributions (such as Ubuntu) :
 
-        sudo apt-get install qt5-default qtbase5-dev
+    sudo apt-get install qt5-default qtbase5-dev
 
 ## Building
 
