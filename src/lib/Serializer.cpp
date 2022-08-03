@@ -10,7 +10,7 @@ Serializer::Serializer(const QString& fname):
 }
 
 void
-Serializer::load()
+Serializer::save()
 {
   QFile file(filename);
   file.open(QIODevice::WriteOnly);
@@ -21,7 +21,7 @@ Serializer::load()
 }
 
 void
-Serializer::save()
+Serializer::load()
 {
   QFile file(filename);
   file.open(QIODevice::ReadOnly);

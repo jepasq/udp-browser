@@ -2,6 +2,7 @@
 
 #include <string>
 #include <fstream>
+#include <QString>
 
 #define BOOST_TEST_MODULE Preferences
 #include <boost/test/unit_test.hpp>
@@ -28,4 +29,13 @@ BOOST_AUTO_TEST_CASE( save_create_file )
   
   BOOST_CHECK( file_exists(fname.toStdString()));
 }
+
+BOOST_AUTO_TEST_CASE( default_filename )
+{
+  Preferences p(fname);
+  auto f = p.getUsername();
+  
+  BOOST_CHECK( f.isEmpty() );
+}
+
 

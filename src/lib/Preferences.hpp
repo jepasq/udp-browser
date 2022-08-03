@@ -16,6 +16,9 @@ public:
   virtual void save(void);
   virtual void load(void);
 
+  void           setUsername(const QString&);
+  const QString& getUsername(void) const;
+  
 private:
   QString      username; //!< The local username
   unsigned int quota;    //!< Quota in Kb

@@ -18,3 +18,16 @@ Preferences::load(void)
   Serializer::load();
 
 }
+
+void
+Preferences::setUsername(const QString& u)
+{
+  username= u;
+}
+
+const QString&
+Preferences::getUsername(void) const
+{
+  return username;
+}
+

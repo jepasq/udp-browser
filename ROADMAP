@@ -28,6 +28,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
   Trying to implement some for lib/Preferences
 **** TODO Handle preference dialog
 :LOGBOOK:
+CLOCK: [2022-08-03 mer. 13:22]--[2022-08-03 mer. 13:35] =>  0:13
 CLOCK: [2022-08-03 mer. 12:25]--[2022-08-03 mer. 12:58] =>  0:33
 CLOCK: [2022-08-03 mer. 07:32]--[2022-08-03 mer. 07:47] =>  0:15
 CLOCK: [2022-07-29 ven. 10:17]--[2022-07-29 ven. 10:39] =>  0:22
@@ -45,7 +46,9 @@ CLOCK: [2022-07-27 mer. 06:24]--[2022-07-27 mer. 06:39] =>  0:15
 - [-] Implement lib/Preferences serialization trying to inherits Serializer
   Should certainly make the stream variable protected in Serializer class
   - [X] Try to test preferences constructor with an optional filename
-  - [ ] Make actual preferences test work  
+  - [ ] Make actual preferences test work
+    Maybe Serialize::save and load should return a QDataStream used by
+    subclass to << and >> theire members ?
 - [ ] Change our username and save it in a Preferences class that only
   keeps these values (and can be serialized)
 - [ ] Disk space is composed of chunk of fixed size (500Kb ?);
