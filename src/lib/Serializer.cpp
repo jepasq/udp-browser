@@ -9,23 +9,25 @@ Serializer::Serializer(const QString& fname):
   
 }
 
-void
+QFile&
 Serializer::save()
 {
   QFile file(filename);
   file.open(QIODevice::WriteOnly);
-  QDataStream out(&file);   // we will serialize the data into the file
+  //  QDataStream out(&file);   // we will serialize the data into the file
   /*  out << QString("the answer is");   // serialize a string
   out << (qint32)42;        // serialize an integer
   */
+  return file;
 }
 
-void
+QFile&
 Serializer::load()
 {
   QFile file(filename);
   file.open(QIODevice::ReadOnly);
-  QDataStream in(&file); 
+  //  QDataStream in(&file);
+  return file;
 }
 
 const QString&

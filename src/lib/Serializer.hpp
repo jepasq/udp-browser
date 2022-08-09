@@ -2,19 +2,20 @@
 #define __SERIALIZER_HPP__
 
 #include <QString>
+#include <QFile>
 
 class Serializer
 {
 public:
   Serializer(const QString&);
 
-  void load(/* ProjectFile* or WebContent */);
-  void save(/* ProjectFile* */);
+  QFile& load(/* ProjectFile* or WebContent */);
+  QFile& save(/* ProjectFile* */);
 
   const QString& getFilename(void) const;
   void           setFilename(const QString&);
   
-private:
+protected:
   QString filename;  //!< The target path
 };
 

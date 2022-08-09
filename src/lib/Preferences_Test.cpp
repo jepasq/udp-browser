@@ -65,4 +65,18 @@ BOOST_AUTO_TEST_CASE( quota_set )
   BOOST_CHECK( p.getQuota() == quota );
 }
 
+BOOST_AUTO_TEST_CASE( save_username )
+{
+  QString s = "TestOne";
+  Preferences p1(fname);
+  p1.setUsername(s);
+  p1.save();
+
+  Preferences p2(fname);
+  p2.load();
+  BOOST_CHECK( p2.getUsername() == s );
+}
+
+
+
 

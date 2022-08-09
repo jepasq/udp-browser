@@ -1,5 +1,8 @@
 #include "Preferences.hpp"
 
+#include <QFile>
+#include <QDataStream>
+
 Preferences::Preferences(const QString& filen):
   Serializer(filen),
   quota(500)
@@ -10,14 +13,28 @@ Preferences::Preferences(const QString& filen):
 void
 Preferences::save(void)
 {
-  Serializer::save();
+  QFile file(filename);
+  file.open(QIODevice::WriteOnly);
+
+  //  QDataStream ds(&Serializer::save());
+  QDataStream ds(&file);
+  ds << username;
+  ds << quota;
 }
 
 void
 Preferences::load(void)
 {
-  Serializer::load();
-
+  /*
+  QDataStream ds(Serializer::load());
+  ds >> username;
+  ds >> quota;
+  */
+  QFile file(filename);
+  file.open(QIODevice::ReadOnly);
+  QDataStream ds(&file);
+  ds >> username;
+  ds >> quota;
 }
 
 void
