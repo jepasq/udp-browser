@@ -30,12 +30,21 @@ BOOST_AUTO_TEST_CASE( save_create_file )
   BOOST_CHECK( file_exists(fname.toStdString()));
 }
 
-BOOST_AUTO_TEST_CASE( default_filename )
+BOOST_AUTO_TEST_CASE( default_username )
 {
   Preferences p(fname);
   auto f = p.getUsername();
   
   BOOST_CHECK( f.isEmpty() );
+}
+
+BOOST_AUTO_TEST_CASE( default_set_username )
+{
+  QString s = "TestOne";
+  Preferences p(fname);
+  p.setUsername(s);
+  
+  BOOST_CHECK( p.getUsername() == s );
 }
 
 
