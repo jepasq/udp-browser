@@ -22,6 +22,7 @@ MainWindow, in its editor mode, have alist of basic HTML element
   ask our friends if they know this revision.
 **** Handle unit tests and CI
 :LOGBOOK:
+CLOCK: [2022-08-09 mar. 11:09]--[2022-08-09 mar. 11:18] =>  0:09
 CLOCK: [2022-08-09 mar. 10:45]--[2022-08-09 mar. 10:50] =>  0:05
 CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 :END:
@@ -44,6 +45,7 @@ CLOCK: [2022-07-27 mer. 06:24]--[2022-07-27 mer. 06:39] =>  0:15
   and the PreferencesDialog class
 - [X] Quota : you tell how many disk spaces it can use. :
   This space will be used to shadow copy others websites
+- [ ] Opnening Preferences dialog should show Preferences values
 - [-] Implement lib/Preferences serialization trying to inherits Serializer
   Should certainly make the stream variable protected in Serializer class
   - [X] Try to test preferences constructor with an optional filename

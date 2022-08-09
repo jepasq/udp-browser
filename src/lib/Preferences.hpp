@@ -18,10 +18,13 @@ public:
 
   void           setUsername(const QString&);
   const QString& getUsername(void) const;
-  
+
+  void         setQuota(unsigned int);
+  unsigned int getQuota(void) const;
+
 private:
   QString      username; //!< The local username
-  unsigned int quota;    //!< Quota in Kb
+  unsigned int quota;    //!< Quota in bytes
 };
 
 #endif // !__PREFERENCES_HPP__

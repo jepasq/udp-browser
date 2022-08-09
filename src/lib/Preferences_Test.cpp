@@ -38,13 +38,31 @@ BOOST_AUTO_TEST_CASE( default_username )
   BOOST_CHECK( f.isEmpty() );
 }
 
-BOOST_AUTO_TEST_CASE( default_set_username )
+BOOST_AUTO_TEST_CASE( set_username )
 {
   QString s = "TestOne";
   Preferences p(fname);
   p.setUsername(s);
   
   BOOST_CHECK( p.getUsername() == s );
+}
+
+BOOST_AUTO_TEST_CASE( quota_default )
+{
+  Preferences p(fname);
+  auto q=p.getQuota();
+  
+  BOOST_CHECK( q == 500 );
+}
+
+
+BOOST_AUTO_TEST_CASE( quota_set )
+{
+  unsigned int quota=1000;
+  Preferences p(fname);
+  p.setQuota(quota);
+  
+  BOOST_CHECK( p.getQuota() == quota );
 }
 
 
