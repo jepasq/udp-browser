@@ -1,10 +1,10 @@
 #include <iostream>
 
+#include "MainWindow.hpp"
+#include "Preferences.hpp"
 #include "ConfigReader.hpp"
 
 #include "config.h"
-
-#include "MainWindow.hpp"
 
 int
 main(int argc, char *argv[])
@@ -16,8 +16,18 @@ main(int argc, char *argv[])
 
 
   cout << "Starting " << PROJECT_NAME << " " << PROJECT_NUMBER << endl;
+
+  Preferences p;
+  p.load();
+  
+  auto un = p.getUsername();
+  if (un.isEmpty())
+    cout << "WARNING: your username is empty" << endl;
+  else
+    cout << "Welcome back '" << un.toStdString() << "'!" << endl;
+  
   QApplication app(argc, argv);
-  MainWindow mw;
+  MainWindow mw;//(&p);
   mw.show();
   
 

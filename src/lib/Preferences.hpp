@@ -5,7 +5,8 @@
 
 #include "Serializer.hpp"
 
-/** Handles localc preferences of the user, to be serialized and load at runtime
+/** Handles locale preferences of the user, to be serialized and
+  * load at runtime
   *
   */
 class Preferences : public Serializer

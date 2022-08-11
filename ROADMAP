@@ -30,6 +30,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
   Trying to implement some for lib/Preferences
 **** TODO Handle preference dialog
 :LOGBOOK:
+CLOCK: [2022-08-11 jeu. 11:21]--[2022-08-11 jeu. 11:36] =>  0:15
 CLOCK: [2022-08-09 mar. 11:47]--[2022-08-09 mar. 12:11] =>  0:24
 CLOCK: [2022-08-03 mer. 13:22]--[2022-08-03 mer. 13:35] =>  0:13
 CLOCK: [2022-08-03 mer. 12:25]--[2022-08-03 mer. 12:58] =>  0:33
@@ -47,6 +48,8 @@ CLOCK: [2022-07-27 mer. 06:24]--[2022-07-27 mer. 06:39] =>  0:15
 - [X] Quota : you tell how many disk spaces it can use. :
   This space will be used to shadow copy others websites
 - [ ] Opnening Preferences dialog should show Preferences values
+  - [ ] Pass main's Preferences object as parameter of MainWindow's ctor
+  - [ ] Also pass it at PreferencesDialog ctor
 - [ ] Preferences saving works but the File reference could come from
   Serializer (not a temporary reference though)
 - [-] Implement lib/Preferences serialization trying to inherits Serializer
