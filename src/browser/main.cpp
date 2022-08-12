@@ -6,6 +6,8 @@
 
 #include "config.h"
 
+#include <memory>
+
 int
 main(int argc, char *argv[])
 {
@@ -27,7 +29,7 @@ main(int argc, char *argv[])
     cout << "Welcome back '" << un.toStdString() << "'!" << endl;
   
   QApplication app(argc, argv);
-  MainWindow mw;//(&p);
+  MainWindow mw(&p);
   mw.show();
   
 

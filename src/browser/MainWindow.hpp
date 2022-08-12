@@ -6,6 +6,11 @@
 
 #include <QWidget>
 
+// Forward declarations
+class Preferences;
+// Edn of forward declarations
+
+
 /** The actual MainWindow's  browser mode
   *
   */
@@ -23,7 +28,7 @@ class MainWindow : public QMainWindow
  Q_OBJECT
 
 public:
-  explicit MainWindow(QWidget *parent = nullptr);
+  explicit MainWindow(Preferences*, QWidget *parent = nullptr);
   virtual ~MainWindow();						
 						
 private slots:
@@ -40,6 +45,7 @@ private:
   Ui::MainWindow ui;  //!< The ui objects from the designer .ui file
 
   QMenu* hamMenu;      //!< The hamberger menu
+  Preferences* pref;
 };
 
 #endif // !__MAIN_WINDOW_HPP__

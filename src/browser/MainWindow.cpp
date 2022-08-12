@@ -4,16 +4,17 @@
 
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
-
+#include "Preferences.hpp"
 
 /** The main window constructor
   *
   * \param parent An optional parent defaulted to nullptr.
   *
   */
-MainWindow::MainWindow(QWidget* parent):
+MainWindow::MainWindow(Preferences* p, QWidget* parent):
   mode(BM_BROWSER),
-  hamMenu(nullptr)
+  hamMenu(nullptr),
+  pref(p)
 {
   ui.setupUi(this);
 
