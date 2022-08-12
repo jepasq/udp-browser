@@ -24,8 +24,13 @@ public:
   unsigned int getQuota(void) const;
 
 private:
-  QString      username; //!< The local username
-  unsigned int quota;    //!< Quota in bytes
+  QString      username;  //!< The local username
+
+  unsigned int quota;
+  /*
+  unsigned int quotaNum;  //!< 
+  unsigned int quotaUnit; //!< Quota in bytes
+  */
 };
 
 #endif // !__PREFERENCES_HPP__

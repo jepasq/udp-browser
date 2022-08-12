@@ -2,8 +2,9 @@
 
 #include "Preferences.hpp"
 
-PreferencesDialog::PreferencesDialog()
+PreferencesDialog::PreferencesDialog(Preferences* p)
 {
   ui.setupUi(this);
-
+  ui.leUsername->setText(p->getUsername());
+  // sbQuota and cbQuota
 }

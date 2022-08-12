@@ -52,7 +52,7 @@ set(BROWSER_SRC
   src/browser/PreferencesDialog.cpp
   
   src/browser/ui/MainWindow.ui
-  src/browser/ui/Preferences.ui
+  src/browser/ui/PreferencesDialog.ui
 
   media/resources.qrc
 )

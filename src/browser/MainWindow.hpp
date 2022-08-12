@@ -8,7 +8,7 @@
 
 // Forward declarations
 class Preferences;
-// Edn of forward declarations
+// End of forward declarations
 
 
 /** The actual MainWindow's  browser mode
