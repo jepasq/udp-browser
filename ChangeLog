@@ -1,3 +1,13 @@
+* v0.0.0-3 (27 Jul. 2022 - 12 Aug. 2022) SLOC 462
+- MainWindow ctor takes a Preferences parameter
+- Load Preferences at startup in main() function
+- Preferences save/load work
+- Add Preferences quota setter and getter and unit test
+- Add Preferences username unit test
+- Add Preferences username setter and getter
+- Add unit tests support
+- Add quota-related widgets to PreferencesDialog
+
 * v0.0.0-2 (12 Jul. 2022 - 27 Jul. 2022) SLOC 261
 - Add Preferences dialog and exec() it
 - Add a menu t hamburger button

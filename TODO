@@ -5,12 +5,5 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     Update version and revision from CMakeLists.txt
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
-* v0.0.0-3 (27 Jul. 2022 - ???) SLOC ???
-- (8) MainWindow ctor takes a Preferences parameter
-- Load Preferences at startup in main() function
-- Preferences save/load work
-- Add Preferences quota setter and getter and unit test
-- Add Preferences username unit test
-- Add Preferences username setter and getter
-- Add unit tests support
-- Add quota-related widgets to PreferencesDialog
+* v0.0.0-4 (12 Aug. 2022 - ???) SLOC ???
+

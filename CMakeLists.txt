@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.1.0)
 project(udp-browser
   VERSION 0.0.0
   LANGUAGES CXX)
-set(REVISION 2)
+set(REVISION 3)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
