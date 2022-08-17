@@ -12,7 +12,7 @@ Serializer::Serializer(const QString& fname):
 QFile&
 Serializer::save()
 {
-  QFile file(filename);
+  file.setFileName(filename);
   file.open(QIODevice::WriteOnly);
   //  QDataStream out(&file);   // we will serialize the data into the file
   /*  out << QString("the answer is");   // serialize a string
@@ -24,7 +24,7 @@ Serializer::save()
 QFile&
 Serializer::load()
 {
-  QFile file(filename);
+  file.setFileName(filename);
   file.open(QIODevice::ReadOnly);
   //  QDataStream in(&file);
   return file;

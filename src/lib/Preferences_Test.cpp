@@ -50,7 +50,7 @@ BOOST_AUTO_TEST_CASE( set_username )
 BOOST_AUTO_TEST_CASE( quota_default )
 {
   Preferences p(fname);
-  auto q=p.getQuota();
+  auto q=p.getQuotaNum();
   
   BOOST_CHECK( q == 500 );
 }
@@ -60,9 +60,9 @@ BOOST_AUTO_TEST_CASE( quota_set )
 {
   unsigned int quota=1000;
   Preferences p(fname);
-  p.setQuota(quota);
+  p.setQuota(quota, QU_KB);
   
-  BOOST_CHECK( p.getQuota() == quota );
+  BOOST_CHECK( p.getQuotaNum() == quota );
 }
 
 BOOST_AUTO_TEST_CASE( save_username )

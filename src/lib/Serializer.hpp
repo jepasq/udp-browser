@@ -17,6 +17,7 @@ public:
   
 protected:
   QString filename;  //!< The target path
+  QFile file;
 };
 
 #endif // !__SERIALIZER_HPP__
