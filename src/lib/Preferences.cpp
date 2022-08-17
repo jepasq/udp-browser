@@ -5,7 +5,7 @@
 
 Preferences::Preferences(const QString& filen):
   Serializer(filen),
-  quota(500)
+  quotaNum(500)
 {
 
 }
@@ -19,7 +19,8 @@ Preferences::save(void)
   //  QDataStream ds(&Serializer::save());
   QDataStream ds(&file);
   ds << username;
-  ds << quota;
+  ds << quotaNum;
+  ds << quotaUnit;
 }
 
 void
@@ -34,7 +35,8 @@ Preferences::load(void)
   file.open(QIODevice::ReadOnly);
   QDataStream ds(&file);
   ds >> username;
-  ds >> quota;
+  ds >> quotaNum;
+  ds >> quotaUnit;
 }
 
 void
@@ -50,13 +52,20 @@ Preferences::getUsername(void) const
 }
 
 void
-Preferences::setQuota(unsigned int q)
+Preferences::setQuota(unsigned int num, QuotaUnit_t unit)
 {
-  quota = q;
+  quotaNum  = num;
+  quotaUnit = unit;
 }
 
 unsigned int
-Preferences::getQuota(void) const
+Preferences::getQuotaNum(void) const
 {
-  return quota;
+  return quotaNum;
+}
+
+QuotaUnit_t
+Preferences::getQuotaUnit(void) const
+{
+  return quotaUnit;
 }
