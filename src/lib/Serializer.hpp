@@ -12,6 +12,8 @@ public:
   QFile& load(/* ProjectFile* or WebContent */);
   QFile& save(/* ProjectFile* */);
 
+  void close();
+  
   const QString& getFilename(void) const;
   void           setFilename(const QString&);
   

@@ -73,7 +73,10 @@ void
 MainWindow::onPreferencesClicked(bool value)
 {
   std::cout << "Show preferences dialog..." << std::endl;
-  PreferencesDialog prd(pref);
+  PreferencesDialog prd;
+  prd.load(pref);
   prd.exec();
+  prd.save(pref);
+  pref->save();
 }
 

@@ -13,31 +13,22 @@ Preferences::Preferences(const QString& filen):
 void
 Preferences::save(void)
 {
-  /*  QFile file(filename);
-  file.open(QIODevice::WriteOnly);
-  */
   QDataStream ds(&Serializer::save());
   //QDataStream ds(&file);
   ds << username;
   ds << quotaNum;
   ds << quotaUnit;
+  Serializer::close();
 }
 
 void
 Preferences::load(void)
 {
   QDataStream ds(&Serializer::load());
-  /*
-  ds >> username;
-  ds >> quota;
-  */
-  /*  QFile file(filename);
-  file.open(QIODevice::ReadOnly);
-  */
-  //  QDataStream ds(&file);
   ds >> username;
   ds >> quotaNum;
   ds >> quotaUnit;
+  Serializer::close();
 }
 
 void

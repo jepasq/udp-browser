@@ -18,8 +18,11 @@ class PreferencesDialog : public QDialog
   Q_OBJECT
 
 public:
-  PreferencesDialog(Preferences*);
+  PreferencesDialog();
 
+  void load(Preferences*);
+  void save(Preferences*);
+  
 private:
   Ui::Dialog ui;  //!< The ui objects from the designer .ui file
 

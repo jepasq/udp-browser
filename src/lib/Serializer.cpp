@@ -41,3 +41,9 @@ Serializer::setFilename(const QString& fname)
 {
   filename = fname;
 }
+
+void
+Serializer::close()
+{
+  file.close();
+}
