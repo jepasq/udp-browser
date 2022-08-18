@@ -4,6 +4,9 @@
 #include "ui/ui_PreferencesDialog.h" // MOC generated file
 
 #include <QWidget>
+#include <unordered_map>
+
+#include "Preferences.hpp" //USES QuotaUnit_t
 
 // Forward declarations
 class Preferences;
@@ -25,7 +28,8 @@ public:
   
 private:
   Ui::Dialog ui;  //!< The ui objects from the designer .ui file
-
+  std::unordered_map<QString, QuotaUnit_t>  units; //!< The ComboBox/units map
+  
 };
 
 #endif // !__PREFERENCES_DIALOG_HPP__

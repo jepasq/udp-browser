@@ -1,13 +1,22 @@
 #include "PreferencesDialog.hpp"
 
-#include "Preferences.hpp"
 
 #include <iostream>
+
 
 PreferencesDialog::PreferencesDialog()
 {
   ui.setupUi(this);
+
+  units["KBytes"] = QU_KB;
+  units["MB"]     = QU_MB;
+  units["GB"]     = QU_GB;
+
+  // Can't get the map added in right order, let's adding it another way
+  QString us[] = {"KBytes", "MB", "GB"};
   
+  for (auto u : us)
+    ui.cbQuota->addItem(u);
 }
 
 void
