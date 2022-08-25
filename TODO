@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.0-4 (12 Aug. 2022 - ???) SLOC ???
-- (6) PreferencesDialog's initial units are hardcoded
+- (7) PreferencesDialog use internal map to save and load values
+- PreferencesDialog's initial units are hardcoded
 - Save both quota values in Preferences
 - Correctly save/load username in preferences dialog
 - Serializer do not return file references anymore

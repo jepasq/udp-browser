@@ -3,17 +3,21 @@
 
 #include <iostream>
 
-
+/** The dialog constructor
+  *
+  * Uses the .ui file to setup UI and handle the units map.
+  *
+  */
 PreferencesDialog::PreferencesDialog()
 {
   ui.setupUi(this);
 
   units["KBytes"] = QU_KB;
-  units["MB"]     = QU_MB;
-  units["GB"]     = QU_GB;
+  units["MBytes"] = QU_MB;
+  units["GBytes"] = QU_GB;
 
   // Can't get the map added in right order, let's adding it another way
-  QString us[] = {"KBytes", "MB", "GB"};
+  QString us[] = {"KBytes", "MBytes", "GBytes"};
   
   for (auto u : us)
     ui.cbQuota->addItem(u);
@@ -26,40 +30,31 @@ PreferencesDialog::load(Preferences* p)
   ui.sbQuota->setValue(p->getQuotaNum());
   auto q = p->getQuotaUnit();
   QString qus;
-  switch (q) {
-  case QU_KB:
-    qus = "KBytes";
-    break;
-  case QU_MB:
-    qus = "MB";
-    break;
-  case QU_GB:
-    qus = "GB";
-    break;
-  default:
-    std::cout << "Quota unit not valid " << q << std::endl;
-  };
+
+  for (auto u : units)
+    if (q == u.second)
+      qus = u.first;
   
   ui.cbQuota->setCurrentText(qus);
 }
 
+/** Save the current dialog values using the given preferences object
+  *
+  * \param p The Preferences object.
+  *
+  */
 void
 PreferencesDialog::save(Preferences* p)
 {
   p->setUsername(ui.leUsername->text());
-  auto unit = ui.cbQuota->currentText().toStdString();
+  auto unit = ui.cbQuota->currentText();
   QuotaUnit_t unn;
-  if (unit == "KBytes")
-    unn = QU_KB;
-  else if (unit == "MB")
-    unn = QU_MB;
-  else if (unit == "GB")
-    unn = QU_GB;
-  else
-    std::cout << "Quota unit not valid " << unit << std::endl;
+
+  for (auto u : units)
+    if (unit == u.first)
+      unn = u.second;
     
-    
-  std::cout << "Current quota unit is " << unit
+  std::cout << "Current quota unit is " << unit.toStdString()
 	    << std::endl;
   p->setQuota(ui.sbQuota->value(), unn);
 }
