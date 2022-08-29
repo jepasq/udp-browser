@@ -39,6 +39,8 @@ private slots:
 protected:
   void    nextMode();
   QString modeToStr();
+
+  void setTitle();
   
 private:
   BrowserMode mode;   //!< The current mode

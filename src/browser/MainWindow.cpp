@@ -21,8 +21,9 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   // Set initial button's label and stackedWidget's page
   ui.stackedWidget->setCurrentIndex(static_cast<int>(mode));
   ui.pbMode->setText(modeToStr());
-  setWindowTitle(WTITLE);
 
+  setTitle();
+  
   auto prefAction = new QAction("&Preferences", this);
   hamMenu = new QMenu("Global menu", this);
   hamMenu->addAction(prefAction);
@@ -78,5 +79,19 @@ MainWindow::onPreferencesClicked(bool value)
   prd.exec();
   prd.save(pref);
   pref->save();
+
+  setTitle();
 }
 
+/** Set the window title according to the username
+  *
+  */
+void
+MainWindow::setTitle()
+{
+  QString u=pref->getUsername();
+  if (u.isEmpty())
+    setWindowTitle(WTITLE);
+  else
+    setWindowTitle(u+"@"+WTITLE);
+}
