@@ -1,9 +1,7 @@
 cmake_minimum_required(VERSION 3.1.0)
 
-project(udp-browser
-  VERSION 0.0.0
-  LANGUAGES CXX)
-set(REVISION 3)
+project(udp-browser VERSION 0.0.0 LANGUAGES CXX)
+set(REVISION 4)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -31,9 +29,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
 #include(FindPkgConfig)
-#pkg_check_modules(LIBS REQUIRED fox>=1.6)
 find_package(Qt5 COMPONENTS Widgets WebView REQUIRED)
-
 
 # The main library (at least used by editor)
 add_library(udpb SHARED

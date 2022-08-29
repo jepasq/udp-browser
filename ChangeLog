@@ -1,3 +1,13 @@
+* v0.0.0-4 (12 Aug. 2022 - 29 Aug. 2022) SLOC 567
+- Show actual preferences username in window title
+- PreferencesDialog use internal map to save and load values
+- PreferencesDialog's initial units are hardcoded
+- Save both quota values in Preferences
+- Correctly save/load username in preferences dialog
+- Serializer do not return file references anymore
+- Preferences has both quota num and unit
+- PreferenceDialog takes Preferences as first param
+
 * v0.0.0-3 (27 Jul. 2022 - 12 Aug. 2022) SLOC 462
 - MainWindow ctor takes a Preferences parameter
 - Load Preferences at startup in main() function
