@@ -36,6 +36,7 @@ add_library(udpb SHARED
   src/lib/ConfigReader.cpp
   src/lib/Preferences.cpp
   src/lib/Serializer.cpp
+  src/lib/WebContent.cpp
   )
 
 target_link_libraries(udpb Qt5::Widgets)

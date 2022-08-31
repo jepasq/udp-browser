@@ -13,12 +13,14 @@ MainWindow, in its editor mode, have alist of basic HTML element
 
 **** Websites are called site@user
      User can be a name or a hashsum.
-- [ ] Disk space is composed of chunk of fixed size (500Kb ?);
-- [ ] We must have a configuration file somewhere to keep username
+- [X] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
-- [ ] WebContent is first compressed then signed then splited in chunks;
+- [ ] Disk space is composed of chunk of fixed size (500Kb ?);
+  - [ ] WebContent is first compressed then signed then splited in chunks;
   Implement the WebContent class and serializer have a save/load(WebContent*)
   using Serializer
+  - [ ] May have a versionning scheme
+  - [ ] How to handle multiple websites for the same user ?
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
 **** TODO Handle unit tests and CI
