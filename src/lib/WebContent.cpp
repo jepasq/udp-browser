@@ -29,3 +29,16 @@ WebContent::load(void)
   */
   Serializer::close();
 }
+
+int
+WebContent::getFileNumber(void) const
+{
+  return files.size();
+}
+
+void
+WebContent::addFile(WebFile* wf)
+{
+  files.push_back(wf);
+}
+

@@ -13,16 +13,19 @@ MainWindow, in its editor mode, have alist of basic HTML element
 
 **** Websites are called site@user
 :LOGBOOK:
+CLOCK: [2022-09-01 jeu. 04:22]--[2022-09-01 jeu. 04:35] =>  0:13
 CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
 :END:
      User can be a name or a hashsum.
 - [X] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
-- [ ] Disk space is composed of chunk of fixed size (500Kb ?);
-  - [ ] WebContent is first compressed then signed then splited in chunks;
+- [-] Disk space is composed of chunk of fixed size (500Kb ?);
+  - [-] WebContent is first compressed then signed then splited in chunks;
   Implement the WebContent class and serializer have a save/load(WebContent*)
   using Serializer
-    - [ ] May have a list of WebFile. Test this.
+    - [X] May have a list of WebFile. Test this.
+    - [ ] Implement WebContent persistance. Already tested. Fails.
+    - [ ] Add a FileCompressor thing with possible subclasses
   - [ ] May have a versionning scheme
   - [ ] How to handle multiple websites for the same user ?
 - When we need a chunk, we first ask for the last known revision, then
