@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.0-5 (29 Aug. 2022 - ???) SLOC ???
-- (5) Implement WebContent load and save functions
+- (6) Add basic empty and tested FileCompressor class
+- Implement WebContent load and save functions
 - Add file list to WebContent
 - Add example WebContent's save and load methods
 - Add empty WebContent class

@@ -13,6 +13,7 @@ MainWindow, in its editor mode, have alist of basic HTML element
 
 **** Websites are called site@user
 :LOGBOOK:
+CLOCK: [2022-09-05 lun. 04:04]--[2022-09-05 lun. 04:08] =>  0:04
 CLOCK: [2022-09-05 lun. 03:29]--[2022-09-05 lun. 03:50] =>  0:21
 CLOCK: [2022-09-01 jeu. 04:22]--[2022-09-01 jeu. 04:35] =>  0:13
 CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
@@ -21,14 +22,16 @@ CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
 - [X] We must have a configuration file somewhere to keep username
   How to generate user name ? from MAC adress ?
 - [-] Disk space is composed of chunk of fixed size (500Kb ?);
-  - [-] WebContent is first compressed then signed then splited in chunks;
+  - [X] WebContent is first compressed then signed then splited in chunks;
   Implement the WebContent class and serializer have a save/load(WebContent*)
   using Serializer
     - [X] May have a list of WebFile. Test this.
     - [X] Implement WebContent persistance. Already tested. Fails.
-    - [ ] Add a FileCompressor thing with possible subclasses
+    - [X] Add a FileCompressor thing with possible subclasses
   - [ ] May have a versionning scheme
   - [ ] How to handle multiple websites for the same user ?
+- [ ] WebContent load and save uses a FileCompressor subclass to create the
+  archive and eventually compute hashsum
 - [ ] WebContent list should use shared_ptr otherwise, the WebFile* instanciated
   from the load() function can't be freed correctly
 - When we need a chunk, we first ask for the last known revision, then
