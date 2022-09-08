@@ -2,12 +2,15 @@
 
 #include <QFile>
 #include <QDataStream>
-
-#include <cstddef>   //!< USES std::size_t
+#include <iostream>
 
 #include "WebFile.hpp"
 
+/** Current written version */
+constexpr int CURRENT_VERSION = 1;
+
 WebContent::WebContent(const QString& filen):
+  version(CURRENT_VERSION),
   Serializer(filen)
 {
 }
@@ -16,6 +19,9 @@ void
 WebContent::save(void)
 {
   QDataStream ds(&Serializer::save());
+
+  ds << version;
+  
   int st = files.size();
   ds << st;
   
@@ -34,6 +40,13 @@ WebContent::load(void)
 {
   QDataStream ds(&Serializer::load());
 
+  int file_version;
+
+  ds >> file_version;
+  if (file_version != version)
+    std::cout << "VERSION MISMATCH " << file_version << " != " << version
+	      << std::endl;
+  
   int st;
   ds >> st;
 

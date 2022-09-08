@@ -7,12 +7,18 @@
 - Included search engine let you discover new websites;
 - An included IA (using libfann) try to suggest you new intersting websites;
   Maybe something like a 'for you' page or so
+**** Improve serialization versionning scheme
+  Actually just a constexpr in *lib/WebContent.cpp*.
+- [ ] Could throw an exception if unreadable
+- [ ] WebFile could delegate work to specialized classes wfV1, wfV2 etc...
+  qo we could test and read old version archives.
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop
 
 **** Websites are called site@user
 :LOGBOOK:
+CLOCK: [2022-09-08 jeu. 05:28]--[2022-09-08 jeu. 05:48] =>  0:20
 CLOCK: [2022-09-05 lun. 04:04]--[2022-09-05 lun. 04:08] =>  0:04
 CLOCK: [2022-09-05 lun. 03:29]--[2022-09-05 lun. 03:50] =>  0:21
 CLOCK: [2022-09-01 jeu. 04:22]--[2022-09-01 jeu. 04:35] =>  0:13
@@ -28,7 +34,7 @@ CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
     - [X] May have a list of WebFile. Test this.
     - [X] Implement WebContent persistance. Already tested. Fails.
     - [X] Add a FileCompressor thing with possible subclasses
-  - [ ] May have a versionning scheme
+  - [X] May have a versionning scheme
   - [ ] How to handle multiple websites for the same user ?
 - [ ] WebContent load and save uses a FileCompressor subclass to create the
   archive and eventually compute hashsum
