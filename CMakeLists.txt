@@ -37,6 +37,7 @@ add_library(udpb SHARED
   src/lib/FileCompressor.cpp
   src/lib/Preferences.cpp
   src/lib/Serializer.cpp
+  src/lib/User.cpp
   src/lib/WebContent.cpp
   src/lib/WebFile.cpp
   )
@@ -65,6 +66,7 @@ add_executable(tests src/tests.cpp
 #  ${BROWSER_SRC}
   src/lib/FileCompressor_Test.cpp
   src/lib/Preferences_Test.cpp
+  src/lib/User_Test.cpp
   src/lib/WebContent_Test.cpp)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   udpb Qt5::Widgets)
