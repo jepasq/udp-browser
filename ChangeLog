@@ -1,3 +1,13 @@
+* v0.0.0-5 (29 Aug. 2022 - 08 Sep. 2022) SLOC 850
+- Add a basic User class with a WebContent list
+- Add a version constexpr to the WebContent data stream
+- Add basic empty and tested FileCompressor class
+- Implement WebContent load and save functions
+- Add file list to WebContent
+- Add example WebContent's save and load methods
+- Add empty WebContent class
+- Close the preferences dialog ROADMAP section
+
 * v0.0.0-4 (12 Aug. 2022 - 29 Aug. 2022) SLOC 567
 - Show actual preferences username in window title
 - PreferencesDialog use internal map to save and load values
