@@ -42,5 +42,34 @@ BOOST_AUTO_TEST_CASE( add_file_should_be_permanent )
   BOOST_CHECK( wb2.getFileNumber() == 1 );
 }
 
+BOOST_AUTO_TEST_CASE( WebContent_ctor_has_a_name )
+{
+  WebContent wb("filename", "name");
+  BOOST_CHECK( wb.getName() == "name" );
+}
+
+BOOST_AUTO_TEST_CASE( WebContent_ctor_literally_has_a_default_name )
+{
+  WebContent wb;
+  BOOST_CHECK( wb.getName() == "default" );
+}
+
+BOOST_AUTO_TEST_CASE( WebContent_has_a_setter_and_a_getter )
+{
+  WebContent wb("filename", "name");
+  wb.setName("name22" );
+  BOOST_CHECK( wb.getName() == "name22" );
+}
+
+BOOST_AUTO_TEST_CASE( WebContent_name_is_permanent )
+{
+  WebContent wb;
+  wb.setName("name22" );
+  wb.save();
 
 
+  WebContent wb2;
+  BOOST_CHECK( wb2.getName() == "default" );
+  wb2.load();
+  BOOST_CHECK( wb2.getName() == "name22" );
+}

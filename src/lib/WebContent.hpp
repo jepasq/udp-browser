@@ -20,7 +20,8 @@ class WebFile;
 class WebContent : public Serializer
 {
 public:
-  WebContent(const QString& filen = "default-website.dat");
+  WebContent(const QString& filen = "default-website.dat",
+	     const QString& vname = "default");
 
   virtual void save(void);
   virtual void load(void);
@@ -28,9 +29,13 @@ public:
   int getFileNumber(void) const;
   void addFile(WebFile*);
 
+  void           setName(const QString&);
+  const QString& getName(void) const;
+  
 private:
   int version;                 //!w The version to be serialized
   std::list<WebFile*> files;   //!< Current list of files
+  QString name;                //!< The name od this site
   
 };
 

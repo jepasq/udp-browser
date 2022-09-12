@@ -7,11 +7,12 @@
 #include "WebFile.hpp"
 
 /** Current written version */
-constexpr int CURRENT_VERSION = 1;
+constexpr int CURRENT_VERSION = 2;
 
-WebContent::WebContent(const QString& filen):
+WebContent::WebContent(const QString& filen, const QString& vname):
   version(CURRENT_VERSION),
-  Serializer(filen)
+  Serializer(filen),
+  name(vname)
 {
 }
 
@@ -21,6 +22,8 @@ WebContent::save(void)
   QDataStream ds(&Serializer::save());
 
   ds << version;
+
+  ds << name;
   
   int st = files.size();
   ds << st;
@@ -28,10 +31,6 @@ WebContent::save(void)
   for (auto f : files)
     f->save(ds);
   
-  /*  ds << username;
-  ds << quotaNum;
-  ds << quotaUnit;
-  */
   Serializer::close();
 }
 
@@ -46,6 +45,9 @@ WebContent::load(void)
   if (file_version != version)
     std::cout << "VERSION MISMATCH " << file_version << " != " << version
 	      << std::endl;
+
+
+  ds >> name;
   
   int st;
   ds >> st;
@@ -76,3 +78,15 @@ WebContent::addFile(WebFile* wf)
   files.push_back(wf);
 }
 
+
+void
+WebContent::setName(const QString& vname)
+{
+  name = vname;
+}
+
+const QString&
+WebContent::getName(void) const
+{
+  return name;
+}
