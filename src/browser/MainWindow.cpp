@@ -5,7 +5,7 @@
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
 #include "Preferences.hpp"
-
+#include "User.hpp"
 /** The main window constructor
   *
   * \param parent An optional parent defaulted to nullptr.
@@ -14,7 +14,8 @@
 MainWindow::MainWindow(Preferences* p, QWidget* parent):
   mode(BM_BROWSER),
   hamMenu(nullptr),
-  pref(p)
+  pref(p),
+  user(nullptr)
 {
   ui.setupUi(this);
 
@@ -31,6 +32,8 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   ui.pbHamburger->setMenu(hamMenu);
   connect(prefAction, &QAction::triggered,
 	  this, &MainWindow::onPreferencesClicked);
+
+  user = new User();
 }
 
 /** The window destructor
@@ -39,6 +42,7 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
 MainWindow::~MainWindow()
 {
   delete hamMenu;
+  delete user;
 }
 
 void

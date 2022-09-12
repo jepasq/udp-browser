@@ -8,6 +8,7 @@
 
 // Forward declarations
 class Preferences;
+class User;
 // End of forward declarations
 
 
@@ -48,6 +49,7 @@ private:
 
   QMenu* hamMenu;      //!< The hamberger menu
   Preferences* pref;
+  User* user;
 };
 
 #endif // !__MAIN_WINDOW_HPP__
