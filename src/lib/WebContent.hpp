@@ -7,7 +7,11 @@
 #include "Serializer.hpp"
 
 
+// Forward declarations
+class FileArchiver;
+class FileCompressor;
 class WebFile;
+// End of forward declarations
 
 /** This class keeps the content of a website in disk
   *
@@ -15,6 +19,9 @@ class WebFile;
   * modification done to the WebFile or WebContent serialization process
   * (order, field etc...) we must increment the CURRENT_VERSION constexpr
   * found in WebContent.cpp file.
+  *
+  * This class is also in charge of the archive creation and compression
+  * using FileArchiver and FileCompressor classes.
   *
   */
 class WebContent : public Serializer
@@ -36,6 +43,9 @@ private:
   int version;                 //!w The version to be serialized
   std::list<WebFile*> files;   //!< Current list of files
   QString name;                //!< The name od this site
+
+  FileArchiver*   fa;
+  FileCompressor* fc;
   
 };
 

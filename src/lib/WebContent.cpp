@@ -4,6 +4,8 @@
 #include <QDataStream>
 #include <iostream>
 
+#include "FileArchiver.hpp"
+#include "FileCompressor.hpp"
 #include "WebFile.hpp"
 
 /** Current written version */
@@ -12,8 +14,11 @@ constexpr int CURRENT_VERSION = 2;
 WebContent::WebContent(const QString& filen, const QString& vname):
   version(CURRENT_VERSION),
   Serializer(filen),
-  name(vname)
+  name(vname),
+  fa(nullptr),
+  fc(nullptr)
 {
+  
 }
 
 void
