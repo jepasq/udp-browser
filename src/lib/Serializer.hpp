@@ -4,6 +4,9 @@
 #include <QString>
 #include <QFile>
 
+/** The object used to load abnd save files
+  *
+  */
 class Serializer
 {
 public:
@@ -19,7 +22,7 @@ public:
   
 protected:
   QString filename;  //!< The target path
-  QFile file;
+  QFile file;        //!< The actual file
 };
 
 #endif // !__SERIALIZER_HPP__
