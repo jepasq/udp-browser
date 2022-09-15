@@ -29,6 +29,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [ ] Continue implementation
 **** TODO Websites are called site@user
 :LOGBOOK:
+CLOCK: [2022-09-15 jeu. 22:04]--[2022-09-15 jeu. 22:29] =>  0:25
 CLOCK: [2022-09-14 mer. 06:50]--[2022-09-14 mer. 07:05] =>  0:15
 CLOCK: [2022-09-12 lun. 06:36]--[2022-09-12 lun. 06:51] =>  0:15
 CLOCK: [2022-09-12 lun. 06:15]--[2022-09-12 lun. 06:30] =>  0:15
@@ -54,12 +55,12 @@ CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
     - [X] We should have a User class with a list of WebContent
     - [X] User is then a member of MainWindow
     - [X] WebContent could have a name (first is default)
+- [X] WebContent list should use shared_ptr otherwise, the WebFile* instanciated
+  from the load() function can't be freed correctly
 - [ ] WebContent load and save uses
   Created both empty clases
   - [ ] a FileArchiver superclass that create a single file from multiple ones
   - [ ] a FileCompressor subclass to compress  archive and eventually compute hashsum
-- [ ] WebContent list should use shared_ptr otherwise, the WebFile* instanciated
-  from the load() function can't be freed correctly
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
 **** DONE Handle preference dialog

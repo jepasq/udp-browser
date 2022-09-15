@@ -59,7 +59,7 @@ WebContent::load(void)
 
   for (int i=0; i<st; ++i)
     {
-      auto wf = new WebFile();
+      auto wf = std::make_shared<WebFile>();
       wf->load(ds);
       files.push_back(wf);
     }
@@ -80,7 +80,8 @@ WebContent::getFileNumber(void) const
 void
 WebContent::addFile(WebFile* wf)
 {
-  files.push_back(wf);
+  std::shared_ptr<WebFile> ff(wf);
+  files.push_back(ff);
 }
 
 

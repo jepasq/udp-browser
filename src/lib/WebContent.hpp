@@ -2,7 +2,8 @@
 #define __WEB_CONTENT_HPP__
 
 #include <QString>
-#include <list>
+#include <vector>
+#include <memory>
 
 #include "Serializer.hpp"
 
@@ -41,7 +42,7 @@ public:
   
 private:
   int version;                 //!w The version to be serialized
-  std::list<WebFile*> files;   //!< Current list of files
+  std::vector<std::shared_ptr<WebFile>> files;   //!< Current list of files
   QString name;                //!< The name od this site
 
   FileArchiver*   fa;
