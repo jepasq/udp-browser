@@ -28,7 +28,9 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
-#include(FindPkgConfig)
+include(FindPkgConfig)
+pkg_check_modules(LIBS REQUIRED libarchive)
+
 find_package(Qt5 COMPONENTS Widgets WebView REQUIRED)
 
 # The main library (at least used by editor)
