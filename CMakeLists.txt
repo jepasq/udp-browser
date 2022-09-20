@@ -42,6 +42,8 @@ add_library(udpb SHARED
   src/lib/User.cpp
   src/lib/WebContent.cpp
   src/lib/WebFile.cpp
+
+  src/lib/faLibarchive.cpp
   )
 
 target_link_libraries(udpb Qt5::Widgets)

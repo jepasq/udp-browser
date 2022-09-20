@@ -60,11 +60,13 @@ CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
   from the load() function can't be freed correctly
 **** TODO [feature_libarchive] Testing libarchive
 :LOGBOOK:
+CLOCK: [2022-09-20 mar. 01:59]--[2022-09-20 mar. 02:11] =>  0:12
 CLOCK: [2022-09-20 mar. 01:43]--[2022-09-20 mar. 01:52] =>  0:09
 :END:
 - [X] cmake must search for libarchive
 - [X] Add install instruction in README
-- [ ] Add faLibArchive : public FileArchiver basic class
+- [-] Test branch
+  - [X] Add faLibArchive : public FileArchiver basic class
   - [ ] Add unit test for this (add two file, an output and test if we can
     read it back)
   - [ ] Imlement this  
