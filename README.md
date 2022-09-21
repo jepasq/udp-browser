@@ -8,9 +8,9 @@ On arch-based GNU/linux distributions :
 
 	sudo pacman -S cmake gcc qt5-base qt5-webview boost libarchive
 
-on  debian-based distributions (such as Ubuntu) :
+on debian-based distributions (such as Ubuntu) :
 
-    sudo apt-get install qt5-default qtbase5-dev
+    sudo apt-get install qt5-default qtbase5-dev libarchive-dev
 
 ## Building
 
