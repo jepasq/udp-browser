@@ -1,3 +1,13 @@
+* v0.0.0-6 (08 Sep. 2022 - 22 Sep. 2022) SLOC 1,50
+- FileArchiver handles a file list
+- Add basic faLibarchive instanciation test
+- Add a FileArchiver libarchive specialization skeleton class
+- Improve Serializer class documentation
+- WebContent is a shared_ptr vector
+- Create the empty FileArchiver superclass
+- WebContent now has a name member
+- MainWindow has a user member
+
 * v0.0.0-5 (29 Aug. 2022 - 08 Sep. 2022) SLOC 850
 - Add a basic User class with a WebContent list
 - Add a version constexpr to the WebContent data stream
