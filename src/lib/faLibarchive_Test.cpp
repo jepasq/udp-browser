@@ -12,6 +12,9 @@ BOOST_AUTO_TEST_CASE( faLibArchive_can_be_instanciated )
 BOOST_AUTO_TEST_CASE( faLibArchive_can_add_file )
 {
   faLibarchive fal;
-  //  fal.addFile("aze");
+  BOOST_CHECK( fal.getFiles().size() == 0 );
+
+  fal.addFile("aze");
+  BOOST_CHECK( fal.getFiles().size() == 1 );
 }
 

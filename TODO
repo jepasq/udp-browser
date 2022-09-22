@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.0-6 (08 Sep. 2022 - ???) SLOC ???
-- (7) Add basic faLibarchive instanciation test
+- (8) FileArchiver handles a file list
+- Add basic faLibarchive instanciation test
 - Add a FileArchiver libarchive specialization skeleton class
 - Improve Serializer class documentation
 - WebContent is a shared_ptr vector
