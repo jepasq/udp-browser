@@ -16,3 +16,15 @@ FileArchiver::getFiles(void) const
 {
   return files;
 }
+
+void
+FileArchiver::setOutput(const std::string& str)
+{
+  output = str;
+}
+
+const std::string&
+FileArchiver::getOutput(void) const
+{
+  return output;
+}

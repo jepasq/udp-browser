@@ -1,6 +1,5 @@
 #include "faLibarchive.hpp"
 
-//#define BOOST_TEST_MODULE WebContent
 #include <boost/test/unit_test.hpp>
 
 BOOST_AUTO_TEST_CASE( faLibArchive_can_be_instanciated )
@@ -8,7 +7,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_can_be_instanciated )
   faLibarchive fal;
 }
 
-// Has a WebContent list and start with a default one
+// Has a string/file list
 BOOST_AUTO_TEST_CASE( faLibArchive_can_add_file )
 {
   faLibarchive fal;
@@ -16,5 +15,16 @@ BOOST_AUTO_TEST_CASE( faLibArchive_can_add_file )
 
   fal.addFile("aze");
   BOOST_CHECK( fal.getFiles().size() == 1 );
+}
+
+/// Has a setOutput function
+BOOST_AUTO_TEST_CASE( faLibArchive_can_set_output )
+{
+  faLibarchive fal;
+  auto filen = "aze.out";
+  BOOST_CHECK( fal.getOutput().empty() );
+  
+  fal.setOutput(filen);
+  BOOST_CHECK( fal.getOutput() == filen );
 }
 

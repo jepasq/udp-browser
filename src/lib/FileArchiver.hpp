@@ -13,9 +13,13 @@ public:
   void addFile(const std::string&);
 
   tFileList getFiles(void) const;
+
+  void               setOutput(const std::string&);
+  const std::string& getOutput(void) const;
   
 private:
   tFileList files;
+  std::string output;
 };
 
 #endif // !__FILE_ARCHIVER_HPP__
