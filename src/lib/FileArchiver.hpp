@@ -16,6 +16,9 @@ public:
 
   void               setOutput(const std::string&);
   const std::string& getOutput(void) const;
+
+  /** Process the input files into a single output file */
+  virtual void process()=0;
   
 private:
   tFileList files;

@@ -6,3 +6,8 @@ faLibarchive::faLibarchive()
 
 }
 
+void
+faLibarchive::process()
+{
+  
+}

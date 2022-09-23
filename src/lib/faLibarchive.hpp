@@ -10,6 +10,9 @@ class faLibarchive : public FileArchiver
 {
 public:
   faLibarchive();
+
+  virtual void process();
+
 };
 
 
