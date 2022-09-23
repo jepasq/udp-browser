@@ -58,7 +58,7 @@ CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
     - [X] WebContent could have a name (first is default)
 - [X] WebContent list should use shared_ptr otherwise, the WebFile* instanciated
   from the load() function can't be freed correctly
-**** TODO [feature_libarchive] Testing libarchive
+**** TODO Testing libarchive
 :LOGBOOK:
 CLOCK: [2022-09-23 ven. 02:57]--[2022-09-23 ven. 03:53] =>  0:56
 CLOCK: [2022-09-23 ven. 02:41]--[2022-09-23 ven. 02:49] =>  0:08
@@ -74,9 +74,9 @@ CLOCK: [2022-09-20 mar. 01:43]--[2022-09-20 mar. 01:52] =>  0:09
   - [X] Add unit test for this (add two file, an output and test if we can
     read it back) and a process() function that build archive
   - [X] Imlement this
+- [X] If this works, merge
 - [ ] May rename FileArchiver::process to write (maybe later add read())
 - [ ] Better FileArchiver test implementation
-- [ ] If this works, merge
     
 - [ ] WebContent load and save uses
   Created both empty clases
