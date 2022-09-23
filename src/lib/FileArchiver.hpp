@@ -20,7 +20,7 @@ public:
   /** Process the input files into a single output file */
   virtual void process()=0;
   
-private:
+protected:
   tFileList files;
   std::string output;
 };

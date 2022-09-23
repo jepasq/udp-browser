@@ -60,7 +60,7 @@ CLOCK: [2022-09-01 jeu. 04:00]--[2022-09-01 jeu. 04:12] =>  0:12
   from the load() function can't be freed correctly
 **** TODO [feature_libarchive] Testing libarchive
 :LOGBOOK:
-CLOCK: [2022-09-23 ven. 02:57]
+CLOCK: [2022-09-23 ven. 02:57]--[2022-09-23 ven. 03:53] =>  0:56
 CLOCK: [2022-09-23 ven. 02:41]--[2022-09-23 ven. 02:49] =>  0:08
 CLOCK: [2022-09-22 jeu. 05:13]--[2022-09-22 jeu. 05:33] =>  0:20
 CLOCK: [2022-09-21 mer. 02:19]--[2022-09-21 mer. 02:32] =>  0:13
@@ -69,11 +69,13 @@ CLOCK: [2022-09-20 mar. 01:43]--[2022-09-20 mar. 01:52] =>  0:09
 :END:
 - [X] cmake must search for libarchive
 - [X] Add install instruction in README
-- [-] Test branch
+- [X] Test branch
   - [X] Add faLibArchive : public FileArchiver basic class
-  - [ ] Add unit test for this (add two file, an output and test if we can
+  - [X] Add unit test for this (add two file, an output and test if we can
     read it back) and a process() function that build archive
-  - [ ] Imlement this  
+  - [X] Imlement this
+- [ ] May rename FileArchiver::process to write (maybe later add read())
+- [ ] Better FileArchiver test implementation
 - [ ] If this works, merge
     
 - [ ] WebContent load and save uses
