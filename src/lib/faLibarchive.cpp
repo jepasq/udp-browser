@@ -19,7 +19,7 @@ faLibarchive::process()
 {
   // Mainly from https://github.com/libarchive/libarchive/wiki/Examples#a-basic-write-example
 
-  const char* outname = output.c_str();
+  const char* outname = filename.c_str();
   const char* filenames[] = {"package.json", "doxygen.log"};
   const char** filename = &filenames[0];
   struct archive *a;

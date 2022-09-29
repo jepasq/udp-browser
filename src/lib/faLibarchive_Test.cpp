@@ -19,15 +19,15 @@ BOOST_AUTO_TEST_CASE( faLibArchive_can_add_file )
   BOOST_CHECK( fal.getFiles().size() == 1 );
 }
 
-/// Has a setOutput function
+/// Has a setFilename function
 BOOST_AUTO_TEST_CASE( faLibArchive_can_set_output )
 {
   faLibarchive fal;
   auto filen = "aze.out";
-  BOOST_CHECK( fal.getOutput().empty() );
+  BOOST_CHECK( fal.getFilename().empty() );
   
-  fal.setOutput(filen);
-  BOOST_CHECK( fal.getOutput() == filen );
+  fal.setFilename(filen);
+  BOOST_CHECK( fal.getFilename() == filen );
 }
 
 /// Has an implemented process function and the output file is created
@@ -35,7 +35,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_process_function )
 {
   faLibarchive fal;
   auto filen = "aze.out";
-  fal.setOutput(filen);
+  fal.setFilename(filen);
   fal.process();
 
   // Should work according to https://stackoverflow.com/a/268525

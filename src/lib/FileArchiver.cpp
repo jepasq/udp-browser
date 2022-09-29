@@ -18,13 +18,13 @@ FileArchiver::getFiles(void) const
 }
 
 void
-FileArchiver::setOutput(const std::string& str)
+FileArchiver::setFilename(const std::string& str)
 {
-  output = str;
+  filename = str;
 }
 
 const std::string&
-FileArchiver::getOutput(void) const
+FileArchiver::getFilename(void) const
 {
-  return output;
+  return filename;
 }

@@ -6,6 +6,9 @@
 
 typedef std::vector<std::string> tFileList;
 
+/** An archiver abstract class for both read and write web content files
+  *
+  */
 class FileArchiver {
 public:
   FileArchiver();
@@ -14,15 +17,15 @@ public:
 
   tFileList getFiles(void) const;
 
-  void               setOutput(const std::string&);
-  const std::string& getOutput(void) const;
+  void               setFilename(const std::string&);
+  const std::string& getFilename(void) const;
 
   /** Process the input files into a single output file */
   virtual void process()=0;
   
 protected:
-  tFileList files;
-  std::string output;
+  tFileList files;      //!< The files to be added to the archive
+  std::string filename; // Archive filename
 };
 
 #endif // !__FILE_ARCHIVER_HPP__
