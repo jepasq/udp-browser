@@ -30,7 +30,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_can_set_output )
   BOOST_CHECK( fal.getFilename() == filen );
 }
 
-/// Has an implemented process function and the output file is created
+/// Has an implemented write() function and the output file is created
 BOOST_AUTO_TEST_CASE( faLibArchive_write_function )
 {
   faLibarchive fal;
@@ -41,6 +41,21 @@ BOOST_AUTO_TEST_CASE( faLibArchive_write_function )
   // Should work according to https://stackoverflow.com/a/268525
   std::ifstream fs(filen);
   BOOST_CHECK( fs );
+}
+
+/// Has an implemented load function and calling it change file list
+BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
+{
+  faLibarchive fal;
+
+  auto size1 = fal.getFiles().size();
+  
+  auto filen = "aze.out";
+  fal.setFilename(filen);
+  fal.load();
+
+  // Should work according to https://stackoverflow.com/a/268525
+  BOOST_CHECK( size1 != fal.getFiles().size());
 }
 
 

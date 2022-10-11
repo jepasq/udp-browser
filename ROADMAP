@@ -77,9 +77,10 @@ CLOCK: [2022-09-20 mar. 01:43]--[2022-09-20 mar. 01:52] =>  0:09
   - [X] Imlement this
 - [X] If this works, merge
 - [X] FileArchiver's output renamed to filename
-- [ ] May rename FileArchiver::process to write (maybe later add read())
+- [X] May rename FileArchiver::process to write (maybe later add read())
 - [ ] Better FileArchiver test implementation
-    
+  Load tests implemented
+  
 - [ ] WebContent load and save uses
   Created both empty clases
   - [ ] a FileArchiver superclass that create a single file from multiple ones

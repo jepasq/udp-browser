@@ -59,3 +59,9 @@ faLibarchive::write()
   archive_write_close(a); // Note 4
   archive_write_free(a); // Note 5
 }
+
+void
+faLibarchive::load()
+{
+
+}

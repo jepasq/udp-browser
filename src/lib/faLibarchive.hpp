@@ -11,7 +11,8 @@ class faLibarchive : public FileArchiver
 public:
   faLibarchive();
 
-  virtual void write();
+  virtual void write(); //!< Write the file
+  virtual void load();  //!< Load the file
 
 };
 
