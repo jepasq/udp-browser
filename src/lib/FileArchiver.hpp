@@ -21,7 +21,7 @@ public:
   const std::string& getFilename(void) const;
 
   /** Process the input files into a single output file */
-  virtual void process()=0;
+  virtual void write()=0;
   
 protected:
   tFileList files;      //!< The files to be added to the archive

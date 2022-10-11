@@ -14,8 +14,11 @@ faLibarchive::faLibarchive()
 
 }
 
+/** Write archived files to the filename archive
+  *
+  */
 void
-faLibarchive::process()
+faLibarchive::write()
 {
   // Mainly from https://github.com/libarchive/libarchive/wiki/Examples#a-basic-write-example
 

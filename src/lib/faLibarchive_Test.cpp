@@ -31,12 +31,12 @@ BOOST_AUTO_TEST_CASE( faLibArchive_can_set_output )
 }
 
 /// Has an implemented process function and the output file is created
-BOOST_AUTO_TEST_CASE( faLibArchive_process_function )
+BOOST_AUTO_TEST_CASE( faLibArchive_write_function )
 {
   faLibarchive fal;
   auto filen = "aze.out";
   fal.setFilename(filen);
-  fal.process();
+  fal.write();
 
   // Should work according to https://stackoverflow.com/a/268525
   std::ifstream fs(filen);
