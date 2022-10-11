@@ -60,8 +60,31 @@ faLibarchive::write()
   archive_write_free(a); // Note 5
 }
 
+/** Load content of archive found in filename
+  *
+  */
 void
 faLibarchive::load()
 {
+  // Notes from https://github.com/libarchive/libarchive/wiki/Examples#list-contents-of-archive-stored-in-file
 
+  const char* outname = filename.c_str();
+
+  struct archive *a;
+  struct archive_entry *entry;
+  int r;
+  
+  a = archive_read_new();
+  archive_read_support_filter_all(a);
+  archive_read_support_format_all(a);
+  r = archive_read_open_filename(a, outname, 10240); // Note 1
+  if (r != ARCHIVE_OK)
+    exit(1);
+  while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
+    files.push_back(archive_entry_pathname(entry));
+    archive_read_data_skip(a);  // Note 2
+  }
+  r = archive_read_free(a);  // Note 3
+  if (r != ARCHIVE_OK)
+    exit(1);
 }
