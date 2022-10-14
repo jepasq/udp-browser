@@ -12,6 +12,9 @@
 - [ ] Could throw an exception if unreadable
 - [ ] WebFile could delegate work to specialized classes wfV1, wfV2 etc...
   qo we could test and read old version archives.
+**** Add an Help/About dialog
+- [ ] Contains our own version number
+- [ ] contains version of dependencies (Qt, libarchive etc...)
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop
