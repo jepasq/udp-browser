@@ -41,12 +41,12 @@ public:
   const QString& getName(void) const;
   
 private:
-  int version;                 //!w The version to be serialized
+  int version;                 //!< The version to be serialized
   std::vector<std::shared_ptr<WebFile>> files;   //!< Current list of files
   QString name;                //!< The name od this site
 
-  FileArchiver*   fa;
-  FileCompressor* fc;
+  FileArchiver*   fa;     //!< The file archiver abstract type
+  FileCompressor* fc;     //!< The file compressor abstract type
   
 };
 

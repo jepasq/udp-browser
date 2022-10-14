@@ -11,6 +11,12 @@
 /** Current written version */
 constexpr int CURRENT_VERSION = 2;
 
+/** Named constructor
+  *
+  * \param filen The content file name.
+  * \param vname The name.
+  *
+  */
 WebContent::WebContent(const QString& filen, const QString& vname):
   version(CURRENT_VERSION),
   Serializer(filen),
@@ -21,6 +27,9 @@ WebContent::WebContent(const QString& filen, const QString& vname):
   
 }
 
+/** Save with class members to a data stream
+  *
+  */
 void
 WebContent::save(void)
 {
@@ -39,6 +48,9 @@ WebContent::save(void)
   Serializer::close();
 }
 
+/** Save with class members from a data stream
+  *
+  */
 void
 WebContent::load(void)
 {
@@ -71,12 +83,23 @@ WebContent::load(void)
   Serializer::close();
 }
 
+
+/** Return the number of files in this content
+  *
+  * \return The size of files vector.
+  *
+  */
 int
 WebContent::getFileNumber(void) const
 {
   return files.size();
 }
 
+/** Add the given file to the content vector
+  *
+  * \param wf The file to be added.
+  *
+  */
 void
 WebContent::addFile(WebFile* wf)
 {
@@ -85,12 +108,22 @@ WebContent::addFile(WebFile* wf)
 }
 
 
+/** Set the current name
+  *
+  * \param vname The new name.
+  *
+  */
 void
 WebContent::setName(const QString& vname)
 {
   name = vname;
 }
 
+/** Return current name
+  *
+  * \return The name member as a QString.
+  *
+  */
 const QString&
 WebContent::getName(void) const
 {

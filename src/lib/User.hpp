@@ -20,7 +20,7 @@ public:
 
 private:
 
-  std::list<WebContent*> webContentList;
+  std::list<WebContent*> webContentList; //!< The user's list of web content
   
 };
 

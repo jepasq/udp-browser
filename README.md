@@ -20,3 +20,14 @@ This project use the now-standard *cmake* build system :
 	cd build/
 	cmake ..
 	make -j4
+
+## API documentation
+
+A *Doxyfile* `doxygen` input file is created by the cmake call. You can use it
+to generate API documentation
+
+	mkdir build
+	cd build/
+	doxyygen
+	<your-favorite-browser> html/index.html
+
