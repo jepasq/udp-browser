@@ -1,4 +1,14 @@
-* v0.0.0-6 (08 Sep. 2022 - 22 Sep. 2022) SLOC 1,50
+* v0.0.0-7 (22 Sep. 2022 - 14 Oct. 2022) SLOC 1,243
+- Improve API documentation and README
+- Basic faLibArchive::load implementation
+- Add failing faLibArchive::load unit tests
+- Rename FileArchiver::process to write
+- FileArchiver's output renamed to filename
+- Implement a tested LibArchiver::process method
+- Add a failing LibArchiver::process unit test
+- Add FileArchiver output handling
+
+* v0.0.0-6 (08 Sep. 2022 - 22 Sep. 2022) SLOC 1,050
 - FileArchiver handles a file list
 - Add basic faLibarchive instanciation test
 - Add a FileArchiver libarchive specialization skeleton class

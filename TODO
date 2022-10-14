@@ -5,12 +5,5 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     Update version and revision from CMakeLists.txt
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
-* v0.0.0-7 (22 Sep. 2022 - ???) SLOC ?,???
-- (8) Improve API documentation and README
-- Basic faLibArchive::load implementation
-- Add failing faLibArchive::load unit tests
-- Rename FileArchiver::process to write
-- FileArchiver's output renamed to filename
-- Implement a tested LibArchiver::process method
-- Add a failing LibArchiver::process unit test
-- Add FileArchiver output handling
+* v0.0.0-8 (14 Oct. 2022 - ???) SLOC ?,???
+
