@@ -73,6 +73,7 @@ add_executable(tests src/tests.cpp
   src/lib/Preferences_Test.cpp
   src/lib/User_Test.cpp
   src/lib/WebContent_Test.cpp
+  src/lib/WebFile_Test.cpp
 
   src/lib/faLibarchive_Test.cpp)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
