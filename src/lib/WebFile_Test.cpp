@@ -11,6 +11,6 @@ BOOST_AUTO_TEST_CASE( WebFile_can_be_instanciated )
 BOOST_AUTO_TEST_CASE( WebFile_get_content )
 {
   WebFile wf;
-  BOOST_CHECK( wf.getContent().empty());
+  BOOST_CHECK( wf.getContent().isEmpty());
 }
 

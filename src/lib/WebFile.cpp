@@ -3,7 +3,8 @@
 /** Webfile constructor
   *
   */
-WebFile::WebFile()
+WebFile::WebFile():
+  content("")
 {
 
 }
@@ -28,4 +29,15 @@ void
 WebFile::save(QDataStream& ds)
 {
 
+}
+
+/** Get the content of the file
+  *
+  * May be an empty string.
+  *
+  */
+const QString&
+WebFile::getContent(void) const
+{
+  return content;
 }

@@ -13,7 +13,10 @@ public:
 
   void load(QDataStream&);
   void save(QDataStream&);
-  
+
+  const QString& getContent(void) const;
+private:
+  QString content;
 };
 
 #endif // !__WEB_FILE_HPP__
