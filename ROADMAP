@@ -57,7 +57,9 @@ CLOCK: [2022-09-20 mar. 01:43]--[2022-09-20 mar. 01:52] =>  0:09
 - [X] May rename FileArchiver::process to write (maybe later add read())
 - [ ] Better FileArchiver test implementation
   Load tests implemented
-  
+
+- [ ] May add a WebFile::setContent unit test and function
+
 - [ ] WebContent load and save uses
   Created both empty clases
   - [ ] a FileArchiver superclass that create a single file from multiple ones
