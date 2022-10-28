@@ -41,3 +41,15 @@ WebFile::getContent(void) const
 {
   return content;
 }
+
+/** Change the content of the file
+  *
+  * \param c The new content. Can be an empty string.
+  *
+  */
+void
+WebFile::setContent(const QString& c)
+{
+  this->content = c;
+}
+

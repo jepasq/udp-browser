@@ -15,6 +15,8 @@ public:
   void save(QDataStream&);
 
   const QString& getContent(void) const;
+  void           setContent(const QString&);
+  
 private:
   QString content;
 };
