@@ -81,7 +81,10 @@ faLibarchive::load()
   if (r != ARCHIVE_OK)
     exit(1);
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
-    files.push_back(archive_entry_pathname(entry));
+    //  files.push_back(archive_entry_pathname(entry)); // Here if the filename
+    addFile(archive_entry_pathname(entry));
+
+
     archive_read_data_skip(a);  // Note 2
   }
   r = archive_read_free(a);  // Note 3
