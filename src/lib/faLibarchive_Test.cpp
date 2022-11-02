@@ -58,4 +58,38 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
   BOOST_CHECK( size1 != fal.getFiles().size());
 }
 
+/// Actually, file is a simple string, change it to WebFile
+BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
+{
+  faLibarchive fal;
+
+  auto size1 = fal.getFiles().size();
+  
+  auto filen = "aze.out";
+  fal.setFilename(filen);
+  fal.load();
+
+  auto f1 = fal.getFiles()[0];
+  
+  // Should work according to https://stackoverflow.com/a/268525
+  BOOST_CHECK( f1.getContent() );
+}
+
+
+/// Has an implemented load function and calling it change file list
+BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )
+{
+  faLibarchive fal;
+
+  auto size1 = fal.getFiles().size();
+  
+  auto filen = "aze.out";
+  fal.setFilename(filen);
+  fal.load();
+
+  auto f1 = fal.getFiles()[0];
+  
+  // Should work according to https://stackoverflow.com/a/268525
+  BOOST_CHECK( !f1.getContent().empty() );
+}
 

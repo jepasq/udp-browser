@@ -4,7 +4,11 @@
 #include <string>
 #include <vector>
 
-typedef std::vector<std::string> tFileList;
+#include <memory>   // USES shared_ptr
+
+#include "WebFile.hpp"
+
+typedef std::vector<std::shared_ptr<WebFile>> tFileList;
 
 /** An archiver abstract class for both read and write web content files
   *
