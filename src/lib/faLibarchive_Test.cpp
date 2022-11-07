@@ -86,6 +86,6 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )
 
   auto f1 = fal.getFiles()[0];
   
-  BOOST_CHECK( f1->getContent().isEmpty() );
+  BOOST_CHECK( !f1->getContent().isEmpty() );
 }
 
