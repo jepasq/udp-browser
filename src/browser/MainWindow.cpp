@@ -8,6 +8,7 @@
 #include "User.hpp"
 /** The main window constructor
   *
+  * \param p      The user preferences object (includes username, quota etc...).
   * \param parent An optional parent defaulted to nullptr.
   *
   */

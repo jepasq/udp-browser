@@ -20,7 +20,7 @@ WebFile::load(QDataStream& ds)
 
 }
 
-/** Load the content of this file from a stream
+/** Save the content of this file to the given stream
   *
   * \param ds The stream.
   *
@@ -34,6 +34,8 @@ WebFile::save(QDataStream& ds)
 /** Get the content of the file
   *
   * May be an empty string.
+  *
+  * \return The content of the file as a Qt string.
   *
   */
 const QString&

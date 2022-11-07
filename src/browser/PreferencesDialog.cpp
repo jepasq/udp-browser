@@ -23,6 +23,14 @@ PreferencesDialog::PreferencesDialog()
     ui.cbQuota->addItem(u);
 }
 
+/** A Preferences-based constructor
+  *
+  * Will override default values with Preferences ones (quota, username
+  * and more ...).
+  *
+  * \param p The Preferences object.
+  *
+  */
 void
 PreferencesDialog::load(Preferences* p)
 {

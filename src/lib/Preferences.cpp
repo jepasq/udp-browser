@@ -3,6 +3,11 @@
 #include <QFile>
 #include <QDataStream>
 
+/** File named constructor
+  *
+  * \param filen The filename.
+  *
+  */
 Preferences::Preferences(const QString& filen):
   Serializer(filen),
   quotaNum(500)

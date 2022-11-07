@@ -21,8 +21,9 @@ MainWindow, in its editor mode, have alist of basic HTML element
 
 - [ ] Could have a basic webcontent template based on webfile
 
-**** TODO Handle unit tests and CI
+**** TODO Handle unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2022-11-07 lun. 13:58]--[2022-11-07 lun. 14:15] =>  0:17
 CLOCK: [2022-10-21 ven. 11:23]--[2022-10-21 ven. 11:31] =>  0:08
 CLOCK: [2022-10-14 ven. 09:50]--[2022-10-14 ven. 10:09] =>  0:19
 CLOCK: [2022-09-15 jeu. 22:49]--[2022-09-15 jeu. 23:04] =>  0:15

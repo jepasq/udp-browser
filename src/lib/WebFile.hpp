@@ -18,7 +18,7 @@ public:
   void           setContent(const QString&);
   
 private:
-  QString content;
+  QString content;   //!< The file content
 };
 
 #endif // !__WEB_FILE_HPP__

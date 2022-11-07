@@ -34,7 +34,7 @@ private:
   QString      username;  //!< The local username
 
   unsigned int quotaNum;  //!< The number part of the quota
-    QuotaUnit_t quotaUnit; //!< Quota in bytes
+  QuotaUnit_t  quotaUnit; //!< Quota in bytes
 };
 
 #endif // !__PREFERENCES_HPP__
