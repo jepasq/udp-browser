@@ -17,7 +17,7 @@ class FileArchiver {
 public:
   FileArchiver();
   
-  void addFile(const std::string&);
+  std::shared_ptr<WebFile> addFile(const std::string&);
 
   tFileList getFiles(void) const;
 

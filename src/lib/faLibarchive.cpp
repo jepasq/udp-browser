@@ -9,6 +9,8 @@
 
 #include <cstring>
 
+#include <iostream>
+
 faLibarchive::faLibarchive()
 {
 
@@ -72,6 +74,7 @@ faLibarchive::load()
 
   struct archive *a;
   struct archive_entry *entry;
+  const void *buff;
   int r;
   
   a = archive_read_new();
@@ -83,8 +86,9 @@ faLibarchive::load()
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
     //  files.push_back(archive_entry_pathname(entry)); // Here if the filename
     addFile(archive_entry_pathname(entry));
-
-
+    auto r = archive_read_open_memory(a, buff, sizeof(buff));
+    std::cout << r << std::endl;
+    
     archive_read_data_skip(a);  // Note 2
   }
   r = archive_read_free(a);  // Note 3

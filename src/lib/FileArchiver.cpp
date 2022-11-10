@@ -12,10 +12,12 @@ FileArchiver::FileArchiver()
   * \param file The file name.
   *
   */
-void
+std::shared_ptr<WebFile>
 FileArchiver::addFile(const std::string& file)
 {
-  files.push_back(std::make_shared<WebFile>());
+  auto sp = std::make_shared<WebFile>();
+  files.push_back(sp);
+  return sp;
 }
 
 tFileList
