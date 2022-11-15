@@ -1,3 +1,13 @@
+* v0.0.1-8 (14 Oct. 2022 - 15 Nov. 2022) SLOC 1,399
+- Trying to read content from archive
+- WebContent::addFile now returns the created shared_ptr
+- Archiver now uses shared_ptr of WebFile
+- Close libarchive test ROADMAP section and bump version to 0.0.1
+- WebFile::setContent implementation
+- Implement WebFile getContent
+- Add a failing WebFile::getContent() unit test
+- Close the site name related ROADMAP section
+
 * v0.0.0-7 (22 Sep. 2022 - 14 Oct. 2022) SLOC 1,243
 - Improve API documentation and README
 - Basic faLibArchive::load implementation
