@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-8 (14 Oct. 2022 - ???) SLOC ?,???
-- (7) WebContent::addFile now returns the created shared_ptr
+- (8) Trying to read content from archive
+- WebContent::addFile now returns the created shared_ptr
 - Archiver now uses shared_ptr of WebFile
 - Close libarchive test ROADMAP section and bump version to 0.0.1
 - WebFile::setContent implementation

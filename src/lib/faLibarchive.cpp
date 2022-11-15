@@ -87,8 +87,10 @@ faLibarchive::load()
     //  files.push_back(archive_entry_pathname(entry)); // Here if the filename
     addFile(archive_entry_pathname(entry));
     auto r = archive_read_open_memory(a, buff, sizeof(buff));
-    std::cout << r << std::endl;
-    
+    char* pc = (char*)buff;
+    std::cout << "'("  << r << ") "
+	      << pc[0] 
+	      << std::endl;
     archive_read_data_skip(a);  // Note 2
   }
   r = archive_read_free(a);  // Note 3
