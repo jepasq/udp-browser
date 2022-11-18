@@ -18,6 +18,7 @@ public:
   void           setContent(const QString&);
   
 private:
+  QString filename;  //!< The file name
   QString content;   //!< The file content
 };
 

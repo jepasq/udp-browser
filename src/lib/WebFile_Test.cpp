@@ -25,3 +25,19 @@ BOOST_AUTO_TEST_CASE( WebFile_set_content )
   BOOST_CHECK( wf.getContent() != ct);
 }
 
+/// Must have a getFilename function but shouldn't be empty
+BOOST_AUTO_TEST_CASE( WebFile_get_filename )
+{
+  WebFile wf;
+  BOOST_CHECK( !wf.getFilename().isEmpty() );
+}
+
+BOOST_AUTO_TEST_CASE( WebFile_set_filename )
+{
+  WebFile wf;
+  auto ct = wf.getFilename();
+  QString new_filename = "AZEazeazeAZE";
+
+  wf.setFilename(new_filename);
+  BOOST_CHECK( wf.getFilename() != ct);
+}
