@@ -16,6 +16,9 @@ public:
 
   const QString& getContent(void) const;
   void           setContent(const QString&);
+
+  const QString& getFilename(void) const;
+  void           setFilename(const QString&);
   
 private:
   QString filename;  //!< The file name

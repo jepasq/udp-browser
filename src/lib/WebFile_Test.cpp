@@ -2,6 +2,8 @@
 
 #include <boost/test/unit_test.hpp>
 
+#include <stdexcept> // USES std::runtime_error
+
 BOOST_AUTO_TEST_CASE( WebFile_can_be_instanciated )
 {
   WebFile wf;
@@ -40,4 +42,13 @@ BOOST_AUTO_TEST_CASE( WebFile_set_filename )
 
   wf.setFilename(new_filename);
   BOOST_CHECK( wf.getFilename() != ct);
+}
+
+/// Should throw an exception if we try to set an empty filename
+BOOST_AUTO_TEST_CASE( WebFile_set_empty_filename )
+{
+  WebFile wf;
+
+  
+  BOOST_CHECK_THROW(wf.setFilename(""), std::runtime_error);
 }
