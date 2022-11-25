@@ -46,6 +46,11 @@ MainWindow::~MainWindow()
   delete user;
 }
 
+/** The browser mode button callback
+ *
+ * \param value Unsused parameter.
+ *
+ */ 
 void
 MainWindow::on_pbMode_clicked(bool value)
 {
@@ -54,6 +59,9 @@ MainWindow::on_pbMode_clicked(bool value)
   ui.pbMode->setText(modeToStr());
 }
 
+/** Change browser to next mode
+ *
+ */
 void
 MainWindow::nextMode()
 {
@@ -75,6 +83,11 @@ MainWindow::modeToStr()
   return m[i];
 }
 
+/** The Preferences button slot
+ *
+ * Must show the preferences handling dialog.
+ *
+ */
 void
 MainWindow::onPreferencesClicked(bool value)
 {

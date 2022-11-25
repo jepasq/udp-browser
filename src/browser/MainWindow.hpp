@@ -48,8 +48,8 @@ private:
   Ui::MainWindow ui;  //!< The ui objects from the designer .ui file
 
   QMenu* hamMenu;      //!< The hamberger menu
-  Preferences* pref;
-  User* user;
+  User* user;          //!< The current user
+  Preferences* pref;   //!< The current user's preferences
 };
 
 #endif // !__MAIN_WINDOW_HPP__
