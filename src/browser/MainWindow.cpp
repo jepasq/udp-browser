@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include <QMessageBox> // USES QMessageBox::about()
+
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
 #include "Preferences.hpp"
@@ -141,6 +143,10 @@ MainWindow::onHelpClicked(bool value)
 void
 MainWindow::onAboutClicked(bool value)
 {
-  std::cout << "Show About dialog..." << std::endl;
-
+  QString title = "About ";
+  title += PROJECT_NAME;
+  
+  QString txt = WTITLE;
+  
+  QMessageBox::about(this, title, txt);
 }
