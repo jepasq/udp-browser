@@ -27,12 +27,19 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   setTitle();
   
   auto prefAction = new QAction("&Preferences", this);
+  auto helpAction = new QAction("&Help", this);
+  auto aboutAction = new QAction("&About", this);
   hamMenu = new QMenu("Global menu", this);
   hamMenu->addAction(prefAction);
+  hamMenu->addSeparator();
+  hamMenu->addAction(helpAction);
+  hamMenu->addAction(aboutAction);
 
+  
   ui.pbHamburger->setMenu(hamMenu);
-  connect(prefAction, &QAction::triggered,
-	  this, &MainWindow::onPreferencesClicked);
+  connect(prefAction, &QAction::triggered, this, &MainWindow::onPrefClicked);
+  connect(helpAction, &QAction::triggered, this, &MainWindow::onHelpClicked);
+  connect(aboutAction, &QAction::triggered,this, &MainWindow::onAboutClicked);
 
   user = new User();
 }
@@ -89,7 +96,7 @@ MainWindow::modeToStr()
  *
  */
 void
-MainWindow::onPreferencesClicked(bool value)
+MainWindow::onPrefClicked(bool value)
 {
   std::cout << "Show preferences dialog..." << std::endl;
   PreferencesDialog prd;
@@ -112,4 +119,28 @@ MainWindow::setTitle()
     setWindowTitle(WTITLE);
   else
     setWindowTitle(u+"@"+WTITLE);
+}
+
+/** The Help button slot
+ *
+ * \param value An unused boolean.
+ *
+ */
+void
+MainWindow::onHelpClicked(bool value)
+{
+  std::cout << "Show Help dialog..." << std::endl;
+
+}
+
+/** The Help button slot
+ *
+ * \param value Show an About dialog.
+ *
+ */
+void
+MainWindow::onAboutClicked(bool value)
+{
+  std::cout << "Show About dialog..." << std::endl;
+
 }

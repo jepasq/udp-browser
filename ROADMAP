@@ -13,6 +13,10 @@
 - [ ] WebFile could delegate work to specialized classes wfV1, wfV2 etc...
   qo we could test and read old version archives.
 **** Add an Help/About dialog
+:LOGBOOK:
+CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
+:END:
+- [X] Button is Under the Preference button
 - [ ] Contains our own version number
 - [ ] contains version of dependencies (Qt, libarchive etc...)
 **** Let's you create website on the fly

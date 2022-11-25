@@ -35,7 +35,9 @@ public:
 private slots:
   void on_pbMode_clicked(bool value);
 
-  void onPreferencesClicked(bool value);
+  void onPrefClicked(bool value);
+  void onHelpClicked(bool value);
+  void onAboutClicked(bool value);
 
 protected:
   void    nextMode();
