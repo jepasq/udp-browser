@@ -8,6 +8,28 @@
 #include "PreferencesDialog.hpp"
 #include "Preferences.hpp"
 #include "User.hpp"
+
+// See https://stackoverflow.com/a/1505631
+// Check windows
+#if _WIN32 || _WIN64
+#if _WIN64
+#define ENVB 64
+#else
+#define ENVB 32
+#endif
+#endif
+
+// Check GCC
+#if __GNUC__
+#if __x86_64__ || __ppc64__
+#define ENVB 64
+#else
+#define ENVB 32
+#endif
+#endif
+
+
+
 /** The main window constructor
   *
   * \param p      The user preferences object (includes username, quota etc...).
@@ -145,8 +167,10 @@ MainWindow::onAboutClicked(bool value)
 {
   QString title = "About ";
   title += PROJECT_NAME;
-  
   QString txt = WTITLE;
+
+  txt  += " (" + QString::number(ENVB) + " bits)";
+  txt += "\nBuild on " + QString(__DATE__) + " at " + QString(__TIME__);
   
   QMessageBox::about(this, title, txt);
 }

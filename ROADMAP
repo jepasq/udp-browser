@@ -14,12 +14,14 @@
   qo we could test and read old version archives.
 **** Add an Help/About dialog
 :LOGBOOK:
+CLOCK: [2022-12-01 jeu. 18:14]--[2022-12-01 jeu. 18:30] =>  0:16
 CLOCK: [2022-11-25 ven. 17:15]--[2022-11-25 ven. 17:23] =>  0:08
 CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
 :END:
 - [X] Button is Under the Preference button
 - [X] Contains our own version number
-- [ ] May add architecture (32/64 bits)  
+- [X] May add architecture (32/64 bits)
+- [ ] May add building compiler  
 - [ ] contains version of dependencies (Qt, libarchive etc...)
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
