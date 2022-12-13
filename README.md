@@ -28,6 +28,6 @@ to generate API documentation
 
 	mkdir build
 	cd build/
-	doxyygen
+	doxygen
 	<your-favorite-browser> html/index.html
 
