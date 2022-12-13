@@ -14,6 +14,7 @@
   qo we could test and read old version archives.
 **** Add an Help/About dialog
 :LOGBOOK:
+CLOCK: [2022-12-13 mar. 03:18]--[2022-12-13 mar. 03:24] =>  0:06
 CLOCK: [2022-12-01 jeu. 18:14]--[2022-12-01 jeu. 18:30] =>  0:16
 CLOCK: [2022-11-25 ven. 17:15]--[2022-11-25 ven. 17:23] =>  0:08
 CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
@@ -23,6 +24,9 @@ CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
 - [X] May add architecture (32/64 bits)
 - [ ] May add building compiler  
 - [ ] contains version of dependencies (Qt, libarchive etc...)
+- [ ] Maybe a complete HelpViewer based on Qt Assistant
+  see https://doc.qt.io/qt-5/assistant-custom-help-viewer.html
+  - [ ] App launched, may now create the .qhc file
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop

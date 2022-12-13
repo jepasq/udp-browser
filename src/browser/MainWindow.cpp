@@ -4,6 +4,8 @@
 
 #include <QMessageBox> // USES QMessageBox::about()
 
+#include <QProcess>
+
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
 #include "Preferences.hpp"
@@ -153,8 +155,17 @@ MainWindow::setTitle()
 void
 MainWindow::onHelpClicked(bool value)
 {
-  std::cout << "Show Help dialog..." << std::endl;
+  std::cout << "Launching Qt Assistant..." << std::endl;
 
+  QProcess *process = new QProcess;
+  QStringList args;
+  args //<< QLatin1String("-collectionFile")
+       //<< QLatin1String("mycollection.qhc")
+       << QLatin1String("-enableRemoteControl");
+  process->start(QLatin1String("assistant"), args);
+  if (!process->waitForStarted())
+    return;
+  
 }
 
 /** The Help button slot
