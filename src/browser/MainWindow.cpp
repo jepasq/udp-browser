@@ -169,8 +169,21 @@ MainWindow::onAboutClicked(bool value)
   title += PROJECT_NAME;
   QString txt = WTITLE;
 
-  txt  += " (" + QString::number(ENVB) + " bits)";
+  txt += " (" + QString::number(ENVB) + " bits)";
   txt += "\nBuild on " + QString(__DATE__) + " at " + QString(__TIME__);
+
+#if defined(__clang__)
+  txt+="\nwith CLANG v" + QString::number(__clang_major__) + "."
+    + QString::number(__clang_minor__)  + "."
+    + QString::number(__clang_patchlevel__);
+#elif defined(__GNUC__) || defined(__GNUG__)
+  txt += "\nwith GCC v" + QString::number(__GNUC__) + "."
+    + QString::number(__GNUC_MINOR__ ) + ".";
+    txt += QString::number(__GNUC_PATCHLEVEL__);
+
+#elif defined(_MSC_VER)
+  txt+= "\nwith MSVC";
+#endif
   
   QMessageBox::about(this, title, txt);
 }
