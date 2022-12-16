@@ -31,7 +31,7 @@ public:
   
 protected:
   tFileList files;      //!< The files to be added to the archive
-  std::string filename; // Archive filename
+  std::string filename; //!< Archive filename
 };
 
 #endif // !__FILE_ARCHIVER_HPP__
