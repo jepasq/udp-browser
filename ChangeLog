@@ -1,3 +1,13 @@
+* v0.0.1-9 (15 Nov. 2022 - 16 Dec. 2022) SLOC 1,565
+- Generates a qhc Qt help file
+- Launch Qt assistant as an help viewer from a custom Process
+- Add compiler version to about dialog
+- Add architecture and build date/time to about dialog
+- Opens a basic about dialog with our own version
+- And help and about button to hamburger menu and slots
+- WebFile filename setter and getter implementation
+- Add a couple of WebFile filename unit tests
+
 * v0.0.1-8 (14 Oct. 2022 - 15 Nov. 2022) SLOC 1,399
 - Trying to read content from archive
 - WebContent::addFile now returns the created shared_ptr
