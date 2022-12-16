@@ -14,6 +14,7 @@
   qo we could test and read old version archives.
 **** Add an Help/About dialog
 :LOGBOOK:
+CLOCK: [2022-12-16 ven. 06:19]--[2022-12-16 ven. 06:26] =>  0:07
 CLOCK: [2022-12-16 ven. 04:11]--[2022-12-16 ven. 04:20] =>  0:09
 CLOCK: [2022-12-13 mar. 03:18]--[2022-12-13 mar. 03:24] =>  0:06
 CLOCK: [2022-12-01 jeu. 18:14]--[2022-12-01 jeu. 18:30] =>  0:16
@@ -28,8 +29,9 @@ CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
 - [-] Maybe a complete HelpViewer based on Qt Assistant
   see https://doc.qt.io/qt-5/assistant-custom-help-viewer.html
   - [X] App launched, may now create the .qhc file
-  - [ ] Now, must write and show the actual
-    Maybe a texinfo-based user's manual ?
+  - [ ] Now, must write and show the actual help
+    Maybe a texinfo-based user's manual ? in /media/manual
+  - [ ] Maybe add a menu entry for the API doxygen-generated doc      
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have a list of basic HTML element
 (div, span etc...) we can drag and drop
