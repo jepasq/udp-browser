@@ -1,0 +1,8 @@
+<!--  Hey emacs, it's an -*-xml-*- file  -->
+<?xml version="1.0" encoding="utf-8" ?>
+<QHelpCollectionProject version="1.0">
+    <assistant>
+        <title>@PROJECT_NAME@ v@CMAKE_PROJECT_VERSION@-@REVISION@</title>
+        <cacheDirectory>jepasq/udp-browser</cacheDirectory>
+    </assistant>
+</QHelpCollectionProject>

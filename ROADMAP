@@ -14,6 +14,7 @@
   qo we could test and read old version archives.
 **** Add an Help/About dialog
 :LOGBOOK:
+CLOCK: [2022-12-16 ven. 04:11]--[2022-12-16 ven. 04:20] =>  0:09
 CLOCK: [2022-12-13 mar. 03:18]--[2022-12-13 mar. 03:24] =>  0:06
 CLOCK: [2022-12-01 jeu. 18:14]--[2022-12-01 jeu. 18:30] =>  0:16
 CLOCK: [2022-11-25 ven. 17:15]--[2022-11-25 ven. 17:23] =>  0:08
@@ -24,9 +25,11 @@ CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
 - [X] May add architecture (32/64 bits)
 - [ ] May add building compiler  
 - [ ] contains version of dependencies (Qt, libarchive etc...)
-- [ ] Maybe a complete HelpViewer based on Qt Assistant
+- [-] Maybe a complete HelpViewer based on Qt Assistant
   see https://doc.qt.io/qt-5/assistant-custom-help-viewer.html
-  - [ ] App launched, may now create the .qhc file
+  - [X] App launched, may now create the .qhc file
+  - [ ] Now, must write and show the actual
+    Maybe a texinfo-based user's manual ?
 **** Let's you create website on the fly
 MainWindow, in its editor mode, have alist of basic HTML element
 (div, span etc...) we can drag and drop
@@ -76,7 +79,8 @@ CLOCK: [2022-11-02 mer. 11:41]--[2022-11-02 mer. 11:49] =>  0:08
   - [ ] a FileArchiver superclass that create a single file from multiple ones
     Maybe libArchive, found in arch. but not sure we need both the
     archiver/compressor classes
-  - [ ] a FileCompressor subclass to compress  archive and eventually compute hashsum
+  - [ ] a FileCompressor subclass to compress  archive and eventually compute
+    hashsum
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
 *** DONE v0.0.1

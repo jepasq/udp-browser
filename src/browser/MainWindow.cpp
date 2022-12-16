@@ -159,8 +159,8 @@ MainWindow::onHelpClicked(bool value)
 
   QProcess *process = new QProcess;
   QStringList args;
-  args //<< QLatin1String("-collectionFile")
-       //<< QLatin1String("mycollection.qhc")
+  args << QLatin1String("-collectionFile")
+       << QLatin1String("udp-browser.qhc")
        << QLatin1String("-enableRemoteControl");
   process->start(QLatin1String("assistant"), args);
   if (!process->waitForStarted())

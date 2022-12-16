@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-9 (15 Nov. 2022 - ???) SLOC ?,???
-- (7) Launch Qt assistant as an help viewer from a custom Process
+- (8) Generates a qhc Qt help file
+- Launch Qt assistant as an help viewer from a custom Process
 - Add compiler version to about dialog
 - Add architecture and build date/time to about dialog
 - Opens a basic about dialog with our own version

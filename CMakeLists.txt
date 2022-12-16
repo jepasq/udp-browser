@@ -20,6 +20,11 @@ configure_file(
   )
 
 configure_file(
+  "${PROJECT_SOURCE_DIR}/udp-browser.qhc.in"
+  "${PROJECT_BINARY_DIR}/udp-browser.qhc"
+  )
+
+configure_file(
   "${PROJECT_SOURCE_DIR}/src/config.h.in"
   "${PROJECT_BINARY_DIR}/config.h"
   )
