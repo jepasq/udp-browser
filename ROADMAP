@@ -37,7 +37,10 @@ MainWindow, in its editor mode, have a list of basic HTML element
 (div, span etc...) we can drag and drop
 
 - [ ] Could have a basic webcontent template based on webfile
-
+- [-] See how to use tool button to create elements
+  - [X] "Brower Mode" text must be top-aligned
+  - [X] Added a "<p>" tool button to the tool box
+  - [ ] See how to handle drag and drop here    
 **** TODO Handle unit tests, CI and API documentation
 :LOGBOOK:
 CLOCK: [2022-12-16 ven. 04:42]--[2022-12-16 ven. 04:52] =>  0:10

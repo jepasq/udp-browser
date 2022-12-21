@@ -50,7 +50,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -58,6 +58,9 @@
          <widget class="QLabel" name="label">
           <property name="text">
            <string>Browser mode!</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
           </property>
          </widget>
         </item>
@@ -85,6 +88,9 @@
            <property name="text">
             <string>TextLabel</string>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
           </widget>
          </item>
          <item>
@@ -110,7 +116,15 @@
             <attribute name="label">
              <string>Page 1</string>
             </attribute>
-            <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QToolButton" name="tbPar">
+               <property name="text">
+                <string>&lt;p&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
            <widget class="QWidget" name="page_4">
             <property name="geometry">
