@@ -75,21 +75,22 @@ faLibarchive::load()
   struct archive *a;
   struct archive_entry *entry;
   char buff[1024];
-  int r;
   
   a = archive_read_new();
   archive_read_support_filter_all(a);
   archive_read_support_format_all(a);
-  r = archive_read_open_filename(a, outname, 1024); // Note 1
+  int r = archive_read_open_filename(a, outname, 1024); // Note 1
   if (r != ARCHIVE_OK)
     exit(1);
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
     //  files.push_back(archive_entry_pathname(entry)); // Here if the filename
-    addFile(archive_entry_pathname(entry));
+    auto addedfile = addFile(archive_entry_pathname(entry));
     // result may be read bytes
     auto result = archive_read_open_memory(a, buff, sizeof(buff));
     char* pc = (char*)buff;
-    std::cout << "'("  << r << ") '" << pc[0] << "'" << std::endl;
+    std::cout << "'("  << result << ") '" << pc << "'" << std::endl;
+    addedfile->setContent(pc);
+
     
     archive_read_data_skip(a);  // Note 2
   }
