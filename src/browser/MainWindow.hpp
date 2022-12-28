@@ -5,6 +5,7 @@
 #include "ui/ui_MainWindow.h" // MOC generated file
 
 #include <QWidget>
+#include <QPointF>   // Used to keep position
 
 // Forward declarations
 class Preferences;
@@ -39,11 +40,16 @@ private slots:
   void onHelpClicked(bool value);
   void onAboutClicked(bool value);
 
+  void onParClicked(bool value);
+
+
 protected:
   void    nextMode();
   QString modeToStr();
 
   void setTitle();
+
+  virtual void mouseMoveEvent(QMouseEvent *event);
   
 private:
   BrowserMode mode;   //!< The current mode
@@ -52,6 +58,8 @@ private:
   QMenu* hamMenu;      //!< The hamberger menu
   User* user;          //!< The current user
   Preferences* pref;   //!< The current user's preferences
+
+  QPointF dragStartPosition;
 };
 
 #endif // !__MAIN_WINDOW_HPP__

@@ -33,14 +33,22 @@ CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
     Maybe a texinfo-based user's manual ? in /media/manual
   - [ ] Maybe add a menu entry for the API doxygen-generated doc      
 **** Let's you create website on the fly
+:LOGBOOK:
+CLOCK: [2022-12-28 mer. 05:40]--[2022-12-28 mer. 06:11] =>  0:31
+:END:
 MainWindow, in its editor mode, have a list of basic HTML element
 (div, span etc...) we can drag and drop
 
-- [ ] Could have a basic webcontent template based on webfile
 - [-] See how to use tool button to create elements
   - [X] "Brower Mode" text must be top-aligned
   - [X] Added a "<p>" tool button to the tool box
-  - [ ] See how to handle drag and drop here    
+  - [ ] See how to handle drag and drop here
+    Trying to handle this way https://doc.qt.io/qt-6/dnd.html
+    We actually reimplemented mousemove on mainwindow
+    - [ ] But now, how to get event position when pat tool button is clicked
+      because it's a trigger event and not a clicked one
+    
+- [ ] Could have a basic webcontent template based on webfile
 **** TODO Handle unit tests, CI and API documentation
 :LOGBOOK:
 CLOCK: [2022-12-16 ven. 04:42]--[2022-12-16 ven. 04:52] =>  0:10

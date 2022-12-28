@@ -3,8 +3,11 @@
 #include <iostream>
 
 #include <QMessageBox> // USES QMessageBox::about()
-
+#include <QMimeData>
 #include <QProcess>
+#include <QEvent>
+#include <QMouseEvent>
+#include <QDrag>
 
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
@@ -67,6 +70,9 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   connect(helpAction, &QAction::triggered, this, &MainWindow::onHelpClicked);
   connect(aboutAction, &QAction::triggered,this, &MainWindow::onAboutClicked);
 
+  // Trying to handle drag event
+  connect(ui.tbPar, &QToolButton::triggered, this, &MainWindow::onParClicked);
+  
   user = new User();
 }
 
@@ -198,3 +204,36 @@ MainWindow::onAboutClicked(bool value)
   
   QMessageBox::about(this, title, txt);
 }
+
+void
+MainWindow::onParClicked(bool value)
+{
+  /*
+  if (event->button() == Qt::LeftButton)
+    dragStartPosition = event->pos();
+  */
+  std::cout << "Par toolbutton clicked" << std::endl;
+}
+
+
+void
+MainWindow::mouseMoveEvent(QMouseEvent *e)
+{
+  if (!(e->buttons() & Qt::LeftButton))
+    return;
+  if ((e->pos() - dragStartPosition).manhattanLength()
+      < QApplication::startDragDistance())
+    return;
+
+  std::cout << "Mouse move" << e->pos().x() << ":" << e->pos().y() << std::endl;
+
+  
+  QDrag *drag = new QDrag(this);
+  QMimeData *mimeData = new QMimeData;
+  
+  //  mimeData->setData(mimeType, data);
+  drag->setMimeData(mimeData);
+  
+  Qt::DropAction dropAction = drag->exec(Qt::CopyAction | Qt::MoveAction);
+}
+
