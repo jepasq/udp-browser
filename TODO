@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-10 (16 Dec. 2022 - ???) SLOC ?,???
-- (6) Improve About dialog using BOOST_COMPILER definition
+- (7) Close the actual Archiver -related ROADMAP section
+- Improve About dialog using BOOST_COMPILER definition
 - Handle some MainWindow events to start working on drag n drop
 - Finally fix the empty content-based FileArchiver unit test
 - Add a toolbutton in editor mode
