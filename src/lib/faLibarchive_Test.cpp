@@ -89,3 +89,25 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )
   BOOST_CHECK( !f1->getContent().isEmpty() );
 }
 
+BOOST_AUTO_TEST_CASE( faLibArchive_save_file )
+{
+  faLibarchive fal;
+
+  std::shared_ptr<WebFile> wf = fal.addFile("name");
+  BOOST_CHECK( wf ); // Not null
+}
+
+BOOST_AUTO_TEST_CASE( faLibArchive_save_file_with_content )
+{
+  faLibarchive fal;
+  fal.setFilename("fatest.out");
+
+  std::shared_ptr<WebFile> wf = fal.addFile("name");
+  wf->setContent("Aaaze");
+  fal.write();
+  
+  BOOST_CHECK( wf ); // Not null
+}
+
+
+
