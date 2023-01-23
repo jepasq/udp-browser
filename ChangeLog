@@ -1,3 +1,13 @@
+* v0.0.1-10 (16 Dec. 2022 - 23 Jan. 2023) SLOC 1,645
+- Add a couple of faLibarchive::load  unit tests
+- Close the actual Archiver -related ROADMAP section
+- Improve About dialog using BOOST_COMPILER definition
+- Handle some MainWindow events to start working on drag n drop
+- Finally fix the empty content-based FileArchiver unit test
+- Add a toolbutton in editor mode
+- Add a basic sample-based texinfo user manual
+- Improve FileArchiver API documentation
+
 * v0.0.1-9 (15 Nov. 2022 - 16 Dec. 2022) SLOC 1,565
 - Generates a qhc Qt help file
 - Launch Qt assistant as an help viewer from a custom Process
