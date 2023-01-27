@@ -109,5 +109,20 @@ BOOST_AUTO_TEST_CASE( faLibArchive_save_file_with_content )
   BOOST_CHECK( wf ); // Not null
 }
 
+BOOST_AUTO_TEST_CASE( faLibArchive_load_file_with_content )
+{
+  faLibarchive fal;
+  fal.setFilename("fatest.out");
+
+  fal.load();
+
+  auto files = fal.getFiles();
+  BOOST_CHECK( files.size() != 0 ); // Not null
+
+  auto s = files[0]->getContent();
+  BOOST_CHECK( s == "Aaaze" ); // Not null
+  
+}
+
 
 
