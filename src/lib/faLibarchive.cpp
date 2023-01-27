@@ -8,8 +8,9 @@
 #include <fcntl.h>
 
 #include <cstring>
-
 #include <iostream>
+
+#include <QDebug>
 
 faLibarchive::faLibarchive()
 {
@@ -40,6 +41,13 @@ faLibarchive::write()
   //  archive_write_add_filter_gzip(a);
   archive_write_set_format_pax_restricted(a); // Note 1
   archive_write_open_filename(a, outname);
+
+  for (auto file : files)
+    {
+      qDebug() << file->getFilename().toUtf8()
+	       << ": " << file->getContent().toUtf8();
+    }
+
   //  while (*filename) {
   //    stat(*filename, &st);
     entry = archive_entry_new(); // Note 2
@@ -82,14 +90,16 @@ faLibarchive::load()
   int r = archive_read_open_filename(a, outname, 1024); // Note 1
   if (r != ARCHIVE_OK)
     exit(1);
-  while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
-    //  files.push_back(archive_entry_pathname(entry)); // Here if the filename
-    auto addedfile = addFile(archive_entry_pathname(entry));
-    // result may be read bytes
-    auto result = archive_read_open_memory(a, buff, sizeof(buff));
-    char* pc = (char*)buff;
-    std::cout << "'("  << result << ") '" << pc << "'" << std::endl;
-    addedfile->setContent(pc);
+  while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
+    {
+      // Here if the filename
+      //  files.push_back(archive_entry_pathname(entry)); 
+      auto addedfile = addFile(archive_entry_pathname(entry));
+      // result may be read bytes
+      auto result = archive_read_open_memory(a, buff, sizeof(buff));
+      char* pc = (char*)buff;
+      std::cout << "'("  << result << ") '" << pc << "'" << std::endl;
+      addedfile->setContent(pc);
 
     
     archive_read_data_skip(a);  // Note 2
