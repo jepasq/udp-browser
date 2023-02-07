@@ -62,7 +62,6 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
 BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
 {
   faLibarchive fal;
-
   auto filen = "aze.out";
   fal.setFilename(filen);
   fal.load();

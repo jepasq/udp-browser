@@ -22,7 +22,7 @@ std::shared_ptr<WebFile>
 FileArchiver::addFile(const std::string& file)
 {
   auto sp = std::make_shared<WebFile>();
-  files.push_back(sp);
+  files.push_back(std::move(sp));
   return sp;
 }
 
