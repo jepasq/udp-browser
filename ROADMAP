@@ -69,6 +69,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [ ] Continue implementation
 **** TODO [fix_loadFunctionUt] WebFile extraction further implementation
 :LOGBOOK:
+CLOCK: [2023-02-13 lun. 12:03]--[2023-02-13 lun. 12:38] =>  0:35
 CLOCK: [2023-02-07 mar. 09:52]--[2023-02-07 mar. 10:25] =>  0:33
 CLOCK: [2023-02-02 jeu. 09:51]--[2023-02-02 jeu. 10:09] =>  0:18
 CLOCK: [2023-01-27 ven. 09:18]--[2023-01-27 ven. 09:32] =>  0:14
@@ -83,6 +84,8 @@ CLOCK: [2023-01-23 lun. 06:31]--[2023-01-23 lun. 06:52] =>  0:21
   #3  0x0000555555576ff2 in faLibArchive_load_file_has_content_invoker() ()
   #4  0x0000555555564645 in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke(boost::detail::function::function_buffer&) ()
   - [ ] Maybe a shared_ptr error ?
+  - It is, at least sometimes, due to the spurious call =fal.getFiles()[0];=
+  - [ ] Add basic SAFE macro calls to conditionnally call spurious code in unit tests
 - [ ] Not sure the WebFile is extracted correctly, test that
   from faLibarchive,
   - [ ] Test is failing and content of the created archive is actually
