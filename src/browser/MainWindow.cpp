@@ -195,6 +195,12 @@ MainWindow::onAboutClicked(bool value)
   QMessageBox::about(this, title, txt);
 }
 
+/** The paragraph toolbar button clicked slot
+  *
+  * \param value The button is uncheckable. Should always be false. See
+  *              https://doc.qt.io/qt-6/qaction.html#triggered .
+  *
+  */
 void
 MainWindow::onParClicked(bool value)
 {
@@ -206,6 +212,14 @@ MainWindow::onParClicked(bool value)
 }
 
 
+/** The mouse move event
+  *
+  * Mainly used to handle drag and drop feature. Using dragStartPosition
+  * as main member.
+  *
+  * \param e The event pointer.
+  *
+  */
 void
 MainWindow::mouseMoveEvent(QMouseEvent *e)
 {

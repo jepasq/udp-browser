@@ -59,7 +59,7 @@ private:
   User* user;          //!< The current user
   Preferences* pref;   //!< The current user's preferences
 
-  QPointF dragStartPosition;
+  QPointF dragStartPosition; //!< Used to handle drag'n'drop from mouseMoveEvent
 };
 
 #endif // !__MAIN_WINDOW_HPP__
