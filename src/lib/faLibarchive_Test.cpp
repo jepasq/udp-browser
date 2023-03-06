@@ -111,9 +111,10 @@ BOOST_AUTO_TEST_CASE( faLibArchive_save_file_with_content )
   fal.setFilename("fatest.out");
 
   std::shared_ptr<WebFile> wf = fal.addFile("name");
-  wf->setContent("Aaaze");
-  fal.write();
-  
+  SAFE{
+    wf->setContent("Aaaze");
+    fal.write();
+  }
   BOOST_CHECK( wf ); // Not null
 }
 
@@ -122,8 +123,9 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_with_content )
   faLibarchive fal;
   fal.setFilename("fatest.out");
 
-  fal.load();
-
+  SAFE{
+    fal.load();
+  }
   auto files = fal.getFiles();
   BOOST_CHECK( files.size() != 0 ); // Not null
 
