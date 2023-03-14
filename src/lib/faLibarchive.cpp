@@ -82,18 +82,15 @@ faLibarchive::load()
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
       // Here if the filename
-      //  files.push_back(archive_entry_pathname(entry)); 
       auto addedfile = addFile(archive_entry_pathname(entry));
+      files.push_back(addedfile);
       // result may be read bytes
       auto result = archive_read_open_memory(a, buff, sizeof(buff));
       char* pc = (char*)buff;
       std::cout << "'("  << result << ") '" << pc << "'" << std::endl;
       addedfile->setContent(pc);
-
-    
-    archive_read_data_skip(a);  // Note 2
   }
-  r = archive_read_free(a);  // Note 3
+  r = archive_read_free(a);
   if (r != ARCHIVE_OK)
     exit(1);
 }
