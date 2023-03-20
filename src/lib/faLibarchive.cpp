@@ -9,6 +9,7 @@
 
 #include <cstring>
 #include <iostream>
+#include <sstream>    // USES ostringstream
 
 #include <QDebug>
 
@@ -78,7 +79,11 @@ faLibarchive::load()
   archive_read_support_format_all(a);
   int r = archive_read_open_filename(a, outname, 1024); // Note 1
   if (r != ARCHIVE_OK)
-    exit(1);
+    {
+      std::ostringstream oss;
+      oss << "Can't read archive file named '" << filename << "'";
+      throw std::runtime_error(oss.str());
+    }
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
       // Here if the filename
@@ -92,5 +97,9 @@ faLibarchive::load()
   }
   r = archive_read_free(a);
   if (r != ARCHIVE_OK)
-    exit(1);
+    {
+      std::ostringstream oss;
+      oss << "Can't free memory for archive '" << filename << "'";
+      throw std::runtime_error(oss.str());
+    }
 }

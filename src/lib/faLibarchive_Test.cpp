@@ -73,6 +73,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
   fal.load();
 
   SAFE{
+    std::cout << "getFiles size : " << fal.getFiles().size() << std::endl;
     auto f1 = fal.getFiles()[0];
     auto c = f1->getContent(); // At least it compiles
   }
