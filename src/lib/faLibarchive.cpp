@@ -36,7 +36,7 @@ faLibarchive::write()
 
   
   a = archive_write_new();
-  //  archive_write_add_filter_gzip(a);
+  archive_write_add_filter_gzip(a);
   archive_write_set_format_pax_restricted(a); // Note 1
   archive_write_open_filename(a, outname);
 
@@ -95,6 +95,7 @@ faLibarchive::load()
       std::cout << "'("  << result << ") '" << pc << "'" << std::endl;
       addedfile->setContent(pc);
   }
+  archive_read_close(a);
   r = archive_read_free(a);
   if (r != ARCHIVE_OK)
     {

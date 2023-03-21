@@ -70,6 +70,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [ ] Continue implementation
 **** TODO [fix_loadFunctionUt] WebFile extraction further implementation
 :LOGBOOK:
+CLOCK: [2023-03-21 mar. 05:05]--[2023-03-21 mar. 05:15] =>  0:10
 CLOCK: [2023-03-20 lun. 07:02]--[2023-03-20 lun. 07:45] =>  0:43
 CLOCK: [2023-03-14 mar. 07:18]--[2023-03-14 mar. 07:47] =>  0:29
 CLOCK: [2023-03-06 lun. 05:02]--[2023-03-06 lun. 05:22] =>  0:20
@@ -80,6 +81,7 @@ CLOCK: [2023-01-27 ven. 09:18]--[2023-01-27 ven. 09:32] =>  0:14
 CLOCK: [2023-01-27 ven. 08:22]--[2023-01-27 ven. 08:39] =>  0:17
 CLOCK: [2023-01-23 lun. 06:31]--[2023-01-23 lun. 06:52] =>  0:21
 :END:
+- [X] The written archive is not anymore read as archive by =file= tool
 - [ ] We currently have a memory access error on faLibArchive_load_function UT
   From gdb, while in =faLibArchive_load_file_has_content= :
   #0  0x0000555555579fe6 in std::__shared_ptr<WebFile, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<WebFile, (__gnu_cxx::_Lock_policy)2> const&) ()
