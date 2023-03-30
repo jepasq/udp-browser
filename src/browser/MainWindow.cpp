@@ -60,17 +60,20 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   auto prefAction = new QAction("&Preferences", this);
   auto helpAction = new QAction("&Help", this);
   auto aboutAction = new QAction("&About", this);
+  auto quitAction = new QAction("&Quit", this);
   hamMenu = new QMenu("Global menu", this);
   hamMenu->addAction(prefAction);
   hamMenu->addSeparator();
   hamMenu->addAction(helpAction);
   hamMenu->addAction(aboutAction);
-
+  hamMenu->addSeparator();
+  hamMenu->addAction(quitAction);
   
   ui.pbHamburger->setMenu(hamMenu);
   connect(prefAction, &QAction::triggered, this, &MainWindow::onPrefClicked);
   connect(helpAction, &QAction::triggered, this, &MainWindow::onHelpClicked);
   connect(aboutAction, &QAction::triggered,this, &MainWindow::onAboutClicked);
+  connect(quitAction, &QAction::triggered,this, &MainWindow::onQuitClicked);
 
   // Trying to handle drag event
   connect(ui.tbPar, &QToolButton::triggered, this, &MainWindow::onParClicked);
@@ -241,3 +244,13 @@ MainWindow::mouseMoveEvent(QMouseEvent *e)
   Qt::DropAction dropAction = drag->exec(Qt::CopyAction | Qt::MoveAction);
 }
 
+/** The quit menu button slot
+ *
+ * \param value An unused boolean.
+ *
+ */
+void
+MainWindow::onQuitClicked(bool value)
+{
+  QCoreApplication::quit();
+}

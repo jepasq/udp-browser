@@ -39,6 +39,7 @@ private slots:
   void onPrefClicked(bool value);
   void onHelpClicked(bool value);
   void onAboutClicked(bool value);
+  void onQuitClicked(bool value);
 
   void onParClicked(bool value);
 
