@@ -48,7 +48,10 @@ MainWindow, in its editor mode, have a list of basic HTML element
     We actually reimplemented mousemove on mainwindow
     - [ ] But now, how to get event position when pat tool button is clicked
       because it's a trigger event and not a clicked one
-    
+
+- [ ] Must add previous/next arrow buttons in browser mode
+  Maybe a full history ?
+
 - [ ] Could have a basic webcontent template based on webfile
 **** TODO Handle unit tests, CI and API documentation
 :LOGBOOK:
@@ -70,6 +73,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [ ] Continue implementation
 **** TODO [fix_loadFunctionUt] WebFile extraction further implementation
 :LOGBOOK:
+CLOCK: [2023-04-06 jeu. 10:34]--[2023-04-06 jeu. 10:54] =>  0:20
 CLOCK: [2023-03-30 jeu. 11:41]--[2023-03-30 jeu. 11:48] =>  0:07
 CLOCK: [2023-03-24 ven. 08:52]--[2023-03-24 ven. 09:03] =>  0:11
 CLOCK: [2023-03-21 mar. 05:05]--[2023-03-21 mar. 05:15] =>  0:10

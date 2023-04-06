@@ -60,6 +60,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
   fal.load();
 
   // Should work according to https://stackoverflow.com/a/268525
+  std::cout << size1 << "!=" <<  fal.getFiles().size() << std::endl;
   BOOST_CHECK( size1 != fal.getFiles().size());
 }
 
