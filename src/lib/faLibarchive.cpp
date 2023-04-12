@@ -88,7 +88,7 @@ faLibarchive::load()
     {
       // Here if the filename
       auto addedfile = addFile(archive_entry_pathname(entry));
-      files.push_back(addedfile);
+
       // result may be read bytes
       auto result = archive_read_open_memory(a, buff, sizeof(buff));
       char* pc = (char*)buff;

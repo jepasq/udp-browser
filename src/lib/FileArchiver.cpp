@@ -2,6 +2,8 @@
 
 #include "WebFile.hpp"
 
+#include <iostream>
+
 /// Default constructor
 FileArchiver::FileArchiver()
 {
@@ -23,6 +25,9 @@ FileArchiver::addFile(const std::string& file)
 {
   auto sp = std::make_shared<WebFile>();
   files.push_back(std::move(sp));
+  std::cout << "II Adding file '" << file << "'. File list len is now "
+	    << files.size() << std::endl;
+
   return sp;
 }
 
