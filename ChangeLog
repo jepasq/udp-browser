@@ -1,3 +1,13 @@
+* v0.0.1-11 (23 Jan. 2023 - 27 Apr. 2023) SLOC 1,715
+- Prevent a failing test to run on empty list
+- More Archive addFile debugging
+- Add a Quit button to browser
+- Created archive is finally readable again
+- faLibArchive::load throws runtime_error when not ARCHIVE_OK
+- Remove unnecessary archive_read_data_skip() call
+- Start to use SAFE macros in faLibarchive unit tests code
+- Add faLibarchive failing write/load unit test
+
 * v0.0.1-10 (16 Dec. 2022 - 23 Jan. 2023) SLOC 1,645
 - Add a couple of faLibarchive::load  unit tests
 - Close the actual Archiver -related ROADMAP section
