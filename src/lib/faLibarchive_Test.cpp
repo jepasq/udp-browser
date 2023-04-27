@@ -131,9 +131,13 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_with_content )
   auto files = fal.getFiles();
   BOOST_CHECK( files.size() != 0 ); // Not null
 
-  auto s = files[0]->getContent();
-  BOOST_CHECK( s == "Aaaze" ); // Not null
-  
+  // The next test may fail with a 'memory access violation' error (a segfault)
+  // if the file list is empty
+  if (files.size() > 0)
+    {  
+      auto s = files[0]->getContent();
+      BOOST_CHECK( s == "Aaaze" ); // Not null
+    }
 }
 
 
