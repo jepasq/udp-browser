@@ -120,6 +120,13 @@ BOOST_AUTO_TEST_CASE( faLibArchive_save_file_with_content )
   BOOST_CHECK( wf ); // Not null
 }
 
+BOOST_AUTO_TEST_CASE( faLibArchive_write_file_empty_filename )
+{
+  faLibarchive fal;
+  fal.setFilename("");
+  BOOST_CHECK_THROW(fal.write(), std::runtime_error);
+}
+
 BOOST_AUTO_TEST_CASE( faLibArchive_load_file_with_content )
 {
   faLibarchive fal;

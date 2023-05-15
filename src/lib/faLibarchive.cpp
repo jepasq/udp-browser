@@ -18,14 +18,16 @@ faLibarchive::faLibarchive()
 
 }
 
-/** Write archived files to the filename archive
+/** Write archived files to the archive named 'filename'
   *
   */
 void
 faLibarchive::write()
 {
+  if (filename.empty())
+    throw runtime_error("Can't save an archive with empty filename");
+  
   // Mainly from https://github.com/libarchive/libarchive/wiki/Examples#a-basic-write-example
-
   const char* outname = filename.c_str();
   struct archive *a;
   struct archive_entry *entry;
