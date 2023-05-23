@@ -25,7 +25,7 @@ void
 faLibarchive::write()
 {
   if (filename.empty())
-    throw runtime_error("Can't save an archive with empty filename");
+    throw std::runtime_error("Can't save an archive with empty filename");
   
   // Mainly from https://github.com/libarchive/libarchive/wiki/Examples#a-basic-write-example
   const char* outname = filename.c_str();
