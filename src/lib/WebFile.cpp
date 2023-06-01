@@ -14,6 +14,16 @@ WebFile::WebFile():
 
 }
 
+/** IOverride the default filename */
+WebFile::WebFile(const QString& fname):
+  filename(fname),
+  content("")
+{
+  // Setting an empty filenae this way is used in unit tests
+}
+ 
+
+
 /** Load the content of this file from a stream
   *
   * \param ds The stream.
@@ -33,6 +43,8 @@ WebFile::load(QDataStream& ds)
 void
 WebFile::save(QDataStream& ds)
 {
+  if (this->filename.isEmpty())
+    throw std::runtime_error("Can't save a WebFile with empty filename.");
 
 }
 

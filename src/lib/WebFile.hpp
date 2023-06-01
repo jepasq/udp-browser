@@ -10,6 +10,7 @@ class WebFile
 {
 public:
   WebFile();
+  WebFile(const QString&);
 
   void load(QDataStream&);
   void save(QDataStream&);

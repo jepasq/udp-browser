@@ -48,7 +48,18 @@ BOOST_AUTO_TEST_CASE( WebFile_set_filename )
 BOOST_AUTO_TEST_CASE( WebFile_set_empty_filename )
 {
   WebFile wf;
-
-  
   BOOST_CHECK_THROW(wf.setFilename(""), std::runtime_error);
 }
+
+/// Should throw an exception if we try to save a file with empty filename
+BOOST_AUTO_TEST_CASE( WebFile_save_with_empty_filename )
+{
+  WebFile wf;
+  QDataStream ds;  
+  // Shouldn't raise an error as WebFile as a default non-empty filename
+  wf.save(ds)     ;
+
+  WebFile wf2("");
+  BOOST_CHECK_THROW(wf2.save(ds), std::runtime_error);
+}
+
