@@ -14,7 +14,11 @@ WebFile::WebFile():
 
 }
 
-/** IOverride the default filename */
+/** Override the default filename
+  *
+  * \param fname The filename string.
+  *
+  */
 WebFile::WebFile(const QString& fname):
   filename(fname),
   content("")

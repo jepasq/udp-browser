@@ -56,7 +56,7 @@ BOOST_AUTO_TEST_CASE( WebFile_save_with_empty_filename )
 {
   WebFile wf;
   QDataStream ds;  
-  // Shouldn't raise an error as WebFile as a default non-empty filename
+  // Shouldn't raise an error as WebFile has a default non-empty filename
   wf.save(ds)     ;
 
   WebFile wf2("");
