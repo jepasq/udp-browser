@@ -13,12 +13,17 @@
 
 #include <QDebug>
 
+/** The libarchive-based FileArchiver class constructor
+  *
+  */
 faLibarchive::faLibarchive()
 {
 
 }
 
 /** Write archived files to the archive named 'filename'
+  *
+  * Will throw a runtime_error exception if filename is emty.
   *
   */
 void

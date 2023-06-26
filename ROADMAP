@@ -71,8 +71,9 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
   Trying to implement some for lib/Preferences
 - [X] Add WebFile unit tests
 - [ ] Continue implementation
-**** TODO Continue WebFile test and implementation    
+**** TODO Continue WebFile test and implementation
 :LOGBOOK:
+CLOCK: [2023-06-26 lun. 09:09]--[2023-06-26 lun. 09:22] =>  0:13
 CLOCK: [2023-06-19 lun. 09:26]--[2023-06-19 lun. 09:36] =>  0:10
 CLOCK: [2023-06-01 jeu. 07:31]--[2023-06-01 jeu. 07:45] =>  0:14
 CLOCK: [2023-05-23 mar. 04:52]--[2023-05-23 mar. 05:14] =>  0:22
