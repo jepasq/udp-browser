@@ -7,7 +7,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#include <cstring>
 #include <iostream>
 #include <sstream>    // USES ostringstream
 
@@ -23,7 +22,7 @@ faLibarchive::faLibarchive()
 
 /** Write archived files to the archive named 'filename'
   *
-  * Will throw a runtime_error exception if filename is emty.
+  * Will throw a runtime_error exception if archive's filename is empty.
   *
   */
 void
@@ -41,7 +40,6 @@ faLibarchive::write()
   int len;
   int fd;
 
-  
   a = archive_write_new();
   archive_write_add_filter_gzip(a);
   archive_write_set_format_pax_restricted(a); // Note 1
@@ -49,13 +47,16 @@ faLibarchive::write()
 
   for (auto file : files)
     {
-
       auto filename = file->getFilename().toStdString().c_str();
       auto content  = file->getContent().toStdString().c_str();
       std::cout << "Adding file "<< filename  << " to archive '" << filename
 		<< "' : " << content << std::endl;
-      
-      entry = archive_entry_new(); // Note 2
+
+      // Note 2:
+      // This example creates a fresh archive_entry object for each file. For
+      // better performance, you can reuse the same archive_entry object by
+      // using `archive_entry_clear()` to erase it after each use. 
+      entry = archive_entry_new(); 
       if (file->getFilename().toStdString().empty())
 	std::cout << "WARNING : Added file with empty name" << std::endl;
 	
