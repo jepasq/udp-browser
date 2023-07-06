@@ -52,10 +52,14 @@ faLibarchive::write()
 
       auto filename = file->getFilename().toStdString().c_str();
       auto content  = file->getContent().toStdString().c_str();
-      std::cout << filename  << ": " << content << std::endl;
+      std::cout << "Adding file "<< filename  << " to archive '" << filename
+		<< "' : " << content << std::endl;
       
       entry = archive_entry_new(); // Note 2
-      archive_entry_set_pathname(entry, "aze");
+      if (file->getFilename().toStdString().empty())
+	std::cout << "WARNING : Added file with empty name" << std::endl;
+	
+      archive_entry_set_pathname(entry, filename);
       archive_entry_set_size(entry, strlen(content)); // Note 3
       archive_entry_set_filetype(entry, AE_IFREG);
       archive_entry_set_perm(entry, 0644);
