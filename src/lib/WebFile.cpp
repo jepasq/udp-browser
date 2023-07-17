@@ -1,6 +1,6 @@
 #include "WebFile.hpp"
 
-const QString DEFAULT_FILEANME = "aze.zer";
+const QString DEFAULT_FILEANME = "aze.txt";
 
 #include <stdexcept> // USES std::runtime_error
 

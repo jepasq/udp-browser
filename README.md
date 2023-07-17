@@ -6,11 +6,15 @@ A web browser designed like a meta server.
 
 On arch-based GNU/linux distributions :
 
-	sudo pacman -S cmake gcc qt5-base qt5-webview boost libarchive
+	sudo pacman -S cmake gcc qt5-base qt5-webview boost libarchive \
+	  texlive-fontutils
 
 on debian-based distributions (such as Ubuntu) :
 
     sudo apt-get install qt5-default qtbase5-dev libarchive-dev
+
+The texlive-related package is only used to provide the `epstopdf` executable,
+which is needed to generate *API documentation* using `doxygen`.
 
 ## Building
 

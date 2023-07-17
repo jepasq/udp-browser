@@ -55,6 +55,7 @@ MainWindow, in its editor mode, have a list of basic HTML element
 - [ ] Could have a basic webcontent template based on webfile
 **** TODO Handle unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2023-07-17 lun. 14:06]--[2023-07-17 lun. 14:22] =>  0:16
 CLOCK: [2023-02-20 lun. 05:27]--[2023-02-20 lun. 05:39] =>  0:12
 CLOCK: [2022-12-16 ven. 04:42]--[2022-12-16 ven. 04:52] =>  0:10
 CLOCK: [2022-11-25 ven. 15:46]--[2022-11-25 ven. 16:12] =>  0:26
@@ -70,6 +71,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [X] Create rule and add tests
   Trying to implement some for lib/Preferences
 - [X] Add WebFile unit tests
+- [X] doxygen can't find =epstopdf= anymore:  sudo pacman -S texlive-fontutils
 - [ ] Continue implementation
 **** TODO Continue WebFile test and implementation
 :LOGBOOK:
