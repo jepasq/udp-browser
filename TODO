@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-12 (27 Apr. 2023 - ???) SLOC ?,???
-- (5) Add a texlive-related dependency in README.md
+- (6) Upgrade minimum cmake version to 3.5.0
+- Add a texlive-related dependency in README.md
 - faLibarchive::write really use WebFile filename instead of hardcoded aze
 - Add a test to forbid WebFile save with an empty filename
 - Fix a missing namespace in faLibarchive implementation
