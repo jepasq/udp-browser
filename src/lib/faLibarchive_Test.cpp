@@ -67,7 +67,6 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
 /// Actually, file is a simple string, change it to WebFile
 BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
 {
-  
   faLibarchive fal;
   auto filen = "aze.out";
   fal.setFilename(filen);
@@ -80,7 +79,6 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
   }
   //  BOOST_CHECK(  );
 }
-
 
 /// Has an implemented load function and calling it change file list
 BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )

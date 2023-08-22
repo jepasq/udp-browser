@@ -96,9 +96,14 @@ faLibarchive::load()
       oss << "Can't read archive file named '" << filename << "'";
       throw std::runtime_error(oss.str());
     }
+  auto valret = archive_read_next_header(a, &entry);
+  std::cout << "Valret = '"  << valret << "' ("
+	    << faStatusToStr(valret) << ")"
+	    << std::endl;
+  
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
-      // Here if the filename
+      // Here is the filename
       auto addedfile = addFile(archive_entry_pathname(entry));
 
       // result may be read bytes
@@ -116,3 +121,28 @@ faLibarchive::load()
       throw std::runtime_error(oss.str());
     }
 }
+
+/** Return a string from a libarchive status code
+  *
+  * From https://nxmnpg.lemoda.net/3/archive_read_next_header
+  *
+  * \param status The code from a call to archive_read_next_header().
+  *
+  * \return A human readable string representation.
+  *
+  */
+std::string
+faLibarchive::faStatusToStr(int status) const
+{
+  std::string ret;
+  switch (status)
+    {
+    case ARCHIVE_OK:    ret = "ARCHIVE_OK";     break;
+    case ARCHIVE_WARN:  ret = "ARCHIVE_WARN";   break;
+    case ARCHIVE_EOF:   ret = "ARCHIVE_EOF";    break;
+    case ARCHIVE_RETRY: ret = "ARCHIVE_RETRY";  break;
+    case ARCHIVE_FATAL: ret = "ARCHIVE_FATAL";  break;
+    }
+  return ret;
+}
+

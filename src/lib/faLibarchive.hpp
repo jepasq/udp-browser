@@ -14,6 +14,8 @@ public:
   virtual void write(); //!< Write the file
   virtual void load();  //!< Load the file
 
+protected:
+  std::string faStatusToStr(int) const;
 };
 
 
