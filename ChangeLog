@@ -1,3 +1,13 @@
+* v0.0.1-12 (27 Apr. 2023 - 22 Aug. 2023) SLOC 1,792
+- Check for archive_read_next_header() return value
+- Fix some doxygen warnings
+- Upgrade minimum cmake version to 3.5.0
+- Add a texlive-related dependency in README.md
+- faLibarchive::write really use WebFile filename instead of hardcoded aze
+- Add a test to forbid WebFile save with an empty filename
+- Fix a missing namespace in faLibarchive implementation
+- Throw an error if archive name is empty
+
 * v0.0.1-11 (23 Jan. 2023 - 27 Apr. 2023) SLOC 1,715
 - Prevent a failing test to run on empty list
 - More Archive addFile debugging
