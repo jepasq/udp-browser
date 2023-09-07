@@ -3,6 +3,8 @@
 
 #include "FileArchiver.hpp"
 
+#include <archive.h>
+
 /** A specialized FileArchiver using libarchive under the hood.
   *
   */
@@ -15,6 +17,7 @@ public:
   virtual void load();  //!< Load the file
 
 protected:
+  void debugArchiveError(struct archive*, int valret) const;
   std::string faStatusToStr(int) const;
 };
 

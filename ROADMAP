@@ -76,7 +76,7 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [ ] Continue implementation
 **** TODO Continue WebFile test and implementation
 :LOGBOOK:
-CLOCK: [2023-07-06 jeu. 13:18]--[2023-07-06 jeu. 13:31] =>  0:13
+CLOCK: [2023-07-06 jeu. 13:18]--[2023-09-07 jeu. 09:14] => 1507:56
 CLOCK: [2023-06-26 lun. 09:09]--[2023-06-26 lun. 09:22] =>  0:13
 CLOCK: [2023-06-19 lun. 09:26]--[2023-06-19 lun. 09:36] =>  0:10
 CLOCK: [2023-06-01 jeu. 07:31]--[2023-06-01 jeu. 07:45] =>  0:14
@@ -88,6 +88,7 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   from faLibarchive,
   - [ ] Test is failing and content of the created archive is actually
   "file content 01". See in faLibarchive::write for hardcoded content
+  - Trying to use archive_error_string() but fails with error 201
 - [ ] WebContent load and save uses
   Created both empty clases
   - [ ] a FileArchiver superclass that create a single file from multiple ones

@@ -1,7 +1,6 @@
 
 #include "faLibarchive.hpp"
 
-#include <archive.h>
 #include <archive_entry.h>
 
 #include <sys/stat.h>
@@ -72,6 +71,26 @@ faLibarchive::write()
   archive_write_free(a); // Note 5
 }
 
+/** Simply print libarchive errors in srd::cerr
+  *
+  * \param a      The used archive.
+  * \param valret The return value of the issued commabd.
+  *
+  */
+void
+faLibarchive::debugArchiveError(struct archive *a, int valret) const
+{
+  const char* errs = "";
+  auto errn = archive_errno(a);
+  if (errn != 0)
+    errs = archive_error_string(a);
+  
+  std::cerr << "Valret = '"  << valret << "' ("
+	    << faStatusToStr(valret) << ") errno=" << errn << "; " << errs
+	    << std::endl;
+}
+
+
 /** Load content of archive found in filename
   *
   */
@@ -97,10 +116,8 @@ faLibarchive::load()
       throw std::runtime_error(oss.str());
     }
   auto valret = archive_read_next_header(a, &entry);
-  std::cout << "Valret = '"  << valret << "' ("
-	    << faStatusToStr(valret) << ")"
-	    << std::endl;
-  
+  debugArchiveError(a, valret);
+
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
       // Here is the filename
