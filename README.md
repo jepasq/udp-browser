@@ -12,7 +12,7 @@ On arch-based GNU/linux distributions :
 on debian-based distributions (such as Ubuntu) :
 
     sudo apt-get install libarchive-dev qtbase5-dev qtchooser qt5-qmake \
-	     qtbase5-dev-tools
+	     qtbase5-dev-tools libqt5webview5-de
 
 
 The texlive-related package is only used to provide the `epstopdf` executable,
