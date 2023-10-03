@@ -11,7 +11,9 @@ On arch-based GNU/linux distributions :
 
 on debian-based distributions (such as Ubuntu) :
 
-    sudo apt-get install qt5-default qtbase5-dev libarchive-dev
+    sudo apt-get install libarchive-dev qtbase5-dev qtchooser qt5-qmake \
+	     qtbase5-dev-tools
+
 
 The texlive-related package is only used to provide the `epstopdf` executable,
 which is needed to generate *API documentation* using `doxygen`.
