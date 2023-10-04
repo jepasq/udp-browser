@@ -14,7 +14,16 @@
 #include "Preferences.hpp"
 #include "User.hpp"
 
-#include <boost/config.hpp>
+// Should work on some compilers (from #if __has_include("myinclude.h"))
+#if __has_include(<boost/version.hpp>)
+#  include <boost/version.hpp> // USES BOOST_VERSION
+#endif
+
+#if __has_include(<boost/config.hpp>)
+#  include <boost/config.hpp>  // USES BOOST_COMPILER
+#endif
+
+//#include <boost/config/suffix.hpp>  // On newer versions
 
 // See https://stackoverflow.com/a/1505631
 // Check windows
@@ -34,8 +43,6 @@
 #define ENVB 32
 #endif
 #endif
-
-
 
 /** The main window constructor
   *
@@ -194,7 +201,13 @@ MainWindow::onAboutClicked(bool value)
   txt += " (" + QString::number(ENVB) + " bits)";
   txt += "\nBuild on " + QString(__DATE__) + " at " + QString(__TIME__);
 
-  txt += "\nUsing " + QString(BOOST_COMPILER);
+#ifdef BOOST_LIB_VERSION 
+  txt += "\nUsing Boost " + QString(BOOST_LIB_VERSION);
+#endif  
+
+#ifdef BOOST_COMPILER
+  txt += "\nbuild with " + QString(BOOST_COMPILER);
+#endif  
   QMessageBox::about(this, title, txt);
 }
 
