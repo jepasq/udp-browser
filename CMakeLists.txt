@@ -52,7 +52,7 @@ add_library(udpb SHARED
   src/lib/faLibarchive.cpp
   )
 
-target_link_libraries(udpb Qt5::Widgets)
+target_link_libraries(udpb ${LIBS_LIBRARIES} Qt5::Widgets)
 
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
