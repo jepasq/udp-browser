@@ -28,6 +28,12 @@ This project use the now-standard *cmake* build system :
 	cmake ..
 	make -j4
 
+## Unit tests
+
+Ont your in the `build/` directory :
+
+	./tests
+
 ## API documentation
 
 A *Doxyfile* `doxygen` input file is created by the cmake call. You can use it
