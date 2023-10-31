@@ -60,6 +60,9 @@ faLibarchive::write()
 	std::cout << "WARNING : Added file with empty name" << std::endl;
 	
       archive_entry_set_pathname(entry, filename);
+
+      std::cout << "Adding content '"<< content  << "'" << std::endl;
+
       archive_entry_set_size(entry, strlen(content)); // Note 3
       archive_entry_set_filetype(entry, AE_IFREG);
       archive_entry_set_perm(entry, 0644);
@@ -99,6 +102,9 @@ faLibarchive::load()
 {
   // Notes from https://github.com/libarchive/libarchive/wiki/Examples#list-contents-of-archive-stored-in-file
 
+  using std::cout;
+  using std::endl;
+  
   const char* outname = filename.c_str();
 
   struct archive *a;
@@ -121,8 +127,10 @@ faLibarchive::load()
   while (archive_read_next_header(a, &entry) == ARCHIVE_OK)
     {
       // Here is the filename
-      auto addedfile = addFile(archive_entry_pathname(entry));
-
+      auto entryname = archive_entry_pathname(entry);
+      cout << "About to add file '" << entryname << "'" << endl;
+      auto addedfile = addFile(entryname);
+      
       // result may be read bytes
       auto result = archive_read_open_memory(a, buff, sizeof(buff));
       char* pc = (char*)buff;
