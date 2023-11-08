@@ -7,7 +7,7 @@
   */
 User::User()
 {
-  webContentList.push_back(new WebContent());
+  webContentList.emplace_back();
 }
 
 /** Returns the current content list

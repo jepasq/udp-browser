@@ -5,7 +5,8 @@
 #include <fstream>
 
 // Call memory access violation suspected code ?
-bool safe = false;
+// Setting this to false may make some test fail
+bool safe = true;
 
 #define SAFE if (safe)
 
