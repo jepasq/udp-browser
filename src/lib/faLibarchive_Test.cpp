@@ -61,8 +61,9 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
   fal.load();
 
   // Should work according to https://stackoverflow.com/a/268525
-  std::cout << size1 << "!=" <<  fal.getFiles().size() << std::endl;
-  BOOST_CHECK(fal.getFiles().size() == size1 + 1);
+  auto files = fal.getFiles();
+  std::cout << size1 << "!=" <<  files.size() << std::endl;
+  BOOST_CHECK(files.size() == size1 + 1);
 }
 
 /// Actually, file is a simple string, change it to WebFile
@@ -74,11 +75,15 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
   fal.load();
 
   SAFE{
-    std::cout << "getFiles size : " << fal.getFiles().size() << std::endl;
-    auto f1 = fal.getFiles()[0];
-    auto c = f1->getContent(); // At least it compiles
+    auto files = fal.getFiles();
+    std::cout << "getFiles size : " << files.size() << std::endl;
+    if (!files.empty())
+      {
+	auto f1 = files[0];
+	auto c = f1->getContent(); // At least it compiles
+	BOOST_CHECK( !c.isEmpty() );
+      }
   }
-  //  BOOST_CHECK(  );
 }
 
 /// Has an implemented load function and calling it change file list

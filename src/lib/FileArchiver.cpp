@@ -4,7 +4,9 @@
 
 #include <iostream>
 
-/// Default constructor
+/** Default constructor
+  *
+  */
 FileArchiver::FileArchiver()
 {
 

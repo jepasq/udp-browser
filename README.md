@@ -15,7 +15,6 @@ on debian-based distributions (such as Ubuntu) :
 	     qtbase5-dev-tools libqt5webview5-dev libboost-dev libboost1.74-dev \
 		 libboost-test-dev  	
 
-
 The texlive-related package is only used to provide the `epstopdf` executable,
 which is needed to generate *API documentation* using `doxygen`.
 
