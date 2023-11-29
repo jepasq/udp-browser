@@ -27,7 +27,7 @@ public:
   /** Process the input files into a single output file */
   virtual void write()=0;
   /** Load the file */
-  virtual void load()=0;
+  virtual void read()=0;
   
 protected:
   tFileList files;      //!< The files to be added to the archive

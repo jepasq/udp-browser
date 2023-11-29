@@ -94,11 +94,11 @@ faLibarchive::debugArchiveError(struct archive *a, int valret) const
 }
 
 
-/** Load content of archive found in filename
+/** Read and load content of archive found in filename
   *
   */
 void
-faLibarchive::load()
+faLibarchive::read()
 {
   // Notes from https://github.com/libarchive/libarchive/wiki/Examples#list-contents-of-archive-stored-in-file
 

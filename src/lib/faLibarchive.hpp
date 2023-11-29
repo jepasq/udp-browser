@@ -14,7 +14,7 @@ public:
   faLibarchive();
 
   virtual void write(); //!< Write the file
-  virtual void load();  //!< Load the file
+  virtual void read();  //!< Read the file
 
 protected:
   void debugArchiveError(struct archive*, int valret) const;

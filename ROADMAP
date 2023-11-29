@@ -81,6 +81,7 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   ask our friends if they know this revision.
 **** TODO Handle unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2023-11-29 mer. 07:12]--[2023-11-29 mer. 07:28] =>  0:16
 CLOCK: [2023-10-04 mer. 07:19]--[2023-10-04 mer. 07:31] =>  0:12
 CLOCK: [2023-10-03 mar. 06:53]--[2023-10-03 mar. 07:00] =>  0:07
 CLOCK: [2023-08-22 mar. 07:59]--[2023-08-22 mar. 08:32] =>  0:33
@@ -104,9 +105,10 @@ CLOCK: [2022-08-03 mer. 08:01]--[2022-08-03 mer. 08:09] =>  0:08
 - [X] Configure github action for this
 - [X] CI can't find boost/config.hpp
   - Exist on manjaro (boost v1.83.0)
-- [ ] I have an issue with FileArchive function naming (write/load)
+- [X] I have an issue with FileArchive function naming (write/load)
   It should be eihter write/read or save/load
   Maybe write + read
+  - [X] Replace load() with read()
   
 - [ ] Continue implementation
 **** DONE [fix_loadFunctionUt] WebFile extraction further implementation

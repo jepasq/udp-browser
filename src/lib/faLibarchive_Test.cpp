@@ -58,7 +58,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_function )
   
   auto filen = "aze.out";
   fal.setFilename(filen);
-  fal.load();
+  fal.read();
 
   // Should work according to https://stackoverflow.com/a/268525
   auto files = fal.getFiles();
@@ -72,7 +72,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
   faLibarchive fal;
   auto filen = "aze.out";
   fal.setFilename(filen);
-  fal.load();
+  fal.read();
 
   SAFE{
     auto files = fal.getFiles();
@@ -95,7 +95,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )
   
   auto filen = "aze.out";
   fal.setFilename(filen);
-  fal.load();
+  fal.read();
 
   SAFE{
     auto f1 = fal.getFiles()[0];
@@ -137,7 +137,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_with_content )
   fal.setFilename("fatest.out");
 
   SAFE{
-    fal.load();
+    fal.read();
   }
   auto files = fal.getFiles();
   BOOST_CHECK( files.size() != 0 ); // Not null
