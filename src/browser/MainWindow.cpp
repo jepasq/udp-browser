@@ -84,6 +84,9 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
 
   // Trying to handle drag event
   connect(ui.tbPar, &QToolButton::triggered, this, &MainWindow::onParClicked);
+
+  connect(ui.pbGo, &QToolButton::clicked, this, &MainWindow::onGoClicked);
+
   
   user = new User();
 }
@@ -267,3 +270,10 @@ MainWindow::onQuitClicked(bool value)
 {
   QCoreApplication::quit();
 }
+
+void
+MainWindow::onGoClicked()
+{
+  std::cout << "Go clicked!" <<  std::endl;
+}
+

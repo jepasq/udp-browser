@@ -42,7 +42,7 @@ private slots:
   void onQuitClicked(bool value);
 
   void onParClicked(bool value);
-
+  void onGoClicked();
 
 protected:
   void    nextMode();

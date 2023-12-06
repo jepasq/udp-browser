@@ -18,7 +18,18 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="placeholderText">
+         <string>Enter URL here!</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbGo">
+        <property name="text">
+         <string>Go</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pbMode">
@@ -109,7 +120,7 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>728</width>
+              <width>725</width>
               <height>345</height>
              </rect>
             </property>
@@ -131,7 +142,7 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>728</width>
+              <width>725</width>
               <height>345</height>
              </rect>
             </property>
