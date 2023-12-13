@@ -50,6 +50,8 @@ protected:
 
   void setTitle();
 
+  QString getUrl() const;
+  
   virtual void mouseMoveEvent(QMouseEvent *event);
   
 private:

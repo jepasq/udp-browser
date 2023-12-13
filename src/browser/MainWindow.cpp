@@ -271,9 +271,27 @@ MainWindow::onQuitClicked(bool value)
   QCoreApplication::quit();
 }
 
+/** Get the URL from the UI widget
+  *
+  * \return The URL as a QString reference.
+  *
+  */
+QString
+MainWindow::getUrl() const
+{
+  return ui.leUrl->text();
+}
+
+
+/** The Go button callback
+  *
+  *
+  *
+  */
 void
 MainWindow::onGoClicked()
 {
-  std::cout << "Go clicked!" <<  std::endl;
+  auto url = getUrl().toStdString();
+  std::cout << "Go clicked! URL is '" << url << "'" << std::endl;
 }
 
