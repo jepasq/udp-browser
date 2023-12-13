@@ -8,6 +8,8 @@
 
 #include <memory>
 
+#include "NetworkNode.hpp"
+
 int
 main(int argc, char *argv[])
 {
@@ -27,6 +29,9 @@ main(int argc, char *argv[])
     cout << "WARNING: your username is empty" << endl;
   else
     cout << "Welcome back '" << un.toStdString() << "'!" << endl;
+
+
+  NetworkNode nn;
   
   QApplication app(argc, argv);
   MainWindow mw(&p);

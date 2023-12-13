@@ -39,6 +39,7 @@ CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
   - [ ] Maybe add a menu entry for the API doxygen-generated doc      
 **** Let's you create website on the fly
 :LOGBOOK:
+CLOCK: [2023-12-13 mer. 14:28]--[2023-12-13 mer. 15:22] =>  0:54
 CLOCK: [2023-12-13 mer. 13:51]--[2023-12-13 mer. 13:58] =>  0:07
 CLOCK: [2023-12-06 mer. 11:11]--[2023-12-06 mer. 11:18] =>  0:07
 CLOCK: [2022-12-28 mer. 05:40]--[2022-12-28 mer. 06:11] =>  0:31
@@ -55,6 +56,11 @@ MainWindow, in its editor mode, have a list of basic HTML element
     - [ ] But now, how to get event position when pat tool button is clicked
       because it's a trigger event and not a clicked one
 
+- [ ] Implement lib/NetworkNode
+  - [ ] Maybe a NetworkNode class in lib based on boost asio
+    May add an URL download function
+  - [ ] Must add asio to README
+    
 - [ ] Must add previous/next arrow buttons in browser mode
   Maybe a full history ?
 

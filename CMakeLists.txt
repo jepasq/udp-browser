@@ -43,6 +43,7 @@ add_library(udpb SHARED
   src/lib/ConfigReader.cpp
   src/lib/FileArchiver.cpp
   src/lib/FileCompressor.cpp
+  src/lib/NetworkNode.cpp
   src/lib/Preferences.cpp
   src/lib/Serializer.cpp
   src/lib/User.cpp

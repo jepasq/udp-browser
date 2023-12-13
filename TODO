@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-14 (20 Nov. 2023 - ???) SLOC ?,???
-- (4) Add a search widget
+- (5) Add empty NetworkNode to lib
+- Add a search widget
 - Got URL from widget and printed it
 - Add Go button, event and placeholder text
 - Rename FileArchive::load() to read()
