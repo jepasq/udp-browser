@@ -43,6 +43,7 @@ private slots:
 
   void onParClicked(bool value);
   void onGoClicked();
+  void onSearchClicked();
 
 protected:
   void    nextMode();
@@ -51,6 +52,7 @@ protected:
   void setTitle();
 
   QString getUrl() const;
+  QString getSearch() const;
   
   virtual void mouseMoveEvent(QMouseEvent *event);
   

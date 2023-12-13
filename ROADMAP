@@ -3,10 +3,14 @@
 * v1.0.0
 ** v0.1.0
 *** TODO v0.0.2
-**** Add a search widget
-- Included search engine let you discover new websites;
-- An included IA (using libfann) try to suggest you new intersting websites;
+**** Add search and status widgets
+:LOGBOOK:
+CLOCK: [2023-12-13 mer. 14:11]--[2023-12-13 mer. 14:21] =>  0:10
+:END:
+- [ ] Included search engine let you discover new websites;
+- [ ] An included IA (using libfann) try to suggest you new intersting websites
   Maybe something like a 'for you' page or so
+- [ ] May add a status widget to show network connection and cached sites
 **** Improve serialization versionning scheme
   Actually just a constexpr in *lib/WebContent.cpp*.
 - [ ] Could throw an exception if unreadable

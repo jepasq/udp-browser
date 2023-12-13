@@ -86,6 +86,7 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   connect(ui.tbPar, &QToolButton::triggered, this, &MainWindow::onParClicked);
 
   connect(ui.pbGo, &QToolButton::clicked, this, &MainWindow::onGoClicked);
+  connect(ui.pbSearch,&QToolButton::clicked,this,&MainWindow::onSearchClicked);
 
   
   user = new User();
@@ -282,10 +283,7 @@ MainWindow::getUrl() const
   return ui.leUrl->text();
 }
 
-
 /** The Go button callback
-  *
-  *
   *
   */
 void
@@ -293,5 +291,26 @@ MainWindow::onGoClicked()
 {
   auto url = getUrl().toStdString();
   std::cout << "Go clicked! URL is '" << url << "'" << std::endl;
+}
+
+/** Get the search string from the UI widget
+  *
+  * \return The search terms
+  *
+  */
+QString
+MainWindow::getSearch() const
+{
+  return ui.leSearch->text();
+}
+
+/** The Go button callback
+  *
+  */
+void
+MainWindow::onSearchClicked()
+{
+  auto search = getSearch().toStdString();
+  std::cout << "Search engine not implemented '" << search << "'" << std::endl;
 }
 
