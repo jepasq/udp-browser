@@ -39,6 +39,7 @@ CLOCK: [2022-11-25 ven. 17:01]--[2022-11-25 ven. 17:12] =>  0:11
   - [ ] Maybe add a menu entry for the API doxygen-generated doc      
 **** Let's you create website on the fly
 :LOGBOOK:
+CLOCK: [2024-01-08 lun. 13:42]--[2024-01-08 lun. 14:02] =>  0:20
 CLOCK: [2024-01-08 lun. 13:11]--[2024-01-08 lun. 13:37] =>  0:26
 CLOCK: [2023-12-13 mer. 14:28]--[2023-12-13 mer. 15:22] =>  0:54
 CLOCK: [2023-12-13 mer. 13:51]--[2023-12-13 mer. 13:58] =>  0:07
@@ -61,7 +62,8 @@ MainWindow, in its editor mode, have a list of basic HTML element
   - [X] Maybe a NetworkNode class in lib based on boost asio
     May add an URL download function
   - [ ] Must add asio to README
-  - [ ] Add NetworkNode_Test file  
+  - [ ] Add NetworkNode_Test file
+    Added but the test is blocking (never finish tests)
   - [ ] NetworkNode::download handles ip but how to add endpoint (i.e. subpage ?)
         
 - [ ] Must add previous/next arrow buttons in browser mode

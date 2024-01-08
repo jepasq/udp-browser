@@ -17,7 +17,7 @@ NetworkNode::~NetworkNode()
 }
 
 void
-NetworkNode::download(std::string ip = "134.246.151.185", int port = 10001)
+NetworkNode::download(std::string ip, int port)
 {
   using boost::asio::ip::udp;
   

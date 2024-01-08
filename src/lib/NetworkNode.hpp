@@ -13,7 +13,7 @@ public:
   ~NetworkNode();
 
   // Not sure for the return type yet
-  void download(std::string, int);
+  void download(std::string  = "134.246.151.185", int = 10001);
 
 private:
   boost::asio::io_service io_service;
