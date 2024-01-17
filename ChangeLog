@@ -1,3 +1,13 @@
+* v0.0.1-14 (20 Nov. 2023 - 17 Jan. 2024) SLOC 1,999
+- Add serer list lineEdit to preferences dialog
+- Add basic NetworkNode unit test file and asio to README
+- Add NetworkNode::download function and fix compilation issue
+- Add empty NetworkNode to lib
+- Add a search widget
+- Got URL from widget and printed it
+- Add Go button, event and placeholder text
+- Rename FileArchive::load() to read()
+
 * v0.0.1-13 (22 Aug. 2023 - 20 Nov. 2023) SLOC 1,841
 - Improve libarchive tests readability
 - User constructor uses emplace_back on STL container
