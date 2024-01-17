@@ -11,6 +11,8 @@
 PreferencesDialog::PreferencesDialog()
 {
   ui.setupUi(this);
+  // May change pushButton icon
+  //  ui.pbChangeServerList->setIcon(QIcon("button_ok"));
 
   units["KBytes"] = QU_KB;
   units["MBytes"] = QU_MB;
@@ -65,4 +67,8 @@ PreferencesDialog::save(Preferences* p)
   std::cout << "Current quota unit is " << unit.toStdString()
 	    << std::endl;
   p->setQuota(ui.sbQuota->value(), unn);
+
+  // Server list
+  auto sl = ui.leServerList->text();
+  std::cout << "Server list : " << sl.toStdString() << std::endl;
 }
