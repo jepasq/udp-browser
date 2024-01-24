@@ -107,7 +107,23 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
 **** TODO Continue unit tests, CI and API documentation
-- [ ] Continue implementation
+:LOGBOOK:
+CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
+:END:
+- [ ] Currently failing in src/lib/faLibarchive_Test.cpp(66 and 90)
+  - [ ] (90): it's a =memory access violation= in /_load_file_isnt_empty/ test
+#+BEGIN_EXAMPLE
+#0 (not interesting)
+#1  0x0000555555578eef in std::shared_ptr<WebFile>::shared_ptr (this=0x7fffffffbcd0)
+    at /usr/include/c++/13.2.1/bits/shared_ptr.h:204
+#2  0x0000555555575c2e in faLibArchive_load_file_isnt_empty::test_method (this=0x7fffffffbdde)
+    at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:101
+#3  0x00005555555757fd in faLibArchive_load_file_isnt_empty_invoker ()
+    at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:90
+#4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
+    function_ptr=...) at /usr/include/boost/function/function_template.hpp:117
+#+END_EXAMPLE
+  - [ ] (66): in _load_function test, doesn't load archive content correctly
 **** DONE Handle unit tests, CI and API documentation
 :LOGBOOK:
 CLOCK: [2023-11-29 mer. 07:12]--[2023-11-29 mer. 07:28] =>  0:16

@@ -6,4 +6,5 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-15 (17 Jan. 2024 - ???) SLOC ?,???
-- (1) Close a tests and CI ROADMAP section
+- (2) Build with debug symbols by default from CMakeLists
+- Close a tests and CI ROADMAP section
