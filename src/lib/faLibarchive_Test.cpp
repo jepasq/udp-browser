@@ -89,7 +89,7 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_has_content )
 /// Has an implemented load function and calling it change file list
 BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )
 {
-  faLibarchive fal;
+ faLibarchive fal;
 
   auto size1 = fal.getFiles().size();
   
@@ -97,10 +97,13 @@ BOOST_AUTO_TEST_CASE( faLibArchive_load_file_isnt_empty )
   fal.setFilename(filen);
   fal.read();
 
-  SAFE{
-    auto f1 = fal.getFiles()[0];
-    BOOST_CHECK( !f1->getContent().isEmpty() );
-  }
+  SAFE {
+    auto allf = fal.getFiles();
+    BOOST_CHECK( !allf.empty() );
+    if (!allf.empty())
+      BOOST_CHECK( !allf[0]->getContent().isEmpty() );
+    } 
+  
 }
 
 BOOST_AUTO_TEST_CASE( faLibArchive_save_file )
