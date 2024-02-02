@@ -11,11 +11,20 @@ NetworkNode::NetworkNode()
 {
 }
 
+/** The node destructor
+  *
+  */
 NetworkNode::~NetworkNode()
 {
 
 }
 
+/** Download a file from the given distant node
+  *
+  * \param ip   The I0P adress
+  * \param port The network port of the distant node.
+  *
+  */
 void
 NetworkNode::download(std::string ip, int port)
 {

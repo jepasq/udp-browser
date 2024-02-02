@@ -108,6 +108,7 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   ask our friends if they know this revision.
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2024-02-02 ven. 18:25]--[2024-02-02 ven. 18:33] =>  0:08
 CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 :END:
 - [ ] Currently failing in src/lib/faLibarchive_Test.cpp(66 and 90)
