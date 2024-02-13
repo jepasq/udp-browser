@@ -43,3 +43,7 @@ to generate API documentation
 	doxygen
 	<your-favorite-browser> html/index.html
 
+## Browser homepage
+
+The browser homepage, you see when opening the app is located in
+*media/homepage* directory.

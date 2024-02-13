@@ -8,6 +8,7 @@
 #include <QEvent>
 #include <QMouseEvent>
 #include <QDrag>
+#include <QDir>        // USES Qdir.absoluteFilePath()
 
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
@@ -63,8 +64,11 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   ui.pbMode->setText(modeToStr());
 
   setTitle();
-
-  //  ui.webEngineView->setUrl("QUrl(file://../media/homepage/index.html"));
+  QDir dir;
+  auto url = QUrl::fromLocalFile(dir.absoluteFilePath
+				 ("../media/homepage/index.html"));
+  
+  ui.webEngineView->setUrl(url);
   
   auto prefAction = new QAction("&Preferences", this);
   auto helpAction = new QAction("&Help", this);
