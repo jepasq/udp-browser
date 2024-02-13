@@ -80,6 +80,13 @@ MainWindow, in its editor mode, have a list of basic HTML element
   Maybe a full history ?
 
 - [ ] Could have a basic webcontent template based on webfile
+**** Main app must use WebView and have a home page
+:LOGBOOK:
+CLOCK: [2024-02-13 mar. 16:38]--[2024-02-13 mar. 17:00] =>  0:22
+:END:
+- [ ] member is webEngineView
+- [ ] Add homepage (from media/homepage/index.html ?) in MainWindow ctor
+  
 **** TODO Continue WebFile test and implementation
 :LOGBOOK:
 CLOCK: [2023-11-20 lun. 04:23]--[2023-11-20 lun. 04:55] =>  0:32

@@ -63,6 +63,8 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   ui.pbMode->setText(modeToStr());
 
   setTitle();
+
+  //  ui.webEngineView->setUrl("QUrl(file://../media/homepage/index.html"));
   
   auto prefAction = new QAction("&Preferences", this);
   auto helpAction = new QAction("&Help", this);

@@ -38,7 +38,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 include(FindPkgConfig)
 pkg_check_modules(LIBS REQUIRED libarchive)
 
-find_package(Qt5 COMPONENTS Widgets WebView REQUIRED)
+find_package(Qt5 COMPONENTS Widgets WebView WebEngineWidgets REQUIRED)
 
 # The main library (at least used by editor)
 add_library(udpb SHARED
@@ -55,7 +55,7 @@ add_library(udpb SHARED
   src/lib/faLibarchive.cpp
   )
 
-target_link_libraries(udpb ${LIBS_LIBRARIES} Qt5::Widgets)
+target_link_libraries(udpb ${LIBS_LIBRARIES} Qt5::Widgets Qt5::WebEngineWidgets)
 
 # Shared both main rule and unit tests editor sources
 # Do not contain main.cpp to avoid multiple definitions of main()
