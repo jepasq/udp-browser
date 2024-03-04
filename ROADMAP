@@ -116,6 +116,15 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
     hashsum
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
+**** TODO May have seperal special pages
+:LOGBOOK:
+CLOCK: [2024-03-04 lun. 04:53]--[2024-03-04 lun. 05:28] =>  0:35
+:END:
+So we can handle them in a common way
+- For example =about:about= list all these special pages in firefox
+  see https://winaero.com/the-full-list-of-firefox-about-commands/
+- [ ] SpecialPage class implementation
+- [ ] Add list of SpecialPage* to MainPage    
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
 CLOCK: [2024-02-02 ven. 18:50]--[2024-02-02 ven. 19:22] =>  0:32
@@ -135,7 +144,6 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
     at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:117
 #4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
 #+END_EXAMPLE
-    
 **** DONE Handle unit tests, CI and API documentation
 :LOGBOOK:
 CLOCK: [2023-11-29 mer. 07:12]--[2023-11-29 mer. 07:28] =>  0:16

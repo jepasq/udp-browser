@@ -1,15 +1,16 @@
 #ifndef __MAIN_WINDOW_HPP__
 #define __MAIN_WINDOW_HPP__
 
-
 #include "ui/ui_MainWindow.h" // MOC generated file
 
 #include <QWidget>
+#include <QList>
 #include <QPointF>   // Used to keep position
 
 // Forward declarations
 class Preferences;
 class User;
+class SpecialPage;
 // End of forward declarations
 
 
@@ -65,6 +66,8 @@ private:
   Preferences* pref;   //!< The current user's preferences
 
   QPointF dragStartPosition; //!< Used to handle drag'n'drop from mouseMoveEvent
+
+  QList<SpecialPage*> spages;
 };
 
 #endif // !__MAIN_WINDOW_HPP__

@@ -13,6 +13,7 @@
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
 #include "Preferences.hpp"
+#include "SpecialPage.hpp"
 #include "User.hpp"
 
 // Should work on some compilers (from #if __has_include("myinclude.h"))
@@ -94,8 +95,11 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   connect(ui.pbGo, &QToolButton::clicked, this, &MainWindow::onGoClicked);
   connect(ui.pbSearch,&QToolButton::clicked,this,&MainWindow::onSearchClicked);
 
-  
   user = new User();
+
+  // Create Special Pages and populate list
+  
+  spages.push_back(new SpecialPage("about:about"));
 }
 
 /** The window destructor
@@ -297,6 +301,12 @@ MainWindow::onGoClicked()
 {
   auto url = getUrl().toStdString();
   std::cout << "Go clicked! URL is '" << url << "'" << std::endl;
+
+  for (auto &p : spages)
+    {
+      // Now comprage searched string with page URL
+    }
+  
 }
 
 /** Get the search string from the UI widget
@@ -317,6 +327,8 @@ void
 MainWindow::onSearchClicked()
 {
   auto search = getSearch().toStdString();
+
+  
   std::cout << "Search engine not implemented '" << search << "'" << std::endl;
 }
 
