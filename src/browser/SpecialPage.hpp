@@ -14,11 +14,13 @@ class SpecialPage
 {
 
 public:
-  SpecialPage(QString u, QUrl c);
+  SpecialPage(QString u, QUrl c = QUrl());
   
   const QString& getUrl() const;
   const QUrl&    getContent() const;
 
+  void setMediaContent(const QString&);
+  
 private:
   QString url;     //!< The URL this page can be accessed with
   QUrl    content; //!< URL to local HTML content (may use QUrl::fromLocalFile)

@@ -8,7 +8,6 @@
 #include <QEvent>
 #include <QMouseEvent>
 #include <QDrag>
-#include <QDir>        // USES Qdir.absoluteFilePath()
 
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
@@ -65,11 +64,6 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   ui.pbMode->setText(modeToStr());
 
   setTitle();
-  QDir dir;
-  auto url = QUrl::fromLocalFile(dir.absoluteFilePath
-				 ("../media/homepage/index.html"));
-  
-  ui.webEngineView->setUrl(url);
   
   auto prefAction = new QAction("&Preferences", this);
   auto helpAction = new QAction("&Help", this);
@@ -98,10 +92,15 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   user = new User();
 
   // Create Special Pages and populate list
-  auto aboutUrl = QUrl::fromLocalFile(dir.absoluteFilePath
-				 ("../media/homepage/index.html"));
+  auto spHome = new SpecialPage("about:home");
+  spHome->setMediaContent("home");
+  spages.push_back(spHome);
+
+  ui.webEngineView->setUrl(spHome->getContent());
+
   
-  auto spAbout = new SpecialPage("about:about", aboutUrl);
+  auto spAbout = new SpecialPage("about:about");
+  spAbout->setMediaContent("about");
   // setContentUrl here!!!
   spages.push_back(spAbout);
 }
@@ -312,7 +311,9 @@ MainWindow::onGoClicked()
       if (p->getUrl() == url)
 	std::cout << "Going to '" << url.toStdString()
 		  << "' special page!!" << std::endl;
-	
+
+      ui.webEngineView->setUrl(p->getContent());
+      
     }
   
 }
