@@ -1,3 +1,13 @@
+* v0.0.1-15 (17 Jan. 2024 - 04 Mar. 2024) SLOC 2,052
+- Header-only Special page skeleton and MainWindow list
+- Add basic external css file to browser homepage
+- Add very simple homepage to browser
+- Browser's main window has a webEngineView
+- Add a test to avoid a unit test segfault in faLibarchive
+- Fix last undocumented members in NetworkNode impl. file
+- Build with debug symbols by default from CMakeLists
+- Close a tests and CI ROADMAP section
+
 * v0.0.1-14 (20 Nov. 2023 - 17 Jan. 2024) SLOC 1,999
 - Add serer list lineEdit to preferences dialog
 - Add basic NetworkNode unit test file and asio to README
