@@ -118,13 +118,15 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   ask our friends if they know this revision.
 **** TODO May have seperal special pages
 :LOGBOOK:
+CLOCK: [2024-03-04 lun. 06:12]--[2024-03-04 lun. 06:37] =>  0:25
 CLOCK: [2024-03-04 lun. 04:53]--[2024-03-04 lun. 05:28] =>  0:35
 :END:
 So we can handle them in a common way
 - For example =about:about= list all these special pages in firefox
   see https://winaero.com/the-full-list-of-firefox-about-commands/
 - [ ] SpecialPage class implementation
-- [ ] Add list of SpecialPage* to MainPage    
+- [ ] Add list of SpecialPage* to MainPage
+- [ ] Homepage could be one
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
 CLOCK: [2024-02-02 ven. 18:50]--[2024-02-02 ven. 19:22] =>  0:32

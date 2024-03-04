@@ -98,8 +98,12 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   user = new User();
 
   // Create Special Pages and populate list
+  auto aboutUrl = QUrl::fromLocalFile(dir.absoluteFilePath
+				 ("../media/homepage/index.html"));
   
-  spages.push_back(new SpecialPage("about:about"));
+  auto spAbout = new SpecialPage("about:about", aboutUrl);
+  // setContentUrl here!!!
+  spages.push_back(spAbout);
 }
 
 /** The window destructor
@@ -299,12 +303,16 @@ MainWindow::getUrl() const
 void
 MainWindow::onGoClicked()
 {
-  auto url = getUrl().toStdString();
-  std::cout << "Go clicked! URL is '" << url << "'" << std::endl;
+  auto url = getUrl();
+  std::cout << "Go clicked! URL is '" << url.toStdString() << "'" << std::endl;
 
   for (auto &p : spages)
     {
       // Now comprage searched string with page URL
+      if (p->getUrl() == url)
+	std::cout << "Going to '" << url.toStdString()
+		  << "' special page!!" << std::endl;
+	
     }
   
 }

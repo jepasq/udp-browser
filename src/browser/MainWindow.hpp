@@ -67,7 +67,7 @@ private:
 
   QPointF dragStartPosition; //!< Used to handle drag'n'drop from mouseMoveEvent
 
-  QList<SpecialPage*> spages;
+  QList<SpecialPage*> spages; //!< List of special pages 
 };
 
 #endif // !__MAIN_WINDOW_HPP__
