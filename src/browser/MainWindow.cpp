@@ -99,7 +99,6 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   spages.push_back(spHome);
 
   ui.webEngineView->setUrl(spHome->getContent());
-
   
   auto spAbout = new SpecialPage("about:about");
   spAbout->setMediaContent("about");
