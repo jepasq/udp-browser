@@ -87,6 +87,8 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   connect(ui.tbPar, &QToolButton::triggered, this, &MainWindow::onParClicked);
 
   connect(ui.pbGo, &QToolButton::clicked, this, &MainWindow::onGoClicked);
+  connect(ui.leUrl, &QLineEdit::returnPressed, this, &MainWindow::onGoClicked);
+  
   connect(ui.pbSearch,&QToolButton::clicked,this,&MainWindow::onSearchClicked);
 
   user = new User();
