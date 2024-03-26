@@ -135,11 +135,13 @@ So we can handle them in a common way
 - [ ] Add an history special page    
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2024-03-26 mar. 08:11]--[2024-03-26 mar. 08:14] =>  0:03
 CLOCK: [2024-03-14 jeu. 07:00]--[2024-03-14 jeu. 07:07] =>  0:07
 CLOCK: [2024-02-02 ven. 18:50]--[2024-02-02 ven. 19:22] =>  0:32
 CLOCK: [2024-02-02 ven. 18:25]--[2024-02-02 ven. 18:33] =>  0:08
 CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 :END:
+- [X] Upgrade Doxygen file to fix some warnings
 - [-] Currently failing in src/lib/faLibarchive_Test.cpp(66 and 90)
   - [X] (90): it's a =memory access violation= in /_load_file_isnt_empty/ test
   - [ ] (66): in _load_function test, doesn't load archive content correctly
