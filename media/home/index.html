@@ -8,5 +8,14 @@
     <p>
       <tt>udp-browser</tt> is a web browser designed like a meta server.
     </p>
+    <div id="result"></div>
   </body>
+  <script>
+    function fn() {
+	var el = document.getElementById("result");
+	var t = el.innerHTML;
+	el.innerHTML = t + "</br>Clicked";
+    }
+    document.body.addEventListener('mouseup', fn, true); 
+  </script>
 </html>
