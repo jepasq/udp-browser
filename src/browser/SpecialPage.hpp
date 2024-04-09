@@ -9,6 +9,9 @@
  * Basically a string identifier (the URL you enter in the go lineedit
  * of the browser and the URL to the local content of the page)
  *
+ * There's also a dynamic data step you must call before displaying called
+ * process.
+ *
  */
 class SpecialPage
 {
@@ -20,6 +23,8 @@ public:
   const QUrl&    getContent() const;
 
   void setMediaContent(const QString&);
+
+  virtual void process();
   
 private:
   QString url;     //!< The URL this page can be accessed with

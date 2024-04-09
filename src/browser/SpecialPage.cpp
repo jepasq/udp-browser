@@ -54,4 +54,11 @@ SpecialPage::setMediaContent(const QString& u)
   this->content =  QUrl::fromLocalFile(dir.canonicalPath());
 }
 
+/** The special step needed to place dynamic data before displaying it
+  *
+  */
+void
+SpecialPage::process()
+{
 
+}
