@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.1-16 (04 Mar. 2024 - ???) SLOC ?,???
-- (6) Tested JS in home page and it works
+- (7) Fix about:about special page URL handling
+- Tested JS in home page and it works
 - Upgrade Doxyfile to fix some API doc generation warnings
 - Add API documentation to SpecialPage class
 - Browser changes URL when return key pressed

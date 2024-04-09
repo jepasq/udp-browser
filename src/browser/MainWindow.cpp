@@ -311,7 +311,9 @@ MainWindow::onGoClicked()
       // Now comprage searched string with page URL
       if (p->getUrl() == url)
 	std::cout << "Going to '" << url.toStdString()
-		  << "' special page!!" << std::endl;
+		  << "' special page ("
+		  << p->getContent().toString().toStdString()
+		  << ")" << std::endl;
 
       ui.webEngineView->setUrl(p->getContent());
       

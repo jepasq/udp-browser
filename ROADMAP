@@ -108,6 +108,7 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   ask our friends if they know this revision.
 **** TODO May have seperal special pages
 :LOGBOOK:
+CLOCK: [2024-04-09 mar. 09:09]
 CLOCK: [2024-03-14 jeu. 06:34]--[2024-03-14 jeu. 06:46] =>  0:12
 CLOCK: [2024-03-04 lun. 06:58]--[2024-03-04 lun. 07:33] =>  0:35
 CLOCK: [2024-03-04 lun. 06:12]--[2024-03-04 lun. 06:37] =>  0:25
@@ -120,6 +121,7 @@ So we can handle them in a common way
 - [X] Main wiondow's Go button must be default one (Return should work)
 - [X] Add list of SpecialPage* to MainWindow
 - [X] Homepage could be one
+- [X] We have issue openening about:about because it containes ..
   
 - [ ] Add a special page listing all special pages
 - [ ] Add an history special page    

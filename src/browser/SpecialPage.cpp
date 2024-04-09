@@ -2,7 +2,6 @@
 
 #include <QDir>        // USES Qdir.absoluteFilePath()
 
-
 /** Sopecial page constructor
  *
  * If you need to set a local URL as URL member (c parameter), you'd better
@@ -51,9 +50,8 @@ SpecialPage::getContent() const
 void
 SpecialPage::setMediaContent(const QString& u)
 {
-  QDir dir;
-  QString uu = "../media/" + u + "/index.html";
-  this->content =  QUrl::fromLocalFile(dir.absoluteFilePath(uu));
+  QDir dir("../media/" + u + "/index.html");
+  this->content =  QUrl::fromLocalFile(dir.canonicalPath());
 }
 
 
