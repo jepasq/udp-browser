@@ -1,3 +1,13 @@
+* v0.0.1-16 (04 Mar. 2024 - 01 Apr. 2024) SLOC 2,143
+- Add a media/about special page
+- Fix about:about special page URL handling
+- Tested JS in home page and it works
+- Upgrade Doxyfile to fix some API doc generation warnings
+- Add API documentation to SpecialPage class
+- Browser changes URL when return key pressed
+- Add home special page and change webEngineView url on go button click
+- Handle special page's content and url compare
+
 * v0.0.1-15 (17 Jan. 2024 - 04 Mar. 2024) SLOC 2,052
 - Header-only Special page skeleton and MainWindow list
 - Add basic external css file to browser homepage
