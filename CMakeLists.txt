@@ -63,7 +63,9 @@ set(BROWSER_SRC
   src/browser/main.cpp
   src/browser/MainWindow.cpp
   src/browser/PreferencesDialog.cpp
+
   src/browser/SpecialPage.cpp
+  src/browser/spAbout.cpp
   
   src/browser/ui/MainWindow.ui
   src/browser/ui/PreferencesDialog.ui

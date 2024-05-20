@@ -20,7 +20,7 @@ public:
   SpecialPage(QString u, QUrl c = QUrl());
   
   const QString& getUrl() const;
-  const QUrl&    getContent() const;
+  const QUrl&    getContentText() const;
 
   void setMediaContent(const QString&);
 

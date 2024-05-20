@@ -108,6 +108,8 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   ask our friends if they know this revision.
 **** TODO May have seperal special pages
 :LOGBOOK:
+CLOCK: [2024-05-20 lun. 16:33]--[2024-05-20 lun. 17:02] =>  0:29
+CLOCK: [2024-05-20 lun. 16:05]--[2024-05-20 lun. 16:18] =>  0:13
 CLOCK: [2024-05-01 mer. 17:03]--[2024-05-01 mer. 17:11] =>  0:08
 CLOCK: [2024-04-09 mar. 10:05]--[2024-04-09 mar. 10:10] =>  0:05
 CLOCK: [2024-04-09 mar. 09:09]--[2024-04-09 mar. 09:31] =>  0:22
@@ -126,14 +128,14 @@ So we can handle them in a common way
 - [X] We have issue openening about:about because it containes ..
 - [X] Add a special page listing all special pages
 
-- [ ] Add a processing step to those special pages
+- [X] Add a processing step to those special pages
+  - [X] But now, we'll need to replace getContent with getContentText
   - Maybe with a per-subclass setData(*), but with which parameter type ?
     Certainly a different type for each subclass because each one is
     instanciated manually in MainWindow's implementation
     - [ ] May create a new spAbout class that override SpecialPage with a
       new setData(list<SpecialPage>&) function that replace {{SPAGES}} on the
       fly with a ul-based list of href to each special page
-  - [ ] But now, we'll need to replace getContent with getContentText
     
     
 - [ ] Add an history special page    

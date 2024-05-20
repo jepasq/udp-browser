@@ -37,7 +37,7 @@ SpecialPage::getUrl() const
  *
  */
 const QUrl&
-SpecialPage::getContent() const
+SpecialPage::getContentText() const
 {
   return this->content;
 }
@@ -56,9 +56,12 @@ SpecialPage::setMediaContent(const QString& u)
 
 /** The special step needed to place dynamic data before displaying it
   *
+  * Just here, empty, so we can instantiate temporary special pages.
+  *
   */
 void
 SpecialPage::process()
 {
 
 }
+

@@ -12,7 +12,10 @@
 #include "config.h" // USES WTITLE
 #include "PreferencesDialog.hpp"
 #include "Preferences.hpp"
+
 #include "SpecialPage.hpp"
+#include "spAbout.hpp"
+
 #include "User.hpp"
 
 // Should work on some compilers (from #if __has_include("myinclude.h"))
@@ -98,12 +101,11 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   spHome->setMediaContent("home");
   spages.push_back(spHome);
 
-  ui.webEngineView->setUrl(spHome->getContent());
+  ui.webEngineView->setUrl(spHome->getContentText());
   
-  auto spAbout = new SpecialPage("about:about");
-  spAbout->setMediaContent("about");
+  auto spAbt = new spAbout();
   // setContentUrl here!!!
-  spages.push_back(spAbout);
+  spages.push_back(spAbt);
 }
 
 /** The window destructor
@@ -312,10 +314,10 @@ MainWindow::onGoClicked()
       if (p->getUrl() == url)
 	std::cout << "Going to '" << url.toStdString()
 		  << "' special page ("
-		  << p->getContent().toString().toStdString()
+		  << p->getContentText().toString().toStdString()
 		  << ")" << std::endl;
 
-      ui.webEngineView->setUrl(p->getContent());
+      ui.webEngineView->setUrl(p->getContentText());
       
     }
   
