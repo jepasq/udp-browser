@@ -104,6 +104,8 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   ui.webEngineView->setUrl(spHome->getContentText());
   
   auto spAbt = new spAbout();
+  spAbt->setData(&spages);
+  
   // setContentUrl here!!!
   spages.push_back(spAbt);
 }
@@ -316,7 +318,7 @@ MainWindow::onGoClicked()
 		  << "' special page ("
 		  << p->getContentText().toString().toStdString()
 		  << ")" << std::endl;
-
+      p->process();
       ui.webEngineView->setUrl(p->getContentText());
       
     }

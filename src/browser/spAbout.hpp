@@ -3,6 +3,8 @@
 
 #include "SpecialPage.hpp"
 
+#include <QList>
+
 /** The about:about special page, listing all other special pages
   *
   */
@@ -11,6 +13,11 @@ class spAbout : public SpecialPage
 public:
   spAbout();
 
+  void setData(QList<SpecialPage*>*);
+  virtual void process() override;
+
+
+  
 private:
   QList<SpecialPage*>* pages;
 };
