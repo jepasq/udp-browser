@@ -24,13 +24,19 @@ spAbout::setData(QList<SpecialPage*>* p)
   *
   *
   */
-void
+QString
 spAbout::process()
 {
   using namespace std;
+
+  QString txt = "<ul>"
   
   for (auto c : *pages)
     {
-      cout << c << ",";
+      cout << c->getUrl() << ",";
+      txt += c->getUrl();
     }
+
+  txt += "</ul>";
+  return replaceText("{{SPAGES}}", txt);
 }

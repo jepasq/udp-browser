@@ -24,7 +24,11 @@ public:
 
   void setMediaContent(const QString&);
 
-  virtual void process();
+  
+  virtual QString process();
+
+protected:
+  QString replaceText(const QString &, const QString &);
   
 private:
   QString url;     //!< The URL this page can be accessed with

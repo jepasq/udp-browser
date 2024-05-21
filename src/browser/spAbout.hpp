@@ -14,9 +14,7 @@ public:
   spAbout();
 
   void setData(QList<SpecialPage*>*);
-  virtual void process() override;
-
-
+  virtual QString process() override;
   
 private:
   QList<SpecialPage*>* pages;

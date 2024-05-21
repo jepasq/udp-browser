@@ -106,8 +106,9 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
     hashsum
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
-**** TODO May have seperal special pages
+**** TODO [feature_ReplacePageContent] May have seperal special pages
 :LOGBOOK:
+CLOCK: [2024-05-21 mar. 16:15]--[2024-05-21 mar. 17:00] =>  0:45
 CLOCK: [2024-05-21 mar. 15:27]--[2024-05-21 mar. 15:51] =>  0:24
 CLOCK: [2024-05-20 lun. 16:33]--[2024-05-20 lun. 17:02] =>  0:29
 CLOCK: [2024-05-20 lun. 16:05]--[2024-05-20 lun. 16:18] =>  0:13
@@ -137,6 +138,9 @@ So we can handle them in a common way
 - [ ] May create a new spAbout class that override SpecialPage with a
   new setData(list<SpecialPage>&) function that replace {{SPAGES}} on the
   fly with a ul-based list of href to each special page
+  - [ ] Here, we'll need the content of the web page (in SpecialPage::replaceText)
+    see https://www.developpez.net/forums/d2042073/c-cpp/bibliotheques/qt/moteurs-web/recuperer-texte-d-page-web-qwebenginepage/#post11348467
+    - Or try with =WebEngineView->runJavaScript(string script, variant callback)=
     
 - [ ] Add an history special page    
 **** TODO Continue unit tests, CI and API documentation
