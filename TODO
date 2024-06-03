@@ -5,8 +5,9 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     Update version and revision from CMakeLists.txt
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
-* v0.0.1-17 (01 Apr. 2024 - ???) SLOC ?,???
-- (4) Work on the SpecialPage::process method
+* v0.0.2-17 (01 Apr. 2024 - ???) SLOC ?,???
+- (5) Switch to minor version 2 (ROADMAP reorg.)
+- Work on the SpecialPage::process method
 - Implement spAbout setData and process methods
 - spAbout basic class implementation
 - Rename SpecialPage getContent to getContentText

@@ -2,7 +2,7 @@
 
 * v1.0.0
 ** v0.1.0
-*** TODO v0.0.2
+*** TODO v0.0.3
 **** Add search and status widgets
 :LOGBOOK:
 CLOCK: [2023-12-13 mer. 14:11]--[2023-12-13 mer. 14:21] =>  0:10
@@ -106,7 +106,42 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
     hashsum
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
-**** TODO [feature_ReplacePageContent] May have seperal special pages
+**** TODO New special pages
+- [ ] May create a new spAbout class that override SpecialPage with a
+  new setData(list<SpecialPage>&) function that replace {{SPAGES}} on the
+  fly with a ul-based list of href to each special page
+
+- [ ] Add an history special page    
+
+**** TODO Continue unit tests, CI and API documentation
+:LOGBOOK:
+CLOCK: [2024-03-26 mar. 08:11]--[2024-03-26 mar. 08:14] =>  0:03
+CLOCK: [2024-03-14 jeu. 07:00]--[2024-03-14 jeu. 07:07] =>  0:07
+CLOCK: [2024-02-02 ven. 18:50]--[2024-02-02 ven. 19:22] =>  0:32
+CLOCK: [2024-02-02 ven. 18:25]--[2024-02-02 ven. 18:33] =>  0:08
+CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
+:END:
+- [X] Upgrade Doxygen file to fix some warnings
+- [-] Currently failing in src/lib/faLibarchive_Test.cpp(66 and 90)
+  - [X] (90): it's a =memory access violation= in /_load_file_isnt_empty/ test
+  - [ ] (66): in _load_function test, doesn't load archive content correctly
+  - [ ] New segfault =QString::operator=(QString const&)=
+#+BEGIN_EXAMPLE
+#1  0x00007ffff7e046d3 in WebFile::setContent (this=0x0, c=...)
+    at /home/rainbru/programmation/github/udp-browser/src/lib/WebFile.cpp:76
+#2  0x0000555555576f7a in faLibArchive_save_file_with_content::test_method (this=0x7fffffffbdde)
+    at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:124
+#3  0x0000555555576b41 in faLibArchive_save_file_with_content_invoker ()
+    at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:117
+#4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
+#+END_EXAMPLE
+**** TODO [feature_ReplacePageContent] For spAbout class
+- [ ] Here, we'll need the content of the web page (in SpecialPage::replaceText)
+  see https://www.developpez.net/forums/d2042073/c-cpp/bibliotheques/qt/moteurs-web/recuperer-texte-d-page-web-qwebenginepage/#post11348467
+  - Or try with =WebEngineView->runJavaScript(string script, variant callback)=
+    
+*** DONE v0.0.2
+**** DONE May have several special pages
 :LOGBOOK:
 CLOCK: [2024-05-21 mar. 16:15]--[2024-05-21 mar. 17:00] =>  0:45
 CLOCK: [2024-05-21 mar. 15:27]--[2024-05-21 mar. 15:51] =>  0:24
@@ -135,36 +170,7 @@ So we can handle them in a common way
   - Maybe with a per-subclass setData(*), but with which parameter type ?
     Certainly a different type for each subclass because each one is
     instanciated manually in MainWindow's implementation
-- [ ] May create a new spAbout class that override SpecialPage with a
-  new setData(list<SpecialPage>&) function that replace {{SPAGES}} on the
-  fly with a ul-based list of href to each special page
-  - [ ] Here, we'll need the content of the web page (in SpecialPage::replaceText)
-    see https://www.developpez.net/forums/d2042073/c-cpp/bibliotheques/qt/moteurs-web/recuperer-texte-d-page-web-qwebenginepage/#post11348467
-    - Or try with =WebEngineView->runJavaScript(string script, variant callback)=
-    
-- [ ] Add an history special page    
-**** TODO Continue unit tests, CI and API documentation
-:LOGBOOK:
-CLOCK: [2024-03-26 mar. 08:11]--[2024-03-26 mar. 08:14] =>  0:03
-CLOCK: [2024-03-14 jeu. 07:00]--[2024-03-14 jeu. 07:07] =>  0:07
-CLOCK: [2024-02-02 ven. 18:50]--[2024-02-02 ven. 19:22] =>  0:32
-CLOCK: [2024-02-02 ven. 18:25]--[2024-02-02 ven. 18:33] =>  0:08
-CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
-:END:
-- [X] Upgrade Doxygen file to fix some warnings
-- [-] Currently failing in src/lib/faLibarchive_Test.cpp(66 and 90)
-  - [X] (90): it's a =memory access violation= in /_load_file_isnt_empty/ test
-  - [ ] (66): in _load_function test, doesn't load archive content correctly
-  - [ ] New segfault =QString::operator=(QString const&)=
-#+BEGIN_EXAMPLE
-#1  0x00007ffff7e046d3 in WebFile::setContent (this=0x0, c=...)
-    at /home/rainbru/programmation/github/udp-browser/src/lib/WebFile.cpp:76
-#2  0x0000555555576f7a in faLibArchive_save_file_with_content::test_method (this=0x7fffffffbdde)
-    at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:124
-#3  0x0000555555576b41 in faLibArchive_save_file_with_content_invoker ()
-    at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:117
-#4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
-#+END_EXAMPLE
+
 **** DONE Main app must use WebView and have a home page
 :LOGBOOK:
 CLOCK: [2024-03-26 mar. 08:30]--[2024-03-26 mar. 08:41] =>  0:11
