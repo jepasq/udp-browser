@@ -314,12 +314,16 @@ MainWindow::onGoClicked()
     {
       // Now comprage searched string with page URL
       if (p->getUrl() == url)
-	std::cout << "Going to '" << url.toStdString()
-		  << "' special page ("
-		  << p->getContentText().toString().toStdString()
-		  << ")" << std::endl;
-      p->process();
-      ui.webEngineView->setUrl(p->getContentText());
+	{
+	  std::cout << "Going to '" << url.toStdString()
+		    << "' special page ("
+		    << p->getContentText().toString().toStdString()
+		    << ")" << std::endl;
+	  auto replacedText = p->process();
+	  // setContent() needs a QByteArray type
+	  ui.webEngineView->setContent(replacedText.toLatin1());
+	  return;
+	}
       
     }
   

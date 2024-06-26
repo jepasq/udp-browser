@@ -5,6 +5,8 @@
 #include <QFile>
 #include <QTextStream>
 
+#include <iostream>
+
 /** Sopecial page constructor
  *
  * If you need to set a local URL as URL member (c parameter), you'd better
@@ -76,15 +78,22 @@ SpecialPage::process()
 QString
 SpecialPage::replaceText(const QString& a, const QString& b)
 {
-  auto contentUrl = this->content;
+  using namespace std;
+  
+  auto contentUrl = this->content.toLocalFile();
 
   // We assume it's a local URL
-  QFile f(contentUrl.toString());
+  QFile f(contentUrl);
+  if (!f.exists())
+    {
+      cerr << "File " << contentUrl.toStdString()
+		<< " does not exist.\n" << endl;
+    }
   if (!f.open(QFile::ReadOnly | QFile::Text))
     {
-      std::string msg = "Opening file '" + contentUrl.toString().toStdString()
+      string msg = "Opening file '" + contentUrl.toStdString()
 	+ "' failed!";
-      throw std::runtime_error(msg);
+      throw runtime_error(msg);
     }
   QTextStream in(&f);
   auto txt = in.readAll();
