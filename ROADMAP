@@ -135,10 +135,12 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
     at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:117
 #4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
 #+END_EXAMPLE
-**** TODO [feature_ReplacePageContent] For spAbout class
-- [ ] Here, we'll need the content of the web page (in SpecialPage::replaceText)
+**** TODO For spAbout class
+- [X] Here, we'll need the content of the web page (in SpecialPage::replaceText)
   see https://www.developpez.net/forums/d2042073/c-cpp/bibliotheques/qt/moteurs-web/recuperer-texte-d-page-web-qwebenginepage/#post11348467
   - Or try with =WebEngineView->runJavaScript(string script, variant callback)=
+- [ ] Now, spAbout must use SpecialPage::replaceText (maybe in process) to
+  show page
     
 *** DONE v0.0.2
 **** DONE May have several special pages

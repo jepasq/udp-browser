@@ -2,6 +2,9 @@
 
 #include <QDir>        // USES Qdir.absoluteFilePath()
 
+#include <QFile>
+#include <QTextStream>
+
 /** Sopecial page constructor
  *
  * If you need to set a local URL as URL member (c parameter), you'd better
@@ -73,8 +76,20 @@ SpecialPage::process()
 QString
 SpecialPage::replaceText(const QString& a, const QString& b)
 {
-  auto txt = this->content;
+  auto contentUrl = this->content;
+
+  // We assume it's a local URL
+  QFile f(contentUrl.toString());
+  if (!f.open(QFile::ReadOnly | QFile::Text))
+    {
+      std::string msg = "Opening file '" + contentUrl.toString().toStdString()
+	+ "' failed!";
+      throw std::runtime_error(msg);
+    }
+  QTextStream in(&f);
+  auto txt = in.readAll();
+  
   // txt should be the test page content
   txt.replace(a, b);
-  return txt;
+  return QString(txt);
 }

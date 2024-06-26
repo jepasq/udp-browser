@@ -29,11 +29,11 @@ spAbout::process()
 {
   using namespace std;
 
-  QString txt = "<ul>"
+  QString txt = "<ul>";
   
   for (auto c : *pages)
     {
-      cout << c->getUrl() << ",";
+      cout << c->getUrl().toStdString() << ",";
       txt += c->getUrl();
     }
 

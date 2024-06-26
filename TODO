@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.2-17 (01 Apr. 2024 - ???) SLOC ?,???
-- (5) Switch to minor version 2 (ROADMAP reorg.)
+- (6) First local files-based SpecialPage::replaceText implementation
+- Switch to minor version 2 (ROADMAP reorg.)
 - Work on the SpecialPage::process method
 - Implement spAbout setData and process methods
 - spAbout basic class implementation
