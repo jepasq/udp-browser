@@ -320,8 +320,15 @@ MainWindow::onGoClicked()
 		    << p->getContentText().toString().toStdString()
 		    << ")" << std::endl;
 	  auto replacedText = p->process();
+
+	  // Getting baseUrl (special page directory)
+	  auto baseUrl = p->getContentText();
+	  std::cout << "BaseUrl is '" << baseUrl.toString().toStdString()
+		    << std::endl;
+	  
 	  // setContent() needs a QByteArray type
-	  ui.webEngineView->setContent(replacedText.toLatin1());
+	  ui.webEngineView->setContent(replacedText.toLatin1(),
+				       "text/html", baseUrl);
 	  return;
 	}
       
