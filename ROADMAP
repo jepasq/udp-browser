@@ -137,6 +137,7 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO For spAbout class
 :LOGBOOK:
+CLOCK: [2024-07-15 lun. 09:32]--[2024-07-15 lun. 09:45] =>  0:13
 CLOCK: [2024-06-26 mer. 04:36]--[2024-06-26 mer. 05:12] =>  0:36
 :END:
 - [X] Here, we'll need the content of the web page (in SpecialPage::replaceText)
@@ -148,7 +149,9 @@ CLOCK: [2024-06-26 mer. 04:36]--[2024-06-26 mer. 05:12] =>  0:36
 - [X] CSS seems to be ignored
   SwebEngineView::setContent has a third parameter named baseUrl, try to set
   it to the page dir
-- [ ] Add special pages table  
+- [ ] Add special pages table. For instance it's a ul
+  Based on a WebTable class in browser/ to be able to use QString and
+  QStringList
 *** DONE v0.0.2
 **** DONE May have several special pages
 :LOGBOOK:
