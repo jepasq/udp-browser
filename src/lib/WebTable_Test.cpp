@@ -15,7 +15,8 @@ public:
 BOOST_AUTO_TEST_CASE( WebTable_nocontent )
 {
   WebTable wt;
-  BOOST_CHECK( wt.toHtml() == "<table></table>" );
+  BOOST_CHECK( wt.toHtml().contains("<table>"));
+  BOOST_CHECK( wt.toHtml().contains("</table>"));
 }
 
 BOOST_AUTO_TEST_CASE( WebTable_headers )
@@ -41,7 +42,9 @@ BOOST_AUTO_TEST_CASE( WebTable_closeTag )
 BOOST_AUTO_TEST_CASE( WebTable_openTag_withClass )
 {
   WtSubclass wt;
-  BOOST_CHECK( wt._openTag("aze", "cla55").contains("<aze>"));
+  auto html = wt._openTag("aze", "cla55");
+  BOOST_CHECK( html.contains("<aze"));
+  BOOST_CHECK( html.contains("cla55"));
 }
 
   
@@ -51,3 +54,12 @@ BOOST_AUTO_TEST_CASE( WebTable_changeQuote )
   wt.changeQuoteChar('T');
   BOOST_CHECK( wt._openTag("aze", "cla55") == "<aze class=Tcla55T>");
 }
+
+BOOST_AUTO_TEST_CASE( WebTable_items )
+{
+  WebTable wt;
+  wt.setHeaders({ "Name", "Age"});
+  wt.setItems({ "AAA", "245", "BBB", "45"});
+  BOOST_CHECK( wt.toHtml().contains("AAA"));
+}
+

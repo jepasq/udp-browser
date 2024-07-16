@@ -12,10 +12,12 @@ class WebTable
 public:
   WebTable();
 
-  QString toHtml();
-  void    setHeaders(const QStringList&);
+  void setHeaders(const QStringList&);
+  void setItems(const QStringList&);
 
   void changeQuoteChar(char);
+  
+  QString toHtml();
   
 protected:
   QString openTag(const QString& tag, const QString& className="");
@@ -25,7 +27,11 @@ private:
   QStringList headers;  //!< The table headers
   QStringList items;    //!< The table content
 
-  char QUOTE;   //!< The quote character. This is not a constant.
+  /** The quote character tat enclose strings in HTML markup.
+    * This is not a constant.
+    *
+    */
+  char QUOTE;   
 };
 
 #endif // !__WEB_TABLE_HPP__
