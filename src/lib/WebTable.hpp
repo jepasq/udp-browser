@@ -14,10 +14,18 @@ public:
 
   QString toHtml();
   void    setHeaders(const QStringList&);
+
+  void changeQuoteChar(char);
+  
+protected:
+  QString openTag(const QString& tag, const QString& className="");
+  QString closeTag(const QString& tag);
   
 private:
   QStringList headers;  //!< The table headers
   QStringList items;    //!< The table content
+
+  char QUOTE;   //!< The quote character. This is not a constant.
 };
 
 #endif // !__WEB_TABLE_HPP__
