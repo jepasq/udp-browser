@@ -63,3 +63,14 @@ BOOST_AUTO_TEST_CASE( WebTable_items )
   BOOST_CHECK( wt.toHtml().contains("AAA"));
 }
 
+BOOST_AUTO_TEST_CASE( WebTable_items_append )
+{
+  WebTable wt;
+  wt.setHeaders({ "Name", "Age"});
+  wt.appendItems({ "AAA", "245", "BBB", "45"});
+  wt.appendItem("AZA");
+  BOOST_CHECK( wt.toHtml().contains("BBB"));
+  BOOST_CHECK( wt.toHtml().contains("AZA"));
+}
+
+

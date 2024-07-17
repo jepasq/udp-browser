@@ -22,9 +22,27 @@ WebTable::toHtml()
 
   // Number of cols/rows
   auto nbcols = headers.length();
-  auto nbrows = items.length() / nbcols;
+
+  content += openTag("tr");
+
   // Must add items...
+  auto itemsByRow = 1;
+  for (auto i : items)
+    {
+      content += openTag("td");
+      content += i;
+      content += closeTag("td");
+      itemsByRow++;
+
+      if (itemsByRow > nbcols)
+	{
+	  content += closeTag("tr");
+	  content += openTag("tr");
+	  itemsByRow = 1;
+	}
+    }
   
+  content += closeTag("tr");
   
   content += closeTag("tbody");
 
@@ -59,8 +77,21 @@ WebTable::changeQuoteChar(char c)
   QUOTE = c;
 }
 
+/// Replace existing items
 void
 WebTable::setItems(const QStringList& i)
 {
   items = i;
+}
+
+void
+WebTable::appendItems(const QStringList& l)
+{
+  items.append(l);
+}
+
+void
+WebTable::appendItem(const QString& i)
+{
+  items.append(i);
 }

@@ -14,6 +14,8 @@ public:
 
   void setHeaders(const QStringList&);
   void setItems(const QStringList&);
+  void appendItem(const QString&);
+  void appendItems(const QStringList&);
 
   void changeQuoteChar(char);
   
