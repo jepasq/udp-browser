@@ -2,12 +2,20 @@
 
 #include <iostream>
 
+/** Constructor with standard quote
+  *
+  */
 WebTable::WebTable(): QUOTE('\'')
 {
 
 }
 
-/// Will be used with SpecialPage::replaceText as QString
+/** Return the HTML representation of the current table
+  *
+  * Will be used with SpecialPage::replaceText as QString
+  *
+  *
+  */
 QString
 WebTable::toHtml()
 {
@@ -50,12 +58,20 @@ WebTable::toHtml()
   return "<table>" + content + "</table>";
 }
 
+/** Set the headers list replacing the current one
+  *
+  * \param sl The new list.
+  *
+  */
 void
 WebTable::setHeaders(const QStringList& sl)
 {
   headers = sl;
 }
 
+/** Create and return an open HTML tag with optional class
+  *
+  */
 QString
 WebTable::openTag(const QString& tag, const QString& className)
 {
@@ -65,12 +81,20 @@ WebTable::openTag(const QString& tag, const QString& className)
   return QString("<" + tag + " class=" + QUOTE + className + QUOTE + ">");
 }
 
+/** Return a closing HTML tag
+  *
+  */
 QString 
 WebTable::closeTag(const QString& tag)
 {
   return QString("</" + tag + ">");
 }
 
+/** Replace the current quote char set in constructor
+  *
+  * \param c The new char.
+  *
+  */
 void
 WebTable::changeQuoteChar(char c)
 {

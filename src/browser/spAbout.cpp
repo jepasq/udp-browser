@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "WebTable.hpp"
+
 spAbout::spAbout():
   SpecialPage("about:about")
 {
@@ -38,5 +40,22 @@ spAbout::process()
     }
 
   txt += "</ul>";
-  return replaceText("{{SPAGES}}", txt);
+
+  WebTable wt;
+  wt.setHeaders({"Name", "Link", "Comment"});
+  for (auto c : *pages)
+    {
+      // Name
+      wt.appendItem(c->getUrl());
+      // Link
+      auto url = c->getUrl();
+      QString urlAsLink = "<a href='" + url + "'>" + url + "</a>";
+      wt.appendItem(urlAsLink);
+
+      // Comment
+      wt.appendItem("---");
+    }
+  
+  auto table = wt.toHtml(); 
+  return replaceText("{{SPAGES}}", table);
 }

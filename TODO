@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.2-18 (26 Jun. 2024 - ???) SLOC ?,???
-- (5) First WebTable rendering
+- (6) Add WebTable to about special page
+- First WebTable rendering
 - Fix most of the WebTable tests
 - Add WebTable interface and failing unit tests
 - Move back WebTable to lib/ and add basic unit tests
