@@ -17,6 +17,7 @@ class SpecialPage
 {
 
 public:
+  SpecialPage();
   SpecialPage(QString u, QUrl c = QUrl());
   
   const QString& getUrl() const;
@@ -24,13 +25,18 @@ public:
 
   void setMediaContent(const QString&);
 
-  
   virtual QString process();
 
+  void           setName(const QString&);
+  const QString& getName(void) const;
+  
 protected:
   QString replaceText(const QString &, const QString &);
   
 private:
+  QString name;
+  QString comment;
+  
   QString url;     //!< The URL this page can be accessed with
   QUrl    content; //!< URL to local HTML content (may use QUrl::fromLocalFile)
   

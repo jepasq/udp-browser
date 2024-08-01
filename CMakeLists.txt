@@ -58,10 +58,10 @@ add_library(udpb SHARED
 
 target_link_libraries(udpb ${LIBS_LIBRARIES} Qt5::Widgets Qt5::WebEngineWidgets)
 
-# Shared both main rule and unit tests editor sources
-# Do not contain main.cpp to avoid multiple definitions of main()
+# Shared both main rule and unit tests
+# Do not contain main.cpp to avoid multiple definitions of main() when linking
+# tests
 set(BROWSER_SRC
-  src/browser/main.cpp
   src/browser/MainWindow.cpp
   src/browser/PreferencesDialog.cpp
 
@@ -73,7 +73,7 @@ set(BROWSER_SRC
 
   media/resources.qrc
 )
-add_executable(udp-browser ${BROWSER_SRC}) 
+add_executable(udp-browser ${BROWSER_SRC} src/browser/main.cpp) 
 target_link_libraries(udp-browser ${LIBS_LIBRARIES} udpb Qt5::Widgets)
 target_include_directories(udp-browser PUBLIC src/lib  ${PROJECT_BINARY_DIR})
 
@@ -81,7 +81,7 @@ target_include_directories(udp-browser PUBLIC src/lib  ${PROJECT_BINARY_DIR})
 enable_testing()
 find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
 add_executable(tests src/tests.cpp
-  #  ${BROWSER_SRC}
+  ${BROWSER_SRC}
   src/lib/FileCompressor_Test.cpp
   src/lib/NetworkNode_Test.cpp
   src/lib/Preferences_Test.cpp
@@ -90,8 +90,11 @@ add_executable(tests src/tests.cpp
   src/lib/WebFile_Test.cpp
   src/lib/WebTable_Test.cpp
 
+  src/browser/SpecialPage_Test.cpp
+  
   src/lib/faLibarchive_Test.cpp)
 target_link_libraries(tests ${Boost_LIBRARIES} ${LIBS_LIBRARIES}
   udpb Qt5::Widgets)
+target_include_directories(tests PUBLIC src/lib  ${PROJECT_BINARY_DIR})
 add_custom_target(check COMMAND tests) # Add the `make check` command
 add_test(NAME tests COMMAND test)

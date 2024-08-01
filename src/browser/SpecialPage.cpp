@@ -7,7 +7,13 @@
 
 #include <iostream>
 
-/** Sopecial page constructor
+SpecialPage::SpecialPage()
+{
+
+}
+
+
+/** Special page constructor
  *
  * If you need to set a local URL as URL member (c parameter), you'd better
  * use the setMediaContent() function.
@@ -102,3 +108,16 @@ SpecialPage::replaceText(const QString& a, const QString& b)
   txt.replace(a, b);
   return QString(txt);
 }
+
+void
+SpecialPage::setName(const QString& n)
+{
+  name = n;
+}
+
+const QString&
+SpecialPage::getName(void) const
+{
+  return name;
+}
+
