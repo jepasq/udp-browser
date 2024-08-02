@@ -137,6 +137,7 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO For spAbout class
 :LOGBOOK:
+CLOCK: [2024-08-02 ven. 09:06]--[2024-08-02 ven. 09:30] =>  0:24
 CLOCK: [2024-08-01 jeu. 12:33]--[2024-08-01 jeu. 13:11] =>  0:38
 CLOCK: [2024-07-17 mer. 07:05]--[2024-07-17 mer. 07:33] =>  0:28
 CLOCK: [2024-07-16 mar. 04:30]--[2024-07-16 mar. 06:03] =>  1:33
@@ -164,10 +165,10 @@ CLOCK: [2024-06-26 mer. 04:36]--[2024-06-26 mer. 05:12] =>  0:36
   - [X] Add items as rows  
   - [X] Then, spAbout uses WebTable to create special pages list
     (Name, Link, Comment)
-- [ ] We should handle Name and comment for Special pages
-  Maybe move SpecialPage to lib to be able to add unit tests
-- [ ] CMakeLists.txt:82 The FindBoost module is removed. see =cmake
-  --help-policy CMP0167=
+- [X] We should handle Name and comment for Special pages and add Unit tests
+- [ ] SpecialPages table uses name and comment fields  
+- [ ] CMakeLists.txt:82 The FindBoost module is removed. see
+  =cmake --help-policy CMP0167=
 - [ ] When we click a special page link, it doesn't work, even with
   getContentText() (it doesn't handle processing)    
 *** DONE v0.0.2

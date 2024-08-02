@@ -29,7 +29,10 @@ public:
 
   void           setName(const QString&);
   const QString& getName(void) const;
-  
+
+  void           setComment(const QString&);
+  const QString& getComment(void) const;
+
 protected:
   QString replaceText(const QString &, const QString &);
   

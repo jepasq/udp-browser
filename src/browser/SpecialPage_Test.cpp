@@ -10,3 +10,11 @@ BOOST_AUTO_TEST_CASE( SpecialPage_hasNameAttribute )
   sp.setName("AZE");
   BOOST_CHECK( sp.getName() == "AZE" );
 }
+
+BOOST_AUTO_TEST_CASE( SpecialPage_hasCommentAttribute )
+{
+  SpecialPage sp;
+  sp.setComment("CoMMent");
+  BOOST_CHECK( sp.getComment() == "CoMMent" );
+}
+

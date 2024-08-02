@@ -121,3 +121,16 @@ SpecialPage::getName(void) const
   return name;
 }
 
+
+void
+SpecialPage::setComment(const QString& n)
+{
+  comment = n;
+}
+
+const QString&
+SpecialPage::getComment(void) const
+{
+  return comment;
+}
+
