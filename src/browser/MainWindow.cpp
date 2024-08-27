@@ -104,6 +104,13 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   spages.push_back(spHome);
 
   ui.webEngineView->setUrl(spHome->getContentText());
+
+  auto spBlank = new SpecialPage("about:blank");
+  spBlank->setMediaContent("blank");
+  spBlank->setName("Blank");
+  spBlank->setComment("Every new empty page/tab.");
+  spages.push_back(spBlank);
+
   
   auto spAbt = new spAbout();
   spAbt->setData(&spages);

@@ -137,6 +137,7 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO For spAbout class
 :LOGBOOK:
+CLOCK: [2024-08-27 mar. 11:02]
 CLOCK: [2024-08-27 mar. 10:12]--[2024-08-27 mar. 10:20] =>  0:08
 CLOCK: [2024-08-02 ven. 09:06]--[2024-08-02 ven. 09:30] =>  0:24
 CLOCK: [2024-08-01 jeu. 12:33]--[2024-08-01 jeu. 13:11] =>  0:38
@@ -168,10 +169,11 @@ CLOCK: [2024-06-26 mer. 04:36]--[2024-06-26 mer. 05:12] =>  0:36
     (Name, Link, Comment)
 - [X] We should handle Name and comment for Special pages and add Unit tests
 - [X] SpecialPages table uses name and comment fields
+- [X] New blank page should be a special one (may contain residual css ?)
 - [ ] May move some common/ css styles (like the table one) in a new
   =media/common/= directory
+- [ ] When we click a link, we should update current address
 - [ ] Implement a refresh key/menu/button
-- [ ] New blank page should be a special one (may contain residual css ?)
 - [ ] CMakeLists.txt:82 The FindBoost module is removed. see
   =cmake --help-policy CMP0167=
 - [ ] When we click a special page link, it doesn't work, even with
