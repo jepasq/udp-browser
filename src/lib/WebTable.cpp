@@ -71,6 +71,13 @@ WebTable::setHeaders(const QStringList& sl)
 
 /** Create and return an open HTML tag with optional class
   *
+  * The class uses the current QUOTE character.
+  *
+  * \param tag       The markup tag.
+  * \param className The class(es) tp be applied.
+  *
+  * \return The opening tag with quoted class.
+  *
   */
 QString
 WebTable::openTag(const QString& tag, const QString& className)
@@ -101,19 +108,33 @@ WebTable::changeQuoteChar(char c)
   QUOTE = c;
 }
 
-/// Replace existing items
+/** Replace all existing items
+ *
+ * \param i The enw item list.
+ *
+ */
 void
 WebTable::setItems(const QStringList& i)
 {
   items = i;
 }
 
+/** Append multiple items at once
+  *
+  * \param l The list of element to be added.
+  *
+  */
 void
 WebTable::appendItems(const QStringList& l)
 {
   items.append(l);
 }
 
+/** Append the given text item
+  *
+  * \param i The item to be added.
+  *
+  */
 void
 WebTable::appendItem(const QString& i)
 {

@@ -107,14 +107,15 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
 - When we need a chunk, we first ask for the last known revision, then
   ask our friends if they know this revision.
 **** TODO New special pages
-- [ ] May create a new spAbout class that override SpecialPage with a
+- [X] May create a new spAbout class that override SpecialPage with a
   new setData(list<SpecialPage>&) function that replace {{SPAGES}} on the
   fly with a ul-based list of href to each special page
-
 - [ ] Add an history special page    
-
+  We must have a container with prepend/push_front function and a way
+  to get/delete the nth element. A simple std::list should do the job
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2024-08-27 mar. 13:34]--[2024-08-27 mar. 13:55] =>  0:21
 CLOCK: [2024-03-26 mar. 08:11]--[2024-03-26 mar. 08:14] =>  0:03
 CLOCK: [2024-03-14 jeu. 07:00]--[2024-03-14 jeu. 07:07] =>  0:07
 CLOCK: [2024-02-02 ven. 18:50]--[2024-02-02 ven. 19:22] =>  0:32
@@ -137,7 +138,7 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO For spAbout class
 :LOGBOOK:
-CLOCK: [2024-08-27 mar. 11:02]
+CLOCK: [2024-08-27 mar. 11:02]--[2024-08-27 mar. 11:20] =>  0:18
 CLOCK: [2024-08-27 mar. 10:12]--[2024-08-27 mar. 10:20] =>  0:08
 CLOCK: [2024-08-02 ven. 09:06]--[2024-08-02 ven. 09:30] =>  0:24
 CLOCK: [2024-08-01 jeu. 12:33]--[2024-08-01 jeu. 13:11] =>  0:38

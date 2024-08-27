@@ -6,6 +6,9 @@
 
 /** Defines an HTML table markup with header and elements
   *
+  * To use it, call setHeaders() then appendItem() for one element
+  * or call appendItems() for a list of items.
+  *
   */
 class WebTable
 {
