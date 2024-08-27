@@ -99,6 +99,8 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   // Create Special Pages and populate list
   auto spHome = new SpecialPage("about:home");
   spHome->setMediaContent("home");
+  spHome->setName("Home");
+  spHome->setComment("The first page the user will see.");
   spages.push_back(spHome);
 
   ui.webEngineView->setUrl(spHome->getContentText());

@@ -8,6 +8,8 @@ spAbout::spAbout():
   SpecialPage("about:about")
 {
   setMediaContent("about");
+  setName("About");
+  setComment("Contains build versions and special pages table.");
 
 }
 
@@ -46,14 +48,14 @@ spAbout::process()
   for (auto c : *pages)
     {
       // Name
-      wt.appendItem(c->getUrl());
+      wt.appendItem(c->getName());
       // Link
       auto url = c->getUrl();
       QString urlAsLink = "<a href='" + url + "'>" + url + "</a>";
       wt.appendItem(urlAsLink);
 
       // Comment
-      wt.appendItem("---");
+      wt.appendItem(c->getComment());
     }
   
   auto table = wt.toHtml(); 
