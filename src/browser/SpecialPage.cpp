@@ -73,7 +73,7 @@ SpecialPage::setMediaContent(const QString& u)
 QString
 SpecialPage::process()
 {
-
+  return "";
 }
 
 /** Replace a with b in the processed text
@@ -105,6 +105,13 @@ SpecialPage::replaceText(const QString& a, const QString& b)
   auto txt = in.readAll();
   
   // txt should be the test page content
+  if (!txt.contains(a))
+    {
+      string msg = "SpecialPage content file '" + contentUrl.toStdString() +
+	"'doesn't include dynamic text ' + a + '";
+      throw std::runtime_error(msg);
+    }
+  
   txt.replace(a, b);
   return QString(txt);
 }

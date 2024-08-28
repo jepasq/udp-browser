@@ -34,6 +34,6 @@ spHistory::process()
       wt.appendItem(QString(c->title.c_str()));
     }
   auto table = wt.toHtml();
-  return replaceText("{{SPAGES}}", table);
+  return replaceText("{{HPAGES}}", table);
 
 }

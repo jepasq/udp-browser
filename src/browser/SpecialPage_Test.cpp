@@ -4,6 +4,16 @@
 
 #include <stdexcept> // USES std::runtime_error
 
+/// To be able to test protected functions
+class TestableSpecialPage : public SpecialPage
+{
+public:
+  QString _replaceText(const QString& a, const QString& b){
+    return replaceText(a,b);
+  }
+};
+
+
 BOOST_AUTO_TEST_CASE( SpecialPage_hasNameAttribute )
 {
   SpecialPage sp;
@@ -16,5 +26,18 @@ BOOST_AUTO_TEST_CASE( SpecialPage_hasCommentAttribute )
   SpecialPage sp;
   sp.setComment("CoMMent");
   BOOST_CHECK( sp.getComment() == "CoMMent" );
+}
+
+/// Check that trying to replace an inexisting to be replaced text
+/// throws an exception
+BOOST_AUTO_TEST_CASE( SpecialPage_InvalidTobeReplacedText )
+{
+  TestableSpecialPage sp;
+  sp.setMediaContent("about");
+  QString INEXIST = "A_VERY_INCONSISTENT_TOBEREPLACED_TEXT";
+  BOOST_CHECK_THROW(sp._replaceText(INEXIST, "aze"), std::runtime_error);
+
+  // Note, depends on 'media/index.html' content
+  BOOST_CHECK_NO_THROW(sp._replaceText("{{SPAGES}}", "aze"));
 }
 
