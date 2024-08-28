@@ -32,17 +32,7 @@ QString
 spAbout::process()
 {
   using namespace std;
-
-  QString txt = "<ul>";
   
-  for (auto c : *pages)
-    {
-      cout << c->getUrl().toStdString() << ",";
-      txt += c->getUrl();
-    }
-
-  txt += "</ul>";
-
   WebTable wt;
   wt.setHeaders({"Name", "Link", "Comment"});
   for (auto c : *pages)

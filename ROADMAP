@@ -108,6 +108,7 @@ CLOCK: [2023-05-15 lun. 14:07]--[2023-05-15 lun. 14:18] =>  0:11
   ask our friends if they know this revision.
 **** TODO New special pages
 :LOGBOOK:
+CLOCK: [2024-08-28 mer. 10:12]--[2024-08-28 mer. 10:29] =>  0:17
 CLOCK: [2024-08-28 mer. 08:46]--[2024-08-28 mer. 09:19] =>  0:33
 :END:
 - [X] May create a new spAbout class that override SpecialPage with a

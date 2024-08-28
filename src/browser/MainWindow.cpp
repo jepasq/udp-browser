@@ -15,6 +15,7 @@
 
 #include "SpecialPage.hpp"
 #include "spAbout.hpp"
+#include "spHistory.hpp"
 
 #include "User.hpp"
 
@@ -111,12 +112,13 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   spBlank->setComment("Every new empty page/tab.");
   spages.push_back(spBlank);
 
-  
   auto spAbt = new spAbout();
   spAbt->setData(&spages);
-  
-  // setContentUrl here!!!
   spages.push_back(spAbt);
+
+  auto spHst = new spHistory();
+  //  spHst->setData(&spages);
+  spages.push_back(spHst);
 }
 
 /** The window destructor
