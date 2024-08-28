@@ -1,5 +1,6 @@
 #include "spHistory.hpp"
 
+#include "History.hpp"
 #include "WebTable.hpp"
 
 spHistory::spHistory():
@@ -26,21 +27,12 @@ spHistory::process()
 
   WebTable wt;
   wt.setHeaders({"Link", "Title"});
-  /*
-  for (auto c : *history->)
-    {
-      // Name
-      wt.appendItem(c->getName());
-      // Link
-      auto url = c->getUrl();
-      QString urlAsLink = "<a href='" + url + "'>" + url + "</a>";
-      wt.appendItem(urlAsLink);
 
-      // Comment
-      wt.appendItem(c->getComment());
+  for (auto c : history->getItems())
+    {
+      wt.appendItem(QString(c->url.c_str()));
+      wt.appendItem(QString(c->title.c_str()));
     }
-  */
-  
   auto table = wt.toHtml();
   return replaceText("{{SPAGES}}", table);
 

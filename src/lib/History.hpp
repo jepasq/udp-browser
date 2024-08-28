@@ -23,6 +23,7 @@ public:
   History();
 
   void add(const std::string& url, const std::string& title);
+  std::list<std::shared_ptr<HistoryItem>> getItems(void) const;
   
 private:
   std::list<std::shared_ptr<HistoryItem>> items;
