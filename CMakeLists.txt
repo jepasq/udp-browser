@@ -45,6 +45,7 @@ add_library(udpb SHARED
   src/lib/ConfigReader.cpp
   src/lib/FileArchiver.cpp
   src/lib/FileCompressor.cpp
+  src/lib/History.cpp
   src/lib/NetworkNode.cpp
   src/lib/Preferences.cpp
   src/lib/Serializer.cpp
@@ -67,6 +68,7 @@ set(BROWSER_SRC
 
   src/browser/SpecialPage.cpp
   src/browser/spAbout.cpp
+  src/browser/spHistory.cpp
   
   src/browser/ui/MainWindow.ui
   src/browser/ui/PreferencesDialog.ui
