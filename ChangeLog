@@ -1,3 +1,13 @@
+* v0.0.2-19 (02 Aug. 2024 - 18 Sep. 2024) SLOC 2,777
+- Show WebEngine view hovered URL in MainWindow's status bar
+- Close a spAbout-related ROADMAP section
+- SpecialPage::replaceText throw an exception if 'a' can't be found
+- Add History::getItems() and improve its process loop
+- Add history media folder
+- Add a basic History special page skeleton
+- New blank page is be a special one
+- Special pages table uses name and comment fields
+
 * v0.0.2-18 (26 Jun. 2024 - 02 Aug. 2024) SLOC 2,853
 - Add SpecialPage comment field
 - Add SpecialPage name attribute getter/setter and unit tests

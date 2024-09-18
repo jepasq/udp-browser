@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 
 project(udp-browser VERSION 0.0.1 LANGUAGES CXX)
-set(REVISION 18)
+set(REVISION 19)
 
 set(CMAKE_BUILD_TYPE Debug)
 
