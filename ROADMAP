@@ -145,7 +145,16 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
     at /home/rainbru/programmation/github/udp-browser/src/lib/faLibarchive_Test.cpp:117
 #4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
 #+END_EXAMPLE
-**** TODO For spAbout class
+**** TODO Media common and link click work
+- [ ] May move some common/ css styles (like the table one) in a new
+  =media/common/= directory
+- [ ] When we click a link, we should update current address
+- [ ] Implement a refresh key/menu/button
+- [ ] CMakeLists.txt:82 The FindBoost module is removed. see
+  =cmake --help-policy CMP0167=
+- [ ] When we click a special page link, it doesn't work, even with
+  getContentText() (it doesn't handle processing)    
+**** DONE For spAbout class
 :LOGBOOK:
 CLOCK: [2024-08-27 mar. 11:02]--[2024-08-27 mar. 11:20] =>  0:18
 CLOCK: [2024-08-27 mar. 10:12]--[2024-08-27 mar. 10:20] =>  0:08
@@ -180,14 +189,6 @@ CLOCK: [2024-06-26 mer. 04:36]--[2024-06-26 mer. 05:12] =>  0:36
 - [X] We should handle Name and comment for Special pages and add Unit tests
 - [X] SpecialPages table uses name and comment fields
 - [X] New blank page should be a special one (may contain residual css ?)
-- [ ] May move some common/ css styles (like the table one) in a new
-  =media/common/= directory
-- [ ] When we click a link, we should update current address
-- [ ] Implement a refresh key/menu/button
-- [ ] CMakeLists.txt:82 The FindBoost module is removed. see
-  =cmake --help-policy CMP0167=
-- [ ] When we click a special page link, it doesn't work, even with
-  getContentText() (it doesn't handle processing)    
 *** DONE v0.0.2
 **** DONE May have several special pages
 :LOGBOOK:
