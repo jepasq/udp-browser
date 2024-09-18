@@ -56,6 +56,9 @@ protected:
   QString getSearch() const;
   
   virtual void mouseMoveEvent(QMouseEvent *event);
+
+private slots:
+  void onLinkHovered(const QString&);
   
 private:
   BrowserMode mode;   //!< The current mode

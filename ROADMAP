@@ -146,14 +146,22 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #4  0x000055555555e63c in boost::detail::function::void_function_invoker0<void (*)(), void>::invoke (
 #+END_EXAMPLE
 **** TODO Media common and link click work
+:LOGBOOK:
+CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
+:END:
+- [-] When we click a link, we should update current address
+  Maybe from void QWebEnginePage::linkHovered(const QString &url)
+  - [X] Show this in status bar
+  - [ ] Handle click event  
 - [ ] May move some common/ css styles (like the table one) in a new
   =media/common/= directory
-- [ ] When we click a link, we should update current address
 - [ ] Implement a refresh key/menu/button
 - [ ] CMakeLists.txt:82 The FindBoost module is removed. see
   =cmake --help-policy CMP0167=
 - [ ] When we click a special page link, it doesn't work, even with
-  getContentText() (it doesn't handle processing)    
+  getContentText() (it doesn't handle processing)
+- [ ] May handle loading page progress in status bar
+  via QWebengineView::loadProgress signal
 **** DONE For spAbout class
 :LOGBOOK:
 CLOCK: [2024-08-27 mar. 11:02]--[2024-08-27 mar. 11:20] =>  0:18

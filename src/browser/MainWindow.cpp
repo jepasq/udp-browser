@@ -106,6 +106,10 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
 
   ui.webEngineView->setUrl(spHome->getContentText());
 
+  connect(ui.webEngineView->page(), &QWebEnginePage::linkHovered,
+	  this, &MainWindow::onLinkHovered);
+
+  
   auto spBlank = new SpecialPage("about:blank");
   spBlank->setMediaContent("blank");
   spBlank->setName("Blank");
@@ -370,3 +374,22 @@ MainWindow::onSearchClicked()
   std::cout << "Search engine not implemented '" << search << "'" << std::endl;
 }
 
+/** A link was hovered by the mouse in QWebEngine view's page
+  *
+  *
+  *
+  */
+void
+MainWindow::onLinkHovered(const QString& url)
+{
+  if (url.isEmpty())
+    {
+      // Reset status bar
+      statusBar()->clearMessage();
+    }
+  else
+    {
+      statusBar()->showMessage(url);
+      std::cout << "Link hovere'd : '" << url.toStdString() << "'" << std::endl;
+    }
+}
