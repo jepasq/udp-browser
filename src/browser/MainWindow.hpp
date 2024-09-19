@@ -59,6 +59,7 @@ protected:
 
 private slots:
   void onLinkHovered(const QString&);
+  void onUrlChanged(const QUrl&);
   
 private:
   BrowserMode mode;   //!< The current mode

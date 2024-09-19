@@ -109,6 +109,9 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   connect(ui.webEngineView->page(), &QWebEnginePage::linkHovered,
 	  this, &MainWindow::onLinkHovered);
 
+  connect(ui.webEngineView, &QWebEngineView::urlChanged,
+	  this, &MainWindow::onUrlChanged);
+
   
   auto spBlank = new SpecialPage("about:blank");
   spBlank->setMediaContent("blank");
@@ -392,4 +395,11 @@ MainWindow::onLinkHovered(const QString& url)
       statusBar()->showMessage(url);
       std::cout << "Link hovere'd : '" << url.toStdString() << "'" << std::endl;
     }
+}
+
+void
+MainWindow::onUrlChanged(const QUrl& url)
+{
+  std::cout << "Page changed to : '" << url.toString().toStdString()
+	    << "'" << std::endl;
 }
