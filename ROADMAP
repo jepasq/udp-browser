@@ -150,6 +150,7 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO Media common and link click work
 :LOGBOOK:
+CLOCK: [2024-09-19 jeu. 11:53]--[2024-09-19 jeu. 12:25] =>  0:32
 CLOCK: [2024-09-19 jeu. 10:06]--[2024-09-19 jeu. 10:36] =>  0:30
 CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
 :END:
@@ -157,7 +158,9 @@ CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
   Maybe from void QWebEnginePage::linkHovered(const QString &url)
   - [X] Show this in status bar
   - [ ] Handle click event : Trying to use urlChanged signal
-    Printed to cout but shows 'about:blank#blocked'
+    Printed to cout but shows 'about:blank#blocked'. Maybe try to prepend
+    the URL with a custom protocol (for example udpb://)
+    - If this is that, configure this as a cmake/config.h CUSTOM_PROTOCOL var
 - [ ] May move some common/ css styles (like the table one) in a new
   =media/common/= directory
 - [ ] Implement a refresh key/menu/button

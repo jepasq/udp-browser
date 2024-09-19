@@ -41,7 +41,8 @@ spAbout::process()
       wt.appendItem(c->getName());
       // Link
       auto url = c->getUrl();
-      QString urlAsLink = "<a href='" + url + "'>" + url + "</a>";
+      QString urlAsLink = "<a href='http://" + url + "'>" + url + "</a>";
+      cout << urlAsLink.toStdString() << endl;
       wt.appendItem(urlAsLink);
 
       // Comment
