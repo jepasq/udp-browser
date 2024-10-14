@@ -6,9 +6,22 @@
 class WtSubclass : public WebTable
 {
 public:
+  /** An acessible openTag reimplementation
+   *
+   *  @param tag       The markup tag name.
+   *  @param className An optional CSS class name.
+   *
+   *  @return The return of the call to the underlying function.
+   */
   QString _openTag(const QString& tag, const QString& className = ""){
     return openTag(tag, className);
   };
+  /** An acessible closeTag reimplementation
+   *
+   *  @param tag The markup tag name to be closed.
+   *
+   *  @return The return of the call to the underlying function.
+   */
   QString _closeTag(const QString& tag){ return closeTag(tag);} ;
 };
 

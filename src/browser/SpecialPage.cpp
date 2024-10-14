@@ -116,25 +116,44 @@ SpecialPage::replaceText(const QString& a, const QString& b)
   return QString(txt);
 }
 
+/** Change the current name
+ *
+ *  @param n The new name as QString.
+ *
+ */
 void
 SpecialPage::setName(const QString& n)
 {
   name = n;
 }
 
+/** Return the current page name
+ *
+ *  @return The name as QString.
+ *
+ */
 const QString&
 SpecialPage::getName(void) const
 {
   return name;
 }
 
-
+/** Change the current comment
+ *
+ *  @param n The new comment as QString.
+ *
+ */
 void
 SpecialPage::setComment(const QString& n)
 {
   comment = n;
 }
 
+/** Return the current page comment
+ *
+ *  @return The comment as QString.
+ *
+ */
 const QString&
 SpecialPage::getComment(void) const
 {

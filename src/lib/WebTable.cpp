@@ -14,6 +14,7 @@ WebTable::WebTable(): QUOTE('\'')
   *
   * Will be used with SpecialPage::replaceText as QString
   *
+  * @return The current table content as HTML table string.
   *
   */
 QString

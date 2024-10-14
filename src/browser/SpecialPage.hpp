@@ -12,6 +12,9 @@
  * There's also a dynamic data step you must call before displaying called
  * process.
  *
+ * To make the rendered HTML table easier to read, two fields containing name
+ * and comment were added.
+ *
  */
 class SpecialPage
 {
@@ -37,8 +40,8 @@ protected:
   QString replaceText(const QString &, const QString &);
   
 private:
-  QString name;
-  QString comment;
+  QString name;    //!< The current page name
+  QString comment; //!< An additional comment field
   
   QString url;     //!< The URL this page can be accessed with
   QUrl    content; //!< URL to local HTML content (may use QUrl::fromLocalFile)
