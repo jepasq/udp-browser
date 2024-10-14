@@ -46,6 +46,7 @@ add_library(udpb SHARED
   src/lib/FileArchiver.cpp
   src/lib/FileCompressor.cpp
   src/lib/History.cpp
+  src/lib/HistoryItem.cpp
   src/lib/NetworkNode.cpp
   src/lib/Preferences.cpp
   src/lib/Serializer.cpp

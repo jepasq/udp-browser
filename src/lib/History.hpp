@@ -5,12 +5,7 @@
 #include <string>
 #include <memory>  // USES shared_ptr
 
-struct HistoryItem
-{
-  HistoryItem(const std::string& u, const std::string& t):url(u), title(t){}
-  std::string url;
-  std::string title;
-};
+#include "HistoryItem.hpp"
 
 /** The web history handling class
   *
