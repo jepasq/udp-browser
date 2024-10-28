@@ -13,6 +13,12 @@ class HistoryItem
 public:
   HistoryItem(const std::string&, const std::string&);
 
+  void               setUrl(const std::string&);
+  const std::string& getUrl(void) const;
+
+  const std::string& getTitle(void) const { return title; }
+
+  
   //private:
   std::string url;    //!< The item's history
   std::string title;  //!< The item's title

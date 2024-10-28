@@ -86,6 +86,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system
 add_executable(tests src/tests.cpp
   ${BROWSER_SRC}
   src/lib/FileCompressor_Test.cpp
+  src/lib/HistoryItem_Test.cpp
   src/lib/NetworkNode_Test.cpp
   src/lib/Preferences_Test.cpp
   src/lib/User_Test.cpp

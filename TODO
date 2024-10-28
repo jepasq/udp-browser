@@ -6,6 +6,7 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.2-20 (18 Sep. 2024 - ???) SLOC ?,???
-- (3) HistoryItem move in its own files
+- (4) Add HistoryItem unit test and Url getter and setter
+- HistoryItem move in its own files
 - Improve multiple classes API documentation
 - Handle MainWindow's webView urlChanged signal

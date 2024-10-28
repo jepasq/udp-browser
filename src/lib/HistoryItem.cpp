@@ -6,3 +6,16 @@ HistoryItem::HistoryItem(const std::string& u, const std::string& t):
 {
 
 }
+
+void
+HistoryItem::setUrl(const std::string& u)
+{
+  url = u;
+}
+
+const std::string&
+HistoryItem::getUrl(void) const
+{
+  return url;
+}
+
