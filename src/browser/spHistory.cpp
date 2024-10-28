@@ -30,8 +30,12 @@ spHistory::process()
 
   for (auto c : history->getItems())
     {
-      wt.appendItem(QString(c->url.c_str()));
+      /*      wt.appendItem(QString(c->url.c_str()));
       wt.appendItem(QString(c->title.c_str()));
+      */
+      wt.appendItem(c->getUrl());
+      wt.appendItem(c->getTitle());
+      
     }
   auto table = wt.toHtml();
   return replaceText("{{HPAGES}}", table);

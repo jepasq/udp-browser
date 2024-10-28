@@ -4,6 +4,8 @@
 #include <QString>
 #include <QStringList>
 
+#include <string>
+
 /** Defines an HTML table markup with header and elements
   *
   * To use it, call setHeaders() then appendItem() for one element
@@ -20,6 +22,9 @@ public:
   void appendItem(const QString&);
   void appendItems(const QStringList&);
 
+  void appendItem(const std::string&);
+  void appendItem(const char*);
+  
   void changeQuoteChar(char);
   
   QString toHtml();

@@ -1,8 +1,15 @@
 #include "HistoryItem.hpp"
 
-HistoryItem::HistoryItem(const std::string& u, const std::string& t):
-  url(u),
-  title(t)
+/** Default constructor
+ *
+ *  @param vUrl   The URL.
+ *  @param vTitle The Title.
+ *
+ *
+ */
+HistoryItem::HistoryItem(const std::string& vUrl, const std::string& vTitle):
+  url(vUrl),
+  title(vTitle)
 {
 
 }
@@ -17,5 +24,17 @@ const std::string&
 HistoryItem::getUrl(void) const
 {
   return url;
+}
+
+void
+HistoryItem::setTitle(const std::string& t)
+{
+  title = t;
+}
+
+const std::string&
+HistoryItem::getTitle(void) const
+{
+  return title;
 }
 

@@ -141,3 +141,15 @@ WebTable::appendItem(const QString& i)
 {
   items.append(i);
 }
+
+void
+WebTable::appendItem(const std::string& str)
+{
+  appendItem(QString(str.c_str()));
+}
+
+void
+WebTable::appendItem(const char* str)
+{
+  appendItem(QString(str));
+}
