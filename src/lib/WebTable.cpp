@@ -90,8 +90,13 @@ WebTable::openTag(const QString& tag, const QString& className)
 }
 
 /** Return a closing HTML tag
-  *
-  */
+ *
+ *  @param tag The tag to be closed. For example for 'aaa', it will
+ *             return '< \ aaa >' without spaces.
+ *
+ *  @return The closed tag as a QString.
+ *
+ */
 QString 
 WebTable::closeTag(const QString& tag)
 {
@@ -142,12 +147,22 @@ WebTable::appendItem(const QString& i)
   items.append(i);
 }
 
+/** Specialization of the appendItem function for standard string
+  *
+  * \param str The item to be added.
+  *
+  */
 void
 WebTable::appendItem(const std::string& str)
 {
   appendItem(QString(str.c_str()));
 }
 
+/** Specialization of the appendItem function for C-style string
+  *
+  * \param str The item to be added.
+  *
+  */
 void
 WebTable::appendItem(const char* str)
 {

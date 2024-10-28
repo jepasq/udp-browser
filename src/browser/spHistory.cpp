@@ -13,6 +13,11 @@ spHistory::spHistory():
 
 }
 
+/** Set the actual data to a new pointer
+ *
+ *  @param h The new history object. Will completely replace existing one.
+ *
+ */
 void
 spHistory::setData(History* h)
 {

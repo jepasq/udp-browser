@@ -127,6 +127,7 @@ CLOCK: [2024-08-28 mer. 08:46]--[2024-08-28 mer. 09:19] =>  0:33
   - [ ] MainWindow must have a history member, set it to special page
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2024-10-28 lun. 10:14]--[2024-10-28 lun. 10:38] =>  0:24
 CLOCK: [2024-10-14 lun. 10:04]--[2024-10-14 lun. 10:41] =>  0:37
 CLOCK: [2024-08-27 mar. 13:34]--[2024-08-27 mar. 13:55] =>  0:21
 CLOCK: [2024-03-26 mar. 08:11]--[2024-03-26 mar. 08:14] =>  0:03
@@ -151,14 +152,14 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO Media common and link click work
 :LOGBOOK:
-CLOCK: [2024-10-28 lun. 09:46]
+CLOCK: [2024-10-28 lun. 09:46]--[2024-10-28 lun. 10:00] =>  0:14
 CLOCK: [2024-10-28 lun. 09:21]--[2024-10-28 lun. 09:43] =>  0:22
 CLOCK: [2024-10-14 lun. 11:49]--[2024-10-14 lun. 11:57] =>  0:08
 CLOCK: [2024-09-19 jeu. 11:53]--[2024-09-19 jeu. 12:25] =>  0:32
 CLOCK: [2024-09-19 jeu. 10:06]--[2024-09-19 jeu. 10:36] =>  0:30
 CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
 :END:
-- [ ] HistoryItem fields should be private with getters and setters
+- [X] HistoryItem fields should be private with getters and setters
 - [-] When we click a link, we should update current address
   Maybe from void QWebEnginePage::linkHovered(const QString &url)
   - [X] Show this in status bar
