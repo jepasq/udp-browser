@@ -72,6 +72,8 @@ private:
   QPointF dragStartPosition; //!< Used to handle drag'n'drop from mouseMoveEvent
 
   QList<SpecialPage*> spages; //!< List of special pages 
+
+  QLabel* statusLabel;   //!< Permanent status widget
 };
 
 #endif // !__MAIN_WINDOW_HPP__

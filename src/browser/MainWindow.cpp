@@ -126,6 +126,10 @@ MainWindow::MainWindow(Preferences* p, QWidget* parent):
   auto spHst = new spHistory();
   //  spHst->setData(&spages);
   spages.push_back(spHst);
+
+  statusLabel = new QLabel(this);
+  statusLabel->setText("Status Label");
+  statusBar()->addPermanentWidget(statusLabel);
 }
 
 /** The window destructor
@@ -135,6 +139,7 @@ MainWindow::~MainWindow()
 {
   delete hamMenu;
   delete user;
+  delete statusLabel;
 }
 
 /** The browser mode button callback
@@ -385,15 +390,19 @@ MainWindow::onSearchClicked()
 void
 MainWindow::onLinkHovered(const QString& url)
 {
+  std::cout << "Link hovere'd : '" << url.toStdString() << "'" << std::endl;
   if (url.isEmpty())
     {
       // Reset status bar
+      /*
       statusBar()->clearMessage();
+      statusLabel->setText("");
+      */
     }
   else
     {
       statusBar()->showMessage(url);
-      std::cout << "Link hovere'd : '" << url.toStdString() << "'" << std::endl;
+      statusLabel->setText(url);
     }
 }
 

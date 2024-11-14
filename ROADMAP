@@ -127,6 +127,7 @@ CLOCK: [2024-08-28 mer. 08:46]--[2024-08-28 mer. 09:19] =>  0:33
   - [ ] MainWindow must have a history member, set it to special page
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2024-11-14 jeu. 11:12]--[2024-11-14 jeu. 11:30] =>  0:18
 CLOCK: [2024-11-14 jeu. 10:07]--[2024-11-14 jeu. 10:18] =>  0:11
 CLOCK: [2024-11-14 jeu. 09:37]--[2024-11-14 jeu. 09:55] =>  0:18
 CLOCK: [2024-10-28 lun. 10:14]--[2024-10-28 lun. 10:38] =>  0:24
@@ -140,6 +141,9 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 :END:
 - [X] Upgrade Doxygen file to fix some warnings
 - [X] HistoryItem fields should be private with getters and setters
+- [ ] Show hovered link in status bar doesn work anymore ?
+  Open =about:about= page to test
+  Added a permanent Label widget for this.
 - [-] Currently failing in src/lib/faLibarchive_Test.cpp(66 and 90)
   - [X] (90): it's a =memory access violation= in /_load_file_isnt_empty/ test
   - [ ] (66): in _load_function test, doesn't load archive content correctly
@@ -164,7 +168,6 @@ CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
 :END:
 - [-] When we click a link, we should update current address
   Maybe from void QWebEnginePage::linkHovered(const QString &url)
-  - [X] Show this in status bar
   - [ ] Handle click event : Trying to use urlChanged signal
     Printed to cout but shows 'about:blank#blocked'. Maybe try to prepend
     the URL with a custom protocol (for example udpb://)
