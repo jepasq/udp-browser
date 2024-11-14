@@ -6,7 +6,8 @@ udb-browser - GPLv3 - A web browser designed like a meta server.
     SLOC is the result of https://github.com/flosse/sloc on src/.
 
 * v0.0.2-20 (18 Sep. 2024 - ???) SLOC ?,???
-- (5) HistoryItem title has getter and setter
+- (6) Upgrade Doxyfile for doxygen from v1.10 to 1.12
+- HistoryItem title has getter and setter
 - Add HistoryItem unit test and Url getter and setter
 - HistoryItem move in its own files
 - Improve multiple classes API documentation

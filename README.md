@@ -40,8 +40,16 @@ to generate API documentation
 
 	mkdir build
 	cd build/
+	cmake ..
 	doxygen
 	<your-favorite-browser> html/index.html
+
+Regularly, yuo may want to upgrade `doxygen` configuration to a newer version.
+To upgrade the file, run :
+
+	doxygen -u Doxyfile.in
+	
+then, call again `cmake	..` from the *build/* directory.
 
 ## Browser homepage
 
