@@ -8,6 +8,14 @@
 class TestableSpecialPage : public SpecialPage
 {
 public:
+  /** Used to test a protected function
+    *
+    * @param a The text to be replaced.
+    * @param b The test that will replace 'a'.
+    *
+    * @return The modified text.
+    *
+    */
   QString _replaceText(const QString& a, const QString& b){
     return replaceText(a,b);
   }

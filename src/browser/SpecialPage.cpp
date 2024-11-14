@@ -69,6 +69,8 @@ SpecialPage::setMediaContent(const QString& u)
   *
   * Just here, empty, so we can instantiate temporary special pages.
   *
+  * @return Always an empty string.
+  *
   */
 QString
 SpecialPage::process()
@@ -80,6 +82,11 @@ SpecialPage::process()
   *
   * Used by subclasses to replace template text such as {{TEXT}}.
   *
+    * @param a The text to be replaced.
+    * @param b The test that will replace 'a'.
+    *
+    * @return The modified text.
+    *
   */
 QString
 SpecialPage::replaceText(const QString& a, const QString& b)

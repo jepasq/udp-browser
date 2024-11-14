@@ -127,6 +127,7 @@ CLOCK: [2024-08-28 mer. 08:46]--[2024-08-28 mer. 09:19] =>  0:33
   - [ ] MainWindow must have a history member, set it to special page
 **** TODO Continue unit tests, CI and API documentation
 :LOGBOOK:
+CLOCK: [2024-11-14 jeu. 10:07]--[2024-11-14 jeu. 10:18] =>  0:11
 CLOCK: [2024-11-14 jeu. 09:37]--[2024-11-14 jeu. 09:55] =>  0:18
 CLOCK: [2024-10-28 lun. 10:14]--[2024-10-28 lun. 10:38] =>  0:24
 CLOCK: [2024-10-14 lun. 10:04]--[2024-10-14 lun. 10:41] =>  0:37

@@ -22,7 +22,7 @@ public:
   virtual QString process() override;
 
 private:
-  History* history;
+  History* history; //!< The history handling class pointer.
 };
 
 #endif // !__SPECIAL_PAGE_HISTORY_HPP__
