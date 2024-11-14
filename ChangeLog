@@ -1,3 +1,13 @@
+* v0.0.2-20 (18 Sep. 2024 - 14 Nov. 2024) SLOC 2,982
+- Add a status bar permanent Label widget
+- Improve several class comments to fix undocumented members
+- Upgrade Doxyfile for doxygen from v1.10 to 1.12
+- HistoryItem title has getter and setter
+- Add HistoryItem unit test and Url getter and setter
+- HistoryItem move in its own files
+- Improve multiple classes API documentation
+- Handle MainWindow's webView urlChanged signal
+
 * v0.0.2-19 (02 Aug. 2024 - 18 Sep. 2024) SLOC 2,777
 - Show WebEngine view hovered URL in MainWindow's status bar
 - Close a spAbout-related ROADMAP section
