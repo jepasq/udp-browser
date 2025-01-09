@@ -378,13 +378,12 @@ MainWindow::onSearchClicked()
 {
   auto search = getSearch().toStdString();
 
-  
   std::cout << "Search engine not implemented '" << search << "'" << std::endl;
 }
 
 /** A link was hovered by the mouse in QWebEngine view's page
   *
-  *
+  *  @param url The URL of the hovered link.
   *
   */
 void
@@ -406,6 +405,11 @@ MainWindow::onLinkHovered(const QString& url)
     }
 }
 
+/** The Url changed slot
+ *
+ *  @param url The new URL.
+ *
+ */
 void
 MainWindow::onUrlChanged(const QUrl& url)
 {
