@@ -6,8 +6,11 @@
 #include <QList>
 
 /** The about:about special page, listing all other special pages
-  *
-  */
+ *
+ *  The about page is a special page that list all other registered special
+ *  pages.
+ *
+ */
 class spAbout : public SpecialPage
 {
 public:
@@ -17,7 +20,7 @@ public:
   virtual QString process() override;
   
 private:
-  QList<SpecialPage*>* pages;
+  QList<SpecialPage*>* pages;   //!< The internal list of special pages
 };
 
 #endif // !__SPECIAL_PAGE_ABOUT_HPP__

@@ -9,7 +9,7 @@
 
 /** The web history handling class
   *
-  *
+  * An ordered list of recently visited links with URL and title.
   *
   */
 class History
@@ -21,7 +21,8 @@ public:
   std::list<std::shared_ptr<HistoryItem>> getItems(void) const;
   
 private:
-  std::list<std::shared_ptr<HistoryItem>> items;
+  /// The interl list of items
+  std::list<std::shared_ptr<HistoryItem>> items; 
 };
 
 #endif // !_HISTORY_HPP_

@@ -2,7 +2,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-// To make protected functions testable
+/// To make protected functions testable
 class WtSubclass : public WebTable
 {
 public:

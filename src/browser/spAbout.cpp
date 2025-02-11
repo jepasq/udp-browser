@@ -4,6 +4,9 @@
 
 #include "WebTable.hpp"
 
+/** The About special page constructor
+ *
+ */
 spAbout::spAbout():
   SpecialPage("about:about")
 {
@@ -25,9 +28,10 @@ spAbout::setData(QList<SpecialPage*>* p)
 }
 
 /** Process the page before showing it to end user
-  *
-  *
-  */
+ *
+ *  @return The pas content after about pages WebTable processing.
+ *
+ */
 QString
 spAbout::process()
 {
