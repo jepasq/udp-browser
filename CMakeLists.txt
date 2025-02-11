@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.10)
 
 project(udp-browser VERSION 0.0.1 LANGUAGES CXX)
 set(REVISION 20)
@@ -82,7 +82,8 @@ target_include_directories(udp-browser PUBLIC src/lib  ${PROJECT_BINARY_DIR})
 
 # Unit tests
 enable_testing()
-find_package(Boost COMPONENTS unit_test_framework REQUIRED) # filesystem system 
+# Maybe  filesystem or system components later
+find_package(Boost REQUIRED COMPONENTS unit_test_framework )
 add_executable(tests src/tests.cpp
   ${BROWSER_SRC}
   src/lib/FileCompressor_Test.cpp
