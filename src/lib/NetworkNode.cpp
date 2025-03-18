@@ -37,7 +37,7 @@ NetworkNode::download(std::string ip, int port)
   try
     {
       // From https://www.developpez.net/forums/d722277/c-cpp/cpp/bibliotheques/boost/boost-asio-ecouter-port-udp/#post4192089
-      udp::endpoint endpoint (boost::asio::ip::address::from_string(ip), port);
+      udp::endpoint endpoint (boost::asio::ip::make_address("127.0.0.1"), port);
       
       udp::socket socket(io_service);
       socket.open(udp::v4());

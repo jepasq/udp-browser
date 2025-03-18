@@ -160,6 +160,7 @@ CLOCK: [2024-01-24 mer. 18:09]--[2024-01-24 mer. 18:23] =>  0:14
 #+END_EXAMPLE
 **** TODO Media common and link click work
 :LOGBOOK:
+CLOCK: [2025-03-18 mar. 08:38]--[2025-03-18 mar. 08:54] =>  0:16
 CLOCK: [2025-02-11 mar. 09:50]--[2025-02-11 mar. 10:07] =>  0:17
 CLOCK: [2025-02-11 mar. 09:20]--[2025-02-11 mar. 09:46] =>  0:26
 CLOCK: [2024-12-19 jeu. 09:24]--[2024-12-19 jeu. 09:33] =>  0:09
@@ -170,7 +171,8 @@ CLOCK: [2024-09-19 jeu. 11:53]--[2024-09-19 jeu. 12:25] =>  0:32
 CLOCK: [2024-09-19 jeu. 10:06]--[2024-09-19 jeu. 10:36] =>  0:30
 CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
 :END:
-- [-] When we click a link, we should update current address
+- [X] Can't find boost::asio::io_service anymore ? Changed in boost 1.66
+- [ ] When we click a link, we should update current address
   Maybe from void QWebEnginePage::linkHovered(const QString &url)
   - [ ] Handle click event : Trying to use urlChanged signal
     Printed to cout but shows 'about:blank#blocked'. Maybe try to prepend
@@ -178,7 +180,8 @@ CLOCK: [2024-09-18 mer. 13:28]--[2024-09-18 mer. 13:44] =>  0:16
     - If this is that, configure this as a cmake/config.h CUSTOM_PROTOCOL var
 - [ ] May move some common/ css styles (like the table one) in a new
   =media/common/= directory
-- [ ] Implement a refresh key/menu/button
+- [ ] Implement a refresh key/menu/button : place the button before the
+  address bar
 - [ ] CMakeLists.txt:82 The FindBoost module is removed. see
   =cmake --help-policy CMP0167=
 - [ ] When we click a special page link, it doesn't work, even with

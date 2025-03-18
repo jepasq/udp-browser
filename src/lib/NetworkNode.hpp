@@ -16,7 +16,8 @@ public:
   void download(std::string  = "134.246.151.185", int = 10001);
 
 private:
-  boost::asio::io_service io_service; //!< The asio (i.e. network) service
+  //!< The asio (i.e. network) service (Was io_service before Boost 1.66)
+  boost::asio::io_context io_service; 
   
   // A download URL function 
 };
