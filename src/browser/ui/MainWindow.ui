@@ -18,6 +18,13 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
+       <widget class="QPushButton" name="pbLoad">
+        <property name="text">
+         <string>Refresh</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLineEdit" name="leUrl">
         <property name="placeholderText">
          <string>Enter URL here!</string>
@@ -149,7 +156,7 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>96</width>
+              <width>100</width>
               <height>46</height>
              </rect>
             </property>

@@ -416,3 +416,11 @@ MainWindow::onUrlChanged(const QUrl& url)
   std::cout << "Page changed to : '" << url.toString().toStdString()
 	    << "'" << std::endl;
 }
+
+/// The refresh or reload button callback
+void
+MainWindow::onRefreshReload()
+{
+  std::cout << "Reloading current page..." << std::endl;
+}
+

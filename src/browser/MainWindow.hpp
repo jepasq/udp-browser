@@ -46,6 +46,8 @@ private slots:
   void onGoClicked();
   void onSearchClicked();
 
+  void onRefreshReload();
+  
 protected:
   void    nextMode();
   QString modeToStr();
